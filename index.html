@@ -3,51 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DailyDotKids | Modern Daycare Management</title>
     <link rel="stylesheet" href="style.css">
+    <title>DailyDotKids | Operations Platform</title>
 </head>
 <body>
     <div class="container">
         <h1>DailyDotKids: Operations, Simplified.</h1>
-        <p>Onboard in minutes. 3-tap logging for teachers. Seamless parent connection.</p>
-        
+        <p>Manage, connect, and grow faster than ever before.</p>
+
         <div class="grid">
             <!-- Admin Hub -->
             <div class="card admin">
                 <h2>Admin Hub</h2>
-                <div class="carousel"><div class="carousel-inner">
-                    <img src="admin/Admin1.png" alt="Admin"> <img src="admin/Admin2.png" alt="Admin"> <img src="admin/Admin3.png" alt="Admin"> <img src="admin/Admin4.png" alt="Admin">
-                </div></div>
-                <p>Cohort scheduling and real-time staff logs.</p>
+                <div class="gallery">
+                    <img src="admin/Admin1.png" onclick="openModal(this.src)">
+                    <img src="admin/Admin2.png" onclick="openModal(this.src)">
+                    <img src="admin/Admin3.png" onclick="openModal(this.src)">
+                    <img src="admin/Admin4.png" onclick="openModal(this.src)">
+                </div>
+                <p>Multi-location oversight and cohort scheduling.</p>
                 <a href="#" class="cta" style="background: #2563eb;">Request Admin Demo</a>
             </div>
 
             <!-- Teacher Corner -->
             <div class="card teacher">
                 <h2>Teacher Corner</h2>
-                <div class="carousel"><div class="carousel-inner">
-                    <img src="teacher/Teacher1.png" alt="Teacher"> <img src="teacher/Teacher2.png" alt="Teacher"> <img src="teacher/Teacher3.png" alt="Teacher">
-                </div></div>
-                <p>3-tap activity logging and communication.</p>
+                <div class="gallery">
+                    <img src="teacher/Teacher1.png" onclick="openModal(this.src)">
+                    <img src="teacher/Teacher2.png" onclick="openModal(this.src)">
+                    <img src="teacher/Teacher3.png" onclick="openModal(this.src)">
+                    <img src="teacher/Teacher4.png" onclick="openModal(this.src)">
+                </div>
+                <p>3-tap logging and instant photo sharing.</p>
                 <a href="#" class="cta" style="background: #0d9488;">Log Activities</a>
             </div>
 
-<!-- Parent Portal Card -->
-<div class="card parent">
-    <h2>Parent Portal</h2>
-    <div class="carousel"><div class="carousel-inner">
-        <img src="parent/Parent1.png" alt="Parent"> <img src="parent/Parent2.png" alt="Parent"> <img src="parent/Parent3.png" alt="Parent">
-    </div></div>
-    <p>Instant updates and digital bulletins.</p>
-    
-    <!-- Primary CTA Button (Inside Card) -->
-    <a href="#" class="cta" style="background: #d97706;">View Activities, Reports & Progress</a>
-</div>
-
-<!-- Contact Support Button (Outside Card) -->
-<a href="mailto:dailydot404@gmail.com?subject=BloomDaily%20Inquiry&body=Hi,%20I%20would%20like%20to%20learn%20more." 
-   class="cta" style="background: #92400e; margin-top: 15px; width: 300px; margin-left: auto; margin-right: auto;">Contact Support</a>
+            <!-- Parent Portal -->
+            <div class="card parent">
+                <h2>Parent Portal</h2>
+                <div class="gallery">
+                    <img src="parent/Parent1.png" onclick="openModal(this.src)">
+                    <img src="parent/Parent2.png" onclick="openModal(this.src)">
+                    <img src="parent/Parent3.png" onclick="openModal(this.src)">
+                    <img src="parent/Parent4.png" onclick="openModal(this.src)">
+                </div>
+                <p>View activities, reports & progress.</p>
+                <a href="#" class="cta" style="background: #d97706;">View Activities, Reports & Progress</a>
+            </div>
         </div>
+
+        <!-- Contact Support Button (Outside Cards) -->
+        <a href="mailto:dailydot404@gmail.com?subject=DailyDotKids%20Inquiry&body=Hi,%20I%20would%20like%20to%20learn%20more." 
+           class="cta" style="background: #92400e; width: 300px; margin: 40px auto;">Contact Support</a>
     </div>
+
+    <!-- Modal Container -->
+    <div id="modal" class="modal" onclick="this.style.display='none'">
+        <span class="close">&times;</span>
+        <img id="modal-img">
+    </div>
+
+    <script>
+        function openModal(src) {
+            document.getElementById('modal-img').src = src;
+            document.getElementById('modal').style.display = 'flex';
+        }
+    </script>
 </body>
 </html>
