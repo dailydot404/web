@@ -3,53 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DailyDotKids | The Modern Daycare Platform</title>
-    <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #f4f7f6; padding: 40px; text-align: center; }
-        .grid { display: flex; gap: 20px; justify-content: center; margin-top: 40px; }
-        .card { background: white; padding: 20px; border-radius: 15px; width: 300px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        .carousel { display: flex; overflow: hidden; height: 150px; margin-bottom: 15px; }
-        .carousel img { width: 100%; height: 100%; object-fit: cover; animation: slide 10s infinite; }
-        @keyframes slide { 0%, 30% { transform: translateX(0); } 40%, 70% { transform: translateX(-100%); } 80%, 100% { transform: translateX(-200%); } }
-        .cta { display: inline-block; padding: 10px 20px; border-radius: 5px; color: white; text-decoration: none; margin-top: 10px; }
-        .admin { border-top: 5px solid #1a365d; }
-        .teacher { border-top: 5px solid #2c7a7b; }
-        .parent { border-top: 5px solid #dd6b20; }
-    </style>
+    <title>DailyDotKids | Operations Platform</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>The Modern Daycare Platform, Simplified.</h1>
-    <p>Manage, connect, and grow faster than ever before.</p>
-
-    <div class="grid">
-        <!-- Admin Hub -->
-        <div class="card admin">
-            <h2>Admin Hub</h2>
-            <div class="carousel">
-                <img src="admin/Admin1.png"> <img src="admin/Admin2.png"> <img src="admin/Admin3.png"><img src="admin/Admin4.png">
+    <div class="container">
+        <h1>DailyDotKids: The Modern Daycare Platform</h1>
+        <p>Manage, connect, and grow faster than ever before.</p>
+        
+        <div class="grid">
+            <!-- Admin Hub -->
+            <div class="card admin">
+                <h2>Admin Hub</h2>
+                <div class="carousel"><div class="carousel-inner">
+                    <img src="admin/Admin1.png" alt="Admin"> <img src="admin/Admin2.png" alt="Admin"> <img src="admin/Admin3.png" alt="Admin"><img src="admin/Admin4.png" alt="Admin">
+                </div></div>
+                <p>Multi-location oversight and effortless search.</p>
+                <a href="#" class="cta" style="background: #3b82f6;">Manage with DailyDotKids</a>
             </div>
-            <ul><li>Multi-Location Oversight</li><li>Effortless Management : Students, Teachers, Announcements, Categories</li></ul>
-            <a href="#" class="cta" style="background:#1a365d">Manage with DailyDotKids</a>
+
+            <!-- Teacher Corner -->
+            <div class="card teacher">
+                <h2>Teacher Corner</h2>
+                <div class="carousel"><div class="carousel-inner">
+                    <img src="teacher/Teacher1.png" alt="Teacher"> <img src="teacher/Teacher2.png" alt="Teacher"> <img src="teacher/Teacher3.png" alt="Teacher">
+                </div></div>
+                <p>3-tap logging and instant photo sharing.</p>
+                <a href="#" class="cta" style="background: #14b8a6;">Log with DailyDotKids</a>
+            </div>
+
+            <!-- Parent Portal -->
+            <div class="card parent">
+                <h2>Parent Portal</h2>
+                <div class="carousel"><div class="carousel-inner">
+                    <img src="parent/Parent1.png" alt="Parent"> <img src="parent/Parent2.png" alt="Parent"> <img src="parent/Parent3.png" alt="Parent">
+                </div></div>
+                <p>Real-time updates and digital bulletins.</p>
+                <a href="mailto:dailydot404@gmail.com?subject=DailyDotKids%20Inquiry&body=Hi,%20I%20would%20like%20to%20learn%20more." class="cta" style="background: #f59e0b;">Connect with DailyDotKids</a>
+            </div>
         </div>
-
-        <!-- Teacher Corner -->
-        <div class="card teacher">
-            <h2>Teacher Corner</h2>
-            <div class="carousel">
-                <img src="teacher/Teacher1.png"> <img src="teacher/Teacher2.png"> <img src="teacher/Teacher3.png">
-            </div>
-            <ul><li>3-Tap Activity Logging</li><li>Real-time Photo Sharing</li></ul>
-            <a href="#" class="cta" style="background:#2c7a7b">Log with DailyDotKids</a>
-        </div>
-
-        <!-- Parent Portal -->
-        <div class="card parent">
-            <h2>Parent Portal</h2>
-            <div class="carousel">
-                <img src="parent/Parent1.png">  <img src="parent/Parent2.png">  <img src="parent/Parent3.png"> 
-            </div>
-            <ul><li>Peace of Mind Feed</li><li>Digital Bulletins</li></ul>
-<a href="mailto:dailydot404@gmail.com?subject=Inquiry%20regarding%20DailyDotKids&body=Hi,%20I%20am%20interested%20in%20learning%20more%20about%20the%20DailyDotKids%20platform%20for%20our%20daycare." class="cta" style="background:#dd6b20">Connect with DailyDotKids</a>        </div>
     </div>
 </body>
 </html>
