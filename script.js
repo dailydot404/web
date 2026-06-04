@@ -9,7 +9,7 @@ document.querySelectorAll('.carousel-side').forEach(container => {
     const images = Array.from(slides.querySelectorAll('img'));
     const total = images.length;
     let index = 0;
-
+dotsContainer.innerHTML = '';
     // 1. Create Navigation Dots
     images.forEach((_, i) => {
         const dot = document.createElement('div');
