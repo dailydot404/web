@@ -1,22 +1,60 @@
-/* Reset */
+/* Reset & Global */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8fafc; color: #1e293b; line-height: 1.6; padding: 2rem; }
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: #f0f4f8; /* Professional light blue-grey background */
+    color: #1e293b; 
+    padding: 2rem; 
+}
 
-/* Layout */
-.container { max-width: 1000px; margin: 0 auto; text-align: center; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+/* Container */
+.container { max-width: 1200px; margin: 0 auto; text-align: center; }
+
+/* Grid Layout */
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Larger minimum width */
+    gap: 30px; 
+    margin-top: 3rem; 
+}
 
 /* Card Styling */
-.card { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-top: 6px solid #e2e8f0; }
-.card.admin { border-top-color: #3b82f6; }
-.card.teacher { border-top-color: #14b8a6; }
-.card.parent { border-top-color: #f59e0b; }
+.card { 
+    background: white; 
+    padding: 2rem; 
+    border-radius: 20px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08); 
+    border: 1px solid #e2e8f0;
+}
 
-/* Rotating Image Widget */
-.carousel { width: 100%; height: 200px; overflow: hidden; border-radius: 8px; margin-bottom: 1rem; position: relative; }
-.carousel-inner { display: flex; width: 300%; animation: slide 12s infinite; }
-.carousel-inner img { width: 33.333%; height: 200px; object-fit: cover; }
-@keyframes slide { 0%, 25% { transform: translateX(0); } 33%, 58% { transform: translateX(-33.333%); } 66%, 91% { transform: translateX(-66.666%); } }
+/* BIGGER Carousel */
+.carousel { 
+    width: 100%; 
+    height: 300px; /* Increased height */
+    overflow: hidden; 
+    border-radius: 12px; 
+    margin-bottom: 1.5rem; 
+    position: relative; 
+}
+.carousel-inner { 
+    display: flex; 
+    width: 300%; 
+    animation: slide 15s infinite; /* Slower, smoother rotation */
+}
+.carousel-inner img { 
+    width: 33.333%; 
+    height: 300px; 
+    object-fit: contain; /* Ensures full image visibility without cropping */
+    background-color: #f8fafc;
+}
 
-/* CTA Button */
-.cta { display: block; text-align: center; padding: 0.8rem; border-radius: 6px; color: white; text-decoration: none; font-weight: 600; margin-top: 1rem; }
+/* CTA */
+.cta { 
+    display: block; 
+    padding: 1rem; 
+    border-radius: 8px; 
+    color: white; 
+    text-decoration: none; 
+    font-weight: 600; 
+    margin-top: 1rem; 
+}
