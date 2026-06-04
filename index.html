@@ -7,61 +7,72 @@
     <title>DailyDotKids | Operations Platform</title>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <span class="logo">DailyDotKids</span>
+            <a href="mailto:dailydot404@gmail.com?subject=Inquiry%20regarding%20DailyDotKids&body=Hi%20Team,%0A%0AI%20would%20like%20to%20learn%20more%20about%20the%20platform." 
+               class="contact-btn">Contact Us</a>
+        </div>
+    </nav>
+
     <div class="container">
-        <h1>DailyDotKids: Operations, Simplified.</h1>
-        <p>Transforming daycare management with seamless technology for admins, teachers, and parents.</p>
-        
-        <div class="about-section">
-            <h3>Why DailyDotKids?</h3>
-            <p>Our platform bridges the communication gap in early childhood education. We provide robust tools to handle multi-location oversight, real-time activity logging, and transparent parent reporting, ensuring every child’s day is captured and shared securely.</p>
-        </div>
-
-        <div class="grid">
-            <!-- Admin Hub -->
-            <div class="card admin">
+        <!-- Admin Section: Details Right -->
+        <div class="section-wrapper" id="admin">
+            <div class="carousel-side">
+                <div class="slides">
+                    <img src="Admin1.png" alt="Admin View">
+                    <img src="Admin2.png" alt="Admin View">
+                    <img src="Admin3.png" alt="Admin View">
+                    <img src="Admin4.jpg" alt="Admin View">
+                </div>
+            </div>
+            <div class="details-side">
                 <h2>Admin Hub</h2>
-                <div class="gallery">
-                    <img src="admin/Admin1.png" onclick="openModal(this.src)">
-                    <img src="admin/Admin2.png" onclick="openModal(this.src)">
-                    <img src="admin/Admin3.png" onclick="openModal(this.src)">
-                    <img src="admin/Admin4.png" onclick="openModal(this.src)">
-                </div>
-                <p>Multi-location oversight, student management, and real-time staff logging.</p>
-                <a href="#" class="cta" style="background: #2563eb;">Request Admin Demo</a>
-            </div>
-
-            <!-- Teacher Corner -->
-            <div class="card teacher">
-                <h2>Teacher Corner</h2>
-                <div class="gallery">
-                    <img src="teacher/Teacher1.png" onclick="openModal(this.src)">
-                    <img src="teacher/Teacher2.png" onclick="openModal(this.src)">
-                    <img src="teacher/Teacher3.png" onclick="openModal(this.src)">
-                </div>
-                <p>Effortless activity tracking, photo sharing, and intuitive clock-in features.</p>
-                <a href="#" class="cta" style="background: #0d9488;">Log Activities</a>
-            </div>
-
-            <!-- Parent Portal -->
-            <div class="card parent">
-                <h2>Parent Portal</h2>
-                <div class="gallery">
-                    <img src="parent/Parent1.png" onclick="openModal(this.src)">
-                    <img src="parent/Parent2.png" onclick="openModal(this.src)">
-                    <img src="parent/Parent3.png" onclick="openModal(this.src)">
-                </div>
-                <p>Stay informed with daily reports, progress tracking, and instant updates.</p>
-                <a href="#" class="cta" style="background: #d97706;">View Activities & Reports</a>
+                <ul>
+                    <li>Real-time multi-location oversight.</li>
+                    <li>Centralized student management.</li>
+                    <li>Automated staff scheduling and time logging.</li>
+                </ul>
             </div>
         </div>
 
-<a href="mailto:dailydot404@gmail.com?subject=Inquiry%20regarding%20DailyDotKids%20Platform&body=Hi%20DailyDotKids%20Team,%0A%0AI%20am%20interested%20in%20learning%20more%20about%20your%20operations%20platform.%20Could%20you%20please%20provide%20more%20details%20or%20schedule%20a%20demo%3F%0A%0AThank%20you!" 
-   class="cta" style="background: #92400e; width: 300px; margin: 40px auto;">Contact Support</a>    </div>
-
-    <!-- Modal for Lightbox -->
-    <div id="modal" class="modal" onclick="this.style.display='none'">
-        <span class="close">&times;</span>
-        <img id="modal-img">
+        <!-- Teacher Section: Details Left (Flipped) -->
+        <div class="section-wrapper reverse" id="teacher">
+            <div class="carousel-side">
+                <div class="slides">
+                    <img src="Teacher1.jpg" alt="Teacher View">
+                    <img src="Teacher2.png" alt="Teacher View">
+                    <img src="Teacher3.jpg" alt="Teacher View">
+                </div>
+            </div>
+            <div class="details-side">
+                <h2>Teacher Corner</h2>
+                <ul>
+                    <li>3-tap activity and meal logging.</li>
+                    <li>Instant parent photo sharing.</li>
+                    <li>Intuitive clock-in/clock-out functionality.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Parent Section: Details Right -->
+        <div class="section-wrapper" id="parent">
+            <div class="carousel-side">
+                <div class="slides">
+                    <img src="Parent1.png" alt="Parent View">
+                    <img src="Parent2.jpg" alt="Parent View">
+                    <img src="Parent3.png" alt="Parent View">
+                </div>
+            </div>
+            <div class="details-side">
+                <h2>Parent Portal</h2>
+                <ul>
+                    <li>Real-time daily activity updates.</li>
+                    <li>Health and milestone notifications.</li>
+                    <li>Transparent progress reports.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
