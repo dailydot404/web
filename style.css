@@ -10,9 +10,10 @@ body { font-family: 'Segoe UI', sans-serif; background-color: #f8fafc; color: #1
 
 /* Section Layout */
 .section-wrapper { display: flex; align-items: center; gap: 40px; background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px; }
-.reverse { flex-direction: row-reverse; } /* Added for alternating layout */
+.reverse { flex-direction: row-reverse; }
 
 .carousel-side { flex: 1; position: relative; overflow: hidden; border-radius: 12px; height: 300px; }
 .slides { display: flex; width: 100%; height: 100%; transition: transform 0.5s ease-in-out; }
 .slides img { min-width: 100%; height: 100%; object-fit: cover; }
 .details-side { flex: 1; }
+ul { line-height: 1.6; padding-left: 20px; }
