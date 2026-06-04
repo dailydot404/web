@@ -9,7 +9,12 @@
 <body>
     <div class="container">
         <h1>DailyDotKids: Operations, Simplified.</h1>
-        <p>Manage, connect, and grow faster than ever before.</p>
+        <p>Transforming daycare management with seamless technology for admins, teachers, and parents.</p>
+        
+        <div class="about-section">
+            <h3>Why DailyDotKids?</h3>
+            <p>Our platform bridges the communication gap in early childhood education. We provide robust tools to handle multi-location oversight, real-time activity logging, and transparent parent reporting, ensuring every child’s day is captured and shared securely.</p>
+        </div>
 
         <div class="grid">
             <!-- Admin Hub -->
@@ -19,9 +24,9 @@
                     <img src="admin/Admin1.png" onclick="openModal(this.src)">
                     <img src="admin/Admin2.png" onclick="openModal(this.src)">
                     <img src="admin/Admin3.png" onclick="openModal(this.src)">
-                    <img src="admin/Admin4.png" onclick="openModal(this.src)">
+                    <img src="admin/Admin4.jpg" onclick="openModal(this.src)">
                 </div>
-                <p>Multi-location oversight and cohort scheduling.</p>
+                <p>Multi-location oversight, student management, and real-time staff logging.</p>
                 <a href="#" class="cta" style="background: #2563eb;">Request Admin Demo</a>
             </div>
 
@@ -29,12 +34,11 @@
             <div class="card teacher">
                 <h2>Teacher Corner</h2>
                 <div class="gallery">
-                    <img src="teacher/Teacher1.png" onclick="openModal(this.src)">
+                    <img src="teacher/Teacher1.jpg" onclick="openModal(this.src)">
                     <img src="teacher/Teacher2.png" onclick="openModal(this.src)">
-                    <img src="teacher/Teacher3.png" onclick="openModal(this.src)">
-                    <img src="teacher/Teacher4.png" onclick="openModal(this.src)">
+                    <img src="teacher/Teacher3.jpg" onclick="openModal(this.src)">
                 </div>
-                <p>3-tap logging and instant photo sharing.</p>
+                <p>Effortless activity tracking, photo sharing, and intuitive clock-in features.</p>
                 <a href="#" class="cta" style="background: #0d9488;">Log Activities</a>
             </div>
 
@@ -43,31 +47,23 @@
                 <h2>Parent Portal</h2>
                 <div class="gallery">
                     <img src="parent/Parent1.png" onclick="openModal(this.src)">
-                    <img src="parent/Parent2.png" onclick="openModal(this.src)">
+                    <img src="parent/Parent2.jpg" onclick="openModal(this.src)">
                     <img src="parent/Parent3.png" onclick="openModal(this.src)">
-                    <img src="parent/Parent4.png" onclick="openModal(this.src)">
                 </div>
-                <p>View activities, reports & progress.</p>
-                <a href="#" class="cta" style="background: #d97706;">View Activities, Reports & Progress</a>
+                <p>Stay informed with daily reports, progress tracking, and instant updates.</p>
+                <a href="#" class="cta" style="background: #d97706;">View Activities & Reports</a>
             </div>
         </div>
 
-        <!-- Contact Support Button (Outside Cards) -->
-        <a href="mailto:dailydot404@gmail.com?subject=DailyDotKids%20Inquiry&body=Hi,%20I%20would%20like%20to%20learn%20more." 
-           class="cta" style="background: #92400e; width: 300px; margin: 40px auto;">Contact Support</a>
+        <a href="mailto:contact@dailydotkids.com" class="cta" style="background: #92400e; width: 300px; margin: 40px auto;">Contact Support</a>
     </div>
 
-    <!-- Modal Container -->
+    <!-- Modal for Lightbox -->
     <div id="modal" class="modal" onclick="this.style.display='none'">
         <span class="close">&times;</span>
         <img id="modal-img">
     </div>
 
-    <script>
-        function openModal(src) {
-            document.getElementById('modal-img').src = src;
-            document.getElementById('modal').style.display = 'flex';
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
