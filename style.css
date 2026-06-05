@@ -145,22 +145,33 @@ body {
     color: var(--white);
 }
 
-/* --- Layout Grid --- */
+/* --- Flexbox Split Layout Grid --- */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 80px 20px;
 }
 
-.feature-section {
-    margin-bottom: 120px;
+.feature-split {
     display: flex;
-    flex-direction: column;
-    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 120px;
+}
+
+.feature-split.reverse {
+    flex-direction: row-reverse;
 }
 
 .feature-text {
-    max-width: 800px;
+    flex: 1;
+    max-width: 500px;
+}
+
+.feature-visual {
+    flex: 1.2;
+    width: 100%;
 }
 
 .badge {
@@ -208,21 +219,18 @@ body {
 /* --- Image Showcase Containers --- */
 .image-showcase {
     display: grid;
-    gap: 20px;
+    gap: 15px;
     width: 100%;
 }
 
-/* 4-Column Layout for Admin Screenshots */
 .grid-4 {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
-/* 3-Column Layout for Teacher & Parent Screenshots */
 .grid-3 {
     grid-template-columns: repeat(3, 1fr);
 }
 
-/* Clean screenshot containers */
 .screenshot-wrapper {
     background-color: var(--light);
     border-radius: 12px;
@@ -230,13 +238,10 @@ body {
     overflow: hidden;
     border: 1px solid #e1e4e6;
     transition: var(--transition);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .screenshot-wrapper:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
@@ -285,12 +290,18 @@ body {
 
 /* --- Mobile Responsiveness --- */
 @media (max-width: 992px) {
-    .grid-4 {
-        grid-template-columns: repeat(2, 1fr);
+    .feature-split, .feature-split.reverse {
+        flex-direction: column;
+        gap: 35px;
+        margin-bottom: 80px;
+    }
+
+    .feature-text {
+        max-width: 100%;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     .nav-links {
         display: none;
     }
@@ -303,14 +314,9 @@ body {
         flex-direction: column;
         gap: 10px;
     }
-
-    .feature-section {
-        margin-bottom: 80px;
-        gap: 25px;
-    }
     
     .grid-4, .grid-3 {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 12px;
     }
 }
