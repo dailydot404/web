@@ -1,8 +1,6 @@
-// Quick Javascript interactions for the DailyDot Landing Page
-
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Smooth scroll for anchor navigation links
+    // Smooth scroll for navbar anchor links
     const links = document.querySelectorAll('.nav-links a[href^="#"]');
     
     links.forEach(link => {
@@ -12,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
-                // Account for the fixed navbar height dynamically
                 const navHeight = document.querySelector('.navbar').offsetHeight;
                 const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
                 
@@ -24,11 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Interaction Tracker to log what features visitors focus on
-    const sections = document.querySelectorAll('.feature-section');
+    // Intersection Tracker for feature visibility
+    const sections = document.querySelectorAll('.feature-split');
     const options = {
         root: null,
-        threshold: 0.3 // Trigger when 30% of the section is visible
+        threshold: 0.3
     };
 
     const observer = new IntersectionObserver((entries) => {
