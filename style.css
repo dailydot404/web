@@ -69,3 +69,35 @@ li { margin-bottom: 10px; }
 .close-lightbox { position: absolute; top: 20px; right: 40px; font-size: 40px; color: white; cursor: pointer; }
 .nav-arrow { position: absolute; font-size: 50px; color: white; cursor: pointer; padding: 20px; }
 .prev { left: 20px; } .next { right: 20px; }
+
+
+/* Mobile Responsiveness Improvements */
+@media (max-width: 768px) {
+    /* Stack the content: carousel on top, text below */
+    .section-wrapper {
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 20px;
+    }
+
+    /* Adjust image height for mobile */
+    .carousel-side {
+        height: 250px;
+        width: 100%;
+    }
+
+    /* Scale fonts for smaller screens */
+    h2 { font-size: 1.5rem; }
+    ul { font-size: 0.95rem; padding-left: 15px; }
+
+    /* Fix Nav for mobile */
+    .nav-container {
+        flex-direction: row; /* Keep logo and button on same line */
+        padding: 0 10px;
+    }
+    
+    .contact-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
