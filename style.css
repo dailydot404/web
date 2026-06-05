@@ -1,110 +1,316 @@
-/* Base Reset & Typography */
-* { box-sizing: border-box; }
-body { 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); 
-    color: #f1f5f9; 
-    padding-top: 80px; 
-    margin: 0; 
+/* --- Global Reset & Variables --- */
+:root {
+    --primary: #ff5a5f;      /* Warm, friendly red-pink accent */
+    --secondary: #2ab7ca;    /* Calm, trustworthy teal blue */
+    --dark: #2b2d42;         /* Professional dark text/background */
+    --light: #f8f9fa;        /* Soft gray background */
+    --white: #ffffff;
+    --gray: #6c757d;
+    --transition: all 0.3s ease;
 }
-.container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
 
-/* Fixed Navbar - Glassmorphism Effect */
-.navbar { 
-    position: fixed; top: 0; width: 100%; 
-    background: rgba(15, 23, 42, 0.8); 
-    backdrop-filter: blur(10px);
-    padding: 1rem 2rem; display: flex; justify-content: center; 
-    border-bottom: 1px solid #334155; z-index: 1000; 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.nav-container { width: 100%; max-width: 1200px; display: flex; justify-content: space-between; align-items: center; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    background-color: var(--white);
+    scroll-behavior: smooth;
+}
+
+/* --- Navigation --- */
+.navbar {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
 .logo {
-    font-size: 1.8rem;        /* Increases the font size */
-    font-weight: 700;         /* Makes it bold for better presence */
-    color: #fb923c;           /* Orangish shade */
-    text-transform: uppercase; /* Gives it a modern, branding look */
-    letter-spacing: 1px;      /* Slightly spaced for readability */
-    cursor: pointer;
-}
-.contact-btn { 
-    background: #f59e0b; color: #0f172a; padding: 0.5rem 1.5rem; 
-    border-radius: 6px; text-decoration: none; font-weight: 700; transition: background 0.3s;
-}
-.contact-btn:hover { background: #d97706; }
-
-/* Section Layout */
-.section-wrapper { 
-    display: flex; align-items: center; gap: 40px; 
-    background: #1e293b; padding: 2.5rem; border-radius: 20px; 
-    border: 1px solid #334155; margin-bottom: 40px; 
-}
-/* Flip Layout for Alternating Sections */
-.reverse { flex-direction: row-reverse; }
-
-/* Carousel Styles */
-.carousel-side { 
-    flex: 1; position: relative; overflow: hidden; border-radius: 12px; 
-    height: 350px; background-color: #0f172a; 
-    display: flex; align-items: center; justify-content: center; 
-}
-.slides { display: flex; width: 100%; height: 100%; transition: transform 0.8s ease-in-out; }
-.slides img { min-width: 100%; height: 100%; object-fit: contain; padding: 10px; }
-
-/* Carousel Dots */
-.dots-container { position: absolute; bottom: 15px; width: 100%; display: flex; justify-content: center; gap: 8px; }
-.dot { height: 12px; width: 12px; background-color: #475569; border-radius: 50%; cursor: pointer; transition: background 0.3s; }
-.dot.active { background-color: #38bdf8; }
-
-/* Details Section */
-.details-side { flex: 1; }
-h2 { color: #38bdf8; margin-top: 0; font-size: 2rem; }
-ul { line-height: 1.8; padding-left: 20px; font-size: 1.1rem; color: #cbd5e1; }
-li { margin-bottom: 10px; }
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .section-wrapper, .reverse { flex-direction: column; text-align: center; }
-    .nav-container { flex-direction: column; gap: 1rem; }
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--dark);
+    text-decoration: none;
 }
 
-.lightbox { 
-    display: none; position: fixed; z-index: 2000; top: 0; left: 0; 
-    width: 100%; height: 100%; background: rgba(0,0,0,0.95); 
-    justify-content: center; align-items: center; 
+.logo span {
+    color: var(--primary);
 }
-.lightbox img { max-width: 90%; max-height: 80%; border-radius: 8px; }
-.close-lightbox { position: absolute; top: 20px; right: 40px; font-size: 40px; color: white; cursor: pointer; }
-.nav-arrow { position: absolute; font-size: 50px; color: white; cursor: pointer; padding: 20px; }
-.prev { left: 20px; } .next { right: 20px; }
 
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 25px;
+}
 
-/* Mobile Responsiveness Improvements */
-@media (max-width: 768px) {
-    /* Stack the content: carousel on top, text below */
-    .section-wrapper {
-        flex-direction: column;
-        padding: 1.5rem;
-        gap: 20px;
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-links .nav-cta {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.nav-links .nav-cta:hover {
+    background-color: #e04f54;
+    color: var(--white);
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    padding: 140px 20px 80px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--gray);
+    margin-bottom: 35px;
+}
+
+/* --- Buttons --- */
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #e04f54;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--dark);
+    border: 2px solid var(--dark);
+}
+
+.btn-secondary:hover {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+/* --- Layout Grid --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.feature-section {
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.feature-text {
+    max-width: 800px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #ffebeb;
+    color: var(--primary);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.feature-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.feature-text p {
+    color: var(--gray);
+    margin-bottom: 25px;
+}
+
+.benefit-list {
+    list-style: none;
+}
+
+.benefit-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.benefit-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+/* --- Image Showcase Containers --- */
+.image-showcase {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+}
+
+/* 4-Column Layout for Admin Screenshots */
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* 3-Column Layout for Teacher & Parent Screenshots */
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Clean screenshot containers */
+.screenshot-wrapper {
+    background-color: var(--light);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border: 1px solid #e1e4e6;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screenshot-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.screenshot-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* --- Final CTA --- */
+.final-cta {
+    background-color: #eef2f3;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.final-cta h2 {
+    font-size: 2.25rem;
+    margin-bottom: 15px;
+}
+
+.final-cta p {
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+.btn.large {
+    font-size: 1.1rem;
+    padding: 15px 35px;
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--dark);
+    color: #a0aec0;
+    font-size: 0.9rem;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 992px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
     }
+}
 
-    /* Adjust image height for mobile */
-    .carousel-side {
-        height: 250px;
-        width: 100%;
-    }
-
-    /* Scale fonts for smaller screens */
-    h2 { font-size: 1.5rem; }
-    ul { font-size: 0.95rem; padding-left: 15px; }
-
-    /* Fix Nav for mobile */
-    .nav-container {
-        flex-direction: row; /* Keep logo and button on same line */
-        padding: 0 10px;
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
     }
     
-    .contact-btn {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.8rem;
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .feature-section {
+        margin-bottom: 80px;
+        gap: 25px;
+    }
+    
+    .grid-4, .grid-3 {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 }

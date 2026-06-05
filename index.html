@@ -1,102 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="fav_icon.png" type="image/png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DailyDot - Simple Childcare Management Software</title>
     <link rel="stylesheet" href="style.css">
-    <title>Daily Dot Kids | Operations Platform</title>
 </head>
 <body>
+
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-<a href="index.html" class="logo">Daily Dot Kids</a>
-            <a href="mailto:dailydot404@gmail.com?subject=Inquiry%20regarding%20DailyDotKids&body=Hi%20Team,%0A%0AI%20would%20like%20to%20learn%20more%20about%20the%20platform." 
-               class="contact-btn">Contact Us</a>
+            <a href="#" class="logo">Daily<span>Dot</span></a>
+            <ul class="nav-links">
+                <li><a href="#admin">Admins</a></li>
+                <li><a href="#teachers">Teachers</a></li>
+                <li><a href="#parents">Parents</a></li>
+                <li><a href="mailto:dailydot404@gmail.com?subject=Inquiry regarding DailyDotKids" class="nav-cta">Get Free Access</a></li>
+            </ul>
         </div>
     </nav>
 
-    <div class="container">
-        <!-- Admin Section: Details Right -->
-        <div class="section-wrapper" id="admin">
-            <div class="carousel-side">
-                <div class="slides">
-                    <img src="Admin1.png" alt="Admin View">
-                    <img src="Admin2.png" alt="Admin View">
-                    <img src="Admin3.png" alt="Admin View">
-                    <img src="Admin4.png" alt="Admin View">
-                </div>
-                <div class="dots-container"></div>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>The Simplest Way to Run Your Daycare</h1>
+            <p>DailyDot cuts out the hours of paperwork so your staff can focus on the kids, and parents stay connected in real time.</p>
+            <div class="hero-actions">
+                <a href="mailto:dailydot404@gmail.com?subject=Inquiry regarding DailyDotKids" class="btn btn-primary">Join the MVP Pilot</a>
+                <a href="#admin" class="btn btn-secondary">See How It Works</a>
             </div>
-           <div class="details-side">
-        <h2>Admin Hub</h2>
-        <ul>
-            <li><strong>Multi-Location Oversight:</strong> </li>
-            <li><strong>Centralized Student Management:</strong> </li>
-            <li><strong>Centralized Teacher Management:</strong> </li>
-            <li><strong>Announcement & Doc Sharing:</strong></li>
-            <li><strong>Category Management:</strong></li>
-        </ul>
-    </div>
         </div>
+    </header>
 
-        <!-- Teacher Section: Details Left (Flipped) -->
-        <div class="section-wrapper reverse" id="teacher">
-            <div class="carousel-side">
-                <div class="slides">
-                    <img src="Teacher1.png" alt="Teacher View">
-                    <img src="Teacher2.png" alt="Teacher View">
-                    <img src="Teacher3.png" alt="Teacher View">
-                </div>
-                <div class="dots-container"></div>
-            </div>
-            <div class="details-side">
-                <h2>Teacher Corner</h2>
-                <ul>
-                    <li><strong>3-tap activity and meal logging.</strong></li>
-                    <li><strong>Instant parent photo sharing.</strong></li>
-                    <li><strong>Intuitive clock-in/clock-out functionality.</strong></li>
+    <!-- Main Content Container -->
+    <main class="container">
+
+        <!-- Admin Section -->
+        <section id="admin" class="feature-section">
+            <div class="feature-text">
+                <span class="badge">For Directors & Admins</span>
+                <h2>Take control of your center without the paperwork chaos</h2>
+                <p>Managing a childcare center shouldn't mean drowning in forms. DailyDot centralizes your entire operation into one clean dashboard.</p>
+                <ul class="benefit-list">
+                    <li><strong>Multi-Location Oversight:</strong> Monitor enrollment and attendance across all your buildings seamlessly.</li>
+                    <li><strong>Category Management:</strong> Easily organize classrooms, age groups, and staff scheduling.</li>
+                    <li><strong>Real-Time Auditing:</strong> Instantly check ratios and student records to stay compliant.</li>
                 </ul>
             </div>
-        </div>
-        
-        <!-- Parent Section: Details Right -->
-        <div class="section-wrapper" id="parent">
-            <div class="carousel-side">
-                <div class="slides">
-                    <img src="Parent1.png" alt="Parent View">
-                    <img src="Parent2.png" alt="Parent View">
-                    <img src="Parent3.png" alt="Parent View">
-                </div>
-                <div class="dots-container"></div>
+            
+            <!-- Admin 4-Image Grid -->
+            <div class="image-showcase grid-4">
+                <div class="screenshot-wrapper"><img src="Admin1.png" alt="Admin Dashboard Overview"></div>
+                <div class="screenshot-wrapper"><img src="Admin2.png" alt="Admin Category Management"></div>
+                <div class="screenshot-wrapper"><img src="Admin3.png" alt="Admin Roster Control"></div>
+                <div class="screenshot-wrapper"><img src="Admin4.png" alt="Admin Multi-location Panel"></div>
             </div>
-            <div class="details-side">
-                <h2>Parent Portal</h2>
-                <ul>
-                    <li><strong>Real-time daily activity updates.</strong></li>
-                    <li><strong>Health and milestone notifications.</strong></li>
-                    <li><strong>Transparent progress reports.</strong></li>
+        </section>
+
+        <!-- Teachers Section -->
+        <section id="teachers" class="feature-section">
+            <div class="feature-text">
+                <span class="badge">For Classroom Teachers</span>
+                <h2>Log updates in 3 taps, then get back to the kids</h2>
+                <p>Teachers want to teach, not type. Our streamlined interface allows educators to update parents instantly without disrupting classroom flow.</p>
+                <ul class="benefit-list">
+                    <li><strong>3-Tap Activity Logging:</strong> Log meals, naps, bathroom breaks, and activities in under 5 seconds.</li>
+                    <li><strong>Instant Broadcasts:</strong> Send reminders or supply requests directly to a whole classroom at once.</li>
+                    <li><strong>Simple Attendance:</strong> Check kids in and out digitally with zero hassle.</li>
                 </ul>
             </div>
+            
+            <!-- Teacher 3-Image Grid -->
+            <div class="image-showcase grid-3">
+                <div class="screenshot-wrapper"><img src="Teacher1.png" alt="Teacher Activity Feed"></div>
+                <div class="screenshot-wrapper"><img src="Teacher2.png" alt="Teacher Quick Log Menu"></div>
+                <div class="screenshot-wrapper"><img src="Teacher3.png" alt="Teacher Attendance Check-in"></div>
+            </div>
+        </section>
+
+        <!-- Parents Section -->
+        <section id="parents" class="feature-section">
+            <div class="feature-text">
+                <span class="badge">For Families</span>
+                <h2>Keep parents connected, happy, and loyal</h2>
+                <p>Build trust from day one. Parents receive clean, beautifully formatted daily updates right on their phones, lowering communication friction.</p>
+                <ul class="benefit-list">
+                    <li><strong>Real-Time Feed:</strong> Parents check in on their child's day whenever they want.</li>
+                    <li><strong>Photo Moments:</strong> Securely share milestones and activities directly with families.</li>
+                    <li><strong>Direct Messaging:</strong> Keep all parent-teacher communications safe, professional, and in one place.</li>
+                </ul>
+            </div>
+            
+            <!-- Parent 3-Image Grid -->
+            <div class="image-showcase grid-3">
+                <div class="screenshot-wrapper"><img src="Parent1.png" alt="Parent Daily Summary Feed"></div>
+                <div class="screenshot-wrapper"><img src="Parent2.png" alt="Parent Photo Gallery Viewer"></div>
+                <div class="screenshot-wrapper"><img src="Parent3.png" alt="Parent Direct Message Hub"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Closing Call to Action -->
+    <section class="final-cta">
+        <div class="cta-content">
+            <h2>Ready to simplify your childcare center?</h2>
+            <p>We are currently accepting a limited number of local daycares for our early-access MVP pilot. No setup fees, no complex onboarding.</p>
+            <a href="mailto:dailydot404@gmail.com?subject=Inquiry regarding DailyDotKids" class="btn btn-primary large">Claim Your Free Pilot Space</a>
         </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 DailyDot. Built for the future of early childhood education.</p>
+    </footer>
 
     <script src="script.js"></script>
-    <div id="lightbox" class="lightbox">
-    <span class="close-lightbox" onclick="closeModal()">&times;</span>
-    <span class="nav-arrow prev" onclick="changeSlide(-1)">&#10094;</span>
-    <img id="lightbox-img">
-    <span class="nav-arrow next" onclick="changeSlide(1)">&#10095;</span>
-</div>
-  <footer style="text-align: center; padding: 2rem; color: #64748b; font-size: 0.9rem; border-top: 1px solid #334155; margin-top: 40px;">
-    <p>&copy; 2026 Anthor Canada Corp. All rights reserved.</p>
-    <div style="margin-top: 10px;">
-<a href="privacy.html" style="color: #38bdf8; text-decoration: none; margin: 0 10px;">Privacy Policy</a> | 
-<a href="terms.html" style="color: #38bdf8; text-decoration: none; margin: 0 10px;">Terms of Service</a>    </div>
-</footer>
-
-    <script src="script.js"></script>
-</body>
 </body>
 </html>
