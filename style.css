@@ -18,7 +18,14 @@ body {
     border-bottom: 1px solid #334155; z-index: 1000; 
 }
 .nav-container { width: 100%; max-width: 1200px; display: flex; justify-content: space-between; align-items: center; }
-.logo { font-size: 1.5rem; font-weight: bold; color: #ffffff; }
+.logo {
+    font-size: 1.8rem;        /* Increases the font size */
+    font-weight: 700;         /* Makes it bold for better presence */
+    color: #fb923c;           /* Orangish shade */
+    text-transform: uppercase; /* Gives it a modern, branding look */
+    letter-spacing: 1px;      /* Slightly spaced for readability */
+    cursor: pointer;
+}
 .contact-btn { 
     background: #f59e0b; color: #0f172a; padding: 0.5rem 1.5rem; 
     border-radius: 6px; text-decoration: none; font-weight: 700; transition: background 0.3s;
