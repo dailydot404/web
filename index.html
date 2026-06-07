@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DailyDotKids — simple childcare management for directors, teachers, and parents. Three dedicated apps, one connected daycare platform.">
     <title>DailyDotKids - Simple Childcare Management Software</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">Daily<span>DotKids</span></a>
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-links">
+                <li><a href="#platform">Platform</a></li>
                 <li><a href="#admin">Admins</a></li>
                 <li><a href="#teachers">Teachers</a></li>
                 <li><a href="#parents">Parents</a></li>
@@ -21,109 +27,173 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
             <h1>The Simplest Way to Run Your Daycare</h1>
-            <p>DailyDotKids cuts out the hours of paperwork so your staff can focus on the kids, and parents stay connected in real time.</p>
+            <p>DailyDotKids cuts out the hours of paperwork so your staff can focus on the kids, and parents stay connected throughout the day.</p>
+            <div class="hero-chips">
+                <span class="chip">Admin App</span>
+                <span class="chip">Teacher App</span>
+                <span class="chip">Parent App</span>
+            </div>
             <div class="hero-actions">
                 <a href="mailto:dailydot404@gmail.com?subject=Inquiry regarding DailyDotKids" class="btn btn-primary">Join the MVP Pilot</a>
-                <a href="#admin" class="btn btn-secondary">See How It Works</a>
+                <a href="#platform" class="btn btn-secondary">See How It Works</a>
             </div>
         </div>
     </header>
 
-    <!-- Main Content Container -->
     <main class="container">
 
-        <!-- Admin Section -->
+        <section id="platform" class="platform-section">
+            <div class="section-header">
+                <span class="badge">One Platform, Three Apps</span>
+                <h2>Everything your center needs — connected end to end</h2>
+                <p>Directors run the center from the Admin app. Teachers log the day from the classroom. Parents follow along from their phones. Everyone joins through secure invitation codes.</p>
+            </div>
+            <div class="platform-grid">
+                <article class="platform-card">
+                    <div class="platform-icon admin">A</div>
+                    <h3>Admin App</h3>
+                    <p>Locations, classes, rosters, categories, bulletins, daily reports, and staff time logs.</p>
+                </article>
+                <article class="platform-card">
+                    <div class="platform-icon teacher">T</div>
+                    <h3>Teacher App</h3>
+                    <p>Fast activity logging, child check-in/out, clock in/out, and daily report generation.</p>
+                </article>
+                <article class="platform-card">
+                    <div class="platform-icon parent">P</div>
+                    <h3>Parent App</h3>
+                    <p>Live activity feed, daily reports, photo moments, and director announcements.</p>
+                </article>
+            </div>
+        </section>
+
         <section id="admin" class="feature-split">
             <div class="feature-text">
-                <span class="badge">For Directors & Admins</span>
+                <span class="badge">For Directors &amp; Admins</span>
                 <h2>Take control of your center without the paperwork chaos</h2>
-                <p>Managing a childcare center shouldn't mean drowning in forms. DailyDotKids centralizes your entire operation into one clean dashboard.</p>
+                <p>Managing a childcare center shouldn't mean drowning in forms. DailyDotKids centralizes locations, people, and communication into one clean dashboard.</p>
                 <ul class="benefit-list">
-                    <li><strong>Multi-Location Oversight:</strong> Monitor enrollment and attendance across all your buildings seamlessly.</li>
-                    <li><strong>Category Management:</strong> Easily organize classrooms, age groups, and staff scheduling.</li>
-                    <li><strong>Real-Time Auditing:</strong> Instantly check ratios and student records to stay compliant.</li>
+                    <li><strong>Multi-Location Management:</strong> Create locations, organize classrooms and age groups, and manage rosters across every building.</li>
+                    <li><strong>Enrollment &amp; Rosters:</strong> Add students and teachers, assign them to classes, and keep parent contact and emergency info on file.</li>
+                    <li><strong>Category Configuration:</strong> Customize activity types — meals, naps, check-in/out, photos, notes, and more — for your center's workflow.</li>
+                    <li><strong>Bulletins &amp; Daily Reports:</strong> Send targeted announcements to families and review student activity timelines with PDF export.</li>
+                    <li><strong>Staff Time Logs:</strong> Review teacher clock-in and clock-out records across your team, with outlier session highlighting.</li>
+                    <li><strong>Invitation Onboarding:</strong> Invite teachers and parents with secure codes — no manual account setup required.</li>
                 </ul>
             </div>
-            
+
             <div class="feature-visual">
-                <!-- Admin 4-Image Grid -->
-                <div class="image-showcase grid-4">
-                    <div class="screenshot-wrapper"><img src="Admin1.png" alt="Admin Dashboard Overview"></div>
-                    <div class="screenshot-wrapper"><img src="Admin2.png" alt="Admin Category Management"></div>
-                    <div class="screenshot-wrapper"><img src="Admin3.png" alt="Admin Roster Control"></div>
-                    <div class="screenshot-wrapper"><img src="Admin4.png" alt="Admin Multi-location Panel"></div>
+                <div class="image-showcase grid-4" data-gallery="Admin App">
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Admin locations list">
+                        <img src="Admin1.png" alt="Admin locations list across multiple buildings" loading="lazy">
+                    </button>
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Admin student roster">
+                        <img src="Admin4.png" alt="Admin student roster with class and location assignments" loading="lazy">
+                    </button>
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Admin category configuration">
+                        <img src="Admin2.png" alt="Admin activity category configuration screen" loading="lazy">
+                    </button>
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Admin teacher list">
+                        <img src="Admin3.png" alt="Admin teacher list with time logs tab" loading="lazy">
+                    </button>
                 </div>
             </div>
         </section>
 
-        <!-- Teachers Section -->
         <section id="teachers" class="feature-split reverse">
             <div class="feature-text">
                 <span class="badge">For Classroom Teachers</span>
                 <h2>Log updates in 3 taps, then get back to the kids</h2>
-                <p>Teachers want to teach, not type. Our streamlined interface allows educators to update parents instantly without disrupting classroom flow.</p>
+                <p>Teachers want to teach, not type. Log activities from a class roster, generate end-of-day reports, and keep parents in the loop without disrupting classroom flow.</p>
                 <ul class="benefit-list">
-                    <li><strong>3-Tap Activity Logging:</strong> Log meals, naps, bathroom breaks, and activities in under 5 seconds.</li>
-                    <li><strong>Instant Broadcasts:</strong> Send reminders or supply requests directly to a whole classroom at once.</li>
-                    <li><strong>Simple Attendance:</strong> Check kids in and out digitally with zero hassle.</li>
+                    <li><strong>3-Tap Activity Logging:</strong> Log meals, naps, bathroom breaks, photos, moods, and notes in seconds — for one child or in bulk.</li>
+                    <li><strong>Check-In &amp; Check-Out:</strong> Record child arrivals and pickups through configurable activity categories, including who picked up.</li>
+                    <li><strong>Clock In &amp; Out:</strong> Teachers clock in before logging activities; directors review staff time logs from the admin dashboard.</li>
+                    <li><strong>Daily Reports:</strong> Generate summarized end-of-day reports for individual students or your whole class, and browse report history.</li>
+                    <li><strong>Class Roster at a Glance:</strong> See allergies, parent notes, and emergency contacts right on each student's card.</li>
                 </ul>
             </div>
-            
+
             <div class="feature-visual">
-                <!-- Teacher 3-Image Grid -->
-                <div class="image-showcase grid-3">
-                    <div class="screenshot-wrapper"><img src="Teacher1.png" alt="Teacher Activity Feed"></div>
-                    <div class="screenshot-wrapper"><img src="Teacher2.png" alt="Teacher Quick Log Menu"></div>
-                    <div class="screenshot-wrapper"><img src="Teacher3.png" alt="Teacher Attendance Check-in"></div>
+                <div class="image-showcase grid-3" data-gallery="Teacher App">
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Teacher class roster">
+                        <img src="Teacher2.png" alt="Teacher class roster with one-tap activity logging buttons" loading="lazy">
+                    </button>
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Teacher clock in and out">
+                        <img src="Teacher1.png" alt="Teacher clock in and clock out screen" loading="lazy">
+                    </button>
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Teacher student card">
+                        <img src="Teacher3.png" alt="Teacher student card showing allergies, notes, and quick actions" loading="lazy">
+                    </button>
                 </div>
             </div>
         </section>
 
-        <!-- Parents Section -->
         <section id="parents" class="feature-split">
             <div class="feature-text">
                 <span class="badge">For Families</span>
                 <h2>Keep parents connected, happy, and loyal</h2>
-                <p>Build trust from day one. Parents receive clean, beautifully formatted daily updates right on their phones, lowering communication friction.</p>
+                <p>Build trust from day one. Parents receive clean, beautifully formatted updates right on their phones — from live classroom moments to end-of-day summaries.</p>
                 <ul class="benefit-list">
-                    <li><strong>Real-Time Feed:</strong> Parents check in on their child's day whenever they want.</li>
-                    <li><strong>Photo Moments:</strong> Securely share milestones and activities directly with families.</li>
-                    <li><strong>Important Announcements:</strong> Parents get instant, direct notifications regarding updates and announcements from Directors or Admins.</li>
+                    <li><strong>Live Activity Feed:</strong> Follow teacher-logged updates throughout the day, organized by date with photos, moods, and notes.</li>
+                    <li><strong>Daily Reports:</strong> Review summarized end-of-day reports by category — meals, naps, activities, and more — with timestamps and photos.</li>
+                    <li><strong>Photo Moments:</strong> View activity photos from the classroom and update your child's profile picture anytime.</li>
+                    <li><strong>Bulletins &amp; Announcements:</strong> Read director and admin announcements in-app, with PDF and image attachments and read/unread tracking.</li>
+                    <li><strong>Multi-Child Profiles:</strong> Manage allergies, emergency contacts, and other details for every child linked to your account.</li>
                 </ul>
             </div>
-            
+
             <div class="feature-visual">
-                <!-- Parent 3-Image Grid -->
-                <div class="image-showcase grid-3">
-                    <div class="screenshot-wrapper"><img src="Parent1.png" alt="Parent Daily Summary Feed"></div>
-                    <div class="screenshot-wrapper"><img src="Parent2.png" alt="Parent Photo Gallery Viewer"></div>
-                    <div class="screenshot-wrapper"><img src="Parent3.png" alt="Parent Administration Announcements Hub"></div>
+                <div class="image-showcase grid-3" data-gallery="Parent App">
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent child profiles">
+                        <img src="Parent2.png" alt="Parent child profiles with allergies and emergency info" loading="lazy">
+                    </button>
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent bulletin inbox">
+                        <img src="Parent3.png" alt="Parent bulletin and announcements inbox" loading="lazy">
+                    </button>
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent activity feed">
+                        <img src="Parent1.png" alt="Parent live activity feed with daily reports toggle" loading="lazy">
+                    </button>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Closing Call to Action -->
     <section class="final-cta">
         <div class="cta-content">
             <h2>Ready to simplify your childcare center?</h2>
-            <p>We are currently accepting a limited number of local daycares for our early-access MVP pilot. No setup fees, no complex onboarding.</p>
+            <p>We are currently accepting a limited number of local daycares for our early-access MVP pilot. No setup fees, no complex onboarding — just three apps and invitation-based setup.</p>
             <a href="mailto:dailydot404@gmail.com?subject=Inquiry regarding DailyDotKids" class="btn btn-primary large">Claim Your Free Pilot Space</a>
         </div>
     </section>
 
-   <footer class="footer">
-    <p>&copy; 2026 Anthor Canada corp. All rights reserved. Built for the future of early childhood education.</p>
-    <p style="margin-top: 10px; font-size: 0.8rem;">
-        <a href="privacy.html" style="color: #a0aec0; text-decoration: none; margin: 0 10px;">Privacy Policy</a> | 
-        <a href="terms.html" style="color: #a0aec0; text-decoration: none; margin: 0 10px;">Terms of Service</a>
-    </p>
-</footer>
+    <footer class="footer">
+        <p>&copy; 2026 Anthor Canada corp. All rights reserved. Built for the future of early childhood education.</p>
+        <p class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <span>|</span>
+            <a href="terms.html">Terms of Service</a>
+        </p>
+    </footer>
+
+    <div id="lightbox" class="lightbox" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Screenshot gallery">
+        <button type="button" class="lightbox-backdrop" aria-label="Close gallery"></button>
+        <button type="button" class="lightbox-close" aria-label="Close gallery">&times;</button>
+        <button type="button" class="lightbox-nav lightbox-prev" aria-label="Previous screenshot" hidden>&lsaquo;</button>
+        <button type="button" class="lightbox-nav lightbox-next" aria-label="Next screenshot" hidden>&rsaquo;</button>
+        <div class="lightbox-panel">
+            <p class="lightbox-meta">
+                <span class="lightbox-gallery-name"></span>
+                <span class="lightbox-counter"></span>
+            </p>
+            <img class="lightbox-image" src="" alt="">
+            <p class="lightbox-caption"></p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
