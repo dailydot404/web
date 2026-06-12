@@ -29,7 +29,8 @@ body {
 }
 
 body.nav-open,
-body.lightbox-open {
+body.lightbox-open,
+body.inquiry-open {
     overflow: hidden;
 }
 
@@ -124,6 +125,10 @@ body.lightbox-open {
     padding: 8px 16px;
     border-radius: 5px;
     font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
 }
 
 .nav-links .nav-cta:hover,
@@ -208,6 +213,13 @@ body.lightbox-open {
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition);
+}
+
+button.btn {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
 }
 
 .btn-primary {
@@ -721,6 +733,142 @@ body.lightbox-open {
     font-size: 0.95rem;
     text-align: center;
     max-width: 100%;
+}
+
+/* --- Inquiry modal (Formspree) --- */
+.inquiry-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.inquiry-modal[hidden] {
+    display: none;
+}
+
+.inquiry-backdrop {
+    position: absolute;
+    inset: 0;
+    border: none;
+    background: rgba(15, 23, 42, 0.55);
+    cursor: pointer;
+}
+
+.inquiry-panel {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    background: var(--white);
+    border-radius: 16px;
+    padding: 28px 24px 24px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+    animation: lightbox-in 0.25s ease;
+}
+
+.inquiry-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    background: var(--light);
+    color: var(--dark);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.inquiry-close:hover {
+    background: #e9ecef;
+}
+
+.inquiry-panel h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    padding-right: 32px;
+}
+
+.inquiry-lead {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.inquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.inquiry-field label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--dark);
+}
+
+.inquiry-field input,
+.inquiry-field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font: inherit;
+    color: var(--dark);
+    background: var(--white);
+}
+
+.inquiry-field input:focus,
+.inquiry-field textarea:focus {
+    outline: 2px solid rgba(42, 183, 202, 0.35);
+    border-color: var(--secondary);
+}
+
+.inquiry-field textarea {
+    resize: vertical;
+    min-height: 96px;
+}
+
+.inquiry-honeypot {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.inquiry-error {
+    color: #b42318;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.inquiry-submit {
+    width: 100%;
+    margin-top: 4px;
+}
+
+.inquiry-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.inquiry-success-view {
+    text-align: center;
+    padding: 12px 0 4px;
+}
+
+.inquiry-success-view p {
+    color: var(--gray);
+    margin: 12px 0 24px;
 }
 
 /* --- Final CTA --- */
