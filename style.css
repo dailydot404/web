@@ -20,6 +20,10 @@
     box-sizing: border-box;
 }
 
+[hidden] {
+    display: none !important;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: var(--dark);
@@ -737,17 +741,17 @@ button.btn {
 
 /* --- Inquiry modal (Formspree) --- */
 .inquiry-modal {
+    display: none;
     position: fixed;
     inset: 0;
     z-index: 1100;
-    display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
 }
 
-.inquiry-modal[hidden] {
-    display: none;
+.inquiry-modal.is-open {
+    display: flex;
 }
 
 .inquiry-backdrop {
@@ -930,9 +934,9 @@ button.btn {
 
 /* --- Legal pages --- */
 .legal-page {
-    padding-top: 120px;
-    padding-bottom: 60px;
+    padding: 120px 20px 60px;
     max-width: 760px;
+    margin: 0 auto;
 }
 
 .legal-page h1 {
@@ -967,15 +971,7 @@ button.btn {
 }
 
 .legal-contact-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    align-items: center;
     margin-top: 8px;
-}
-
-.legal-contact-actions a {
-    color: var(--secondary);
 }
 
 /* --- Mobile --- */

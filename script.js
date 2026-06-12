@@ -270,6 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showInquiryFormView();
         inquiryLastFocused = document.activeElement;
         inquiryModal.hidden = false;
+        inquiryModal.classList.add('is-open');
         inquiryModal.setAttribute('aria-hidden', 'false');
         document.body.classList.add('inquiry-open');
         const firstField = document.getElementById('inquiry-name');
@@ -278,6 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function closeInquiryModal() {
         inquiryModal.hidden = true;
+        inquiryModal.classList.remove('is-open');
         inquiryModal.setAttribute('aria-hidden', 'true');
         document.body.classList.remove('inquiry-open');
         if (inquiryLastFocused) {
