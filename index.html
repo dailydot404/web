@@ -24,7 +24,7 @@
                 <li><a href="#admin">Admins</a></li>
                 <li><a href="#teachers">Teachers</a></li>
                 <li><a href="#parents">Parents</a></li>
-                <li><a href="mailto:dailydot404@gmail.com?subject=Inquiry regarding DailyDotKids" class="nav-cta">Get Free Access</a></li>
+                <li><button type="button" class="nav-cta open-inquiry">Get Free Access</button></li>
             </ul>
         </div>
     </nav>
@@ -41,7 +41,7 @@
                 <span class="chip chip-highlight">Shared Classroom Device</span>
             </div>
             <div class="hero-actions">
-                <a href="mailto:dailydot404@gmail.com?subject=Inquiry regarding DailyDotKids" class="btn btn-primary">Join the MVP Pilot</a>
+                <button type="button" class="btn btn-primary open-inquiry">Join the MVP Pilot</button>
                 <a href="#platform" class="btn btn-secondary">See How It Works</a>
             </div>
         </div>
@@ -249,7 +249,7 @@
         <div class="cta-content">
             <h2>Ready to simplify your childcare center?</h2>
             <p>We are currently accepting a limited number of daycares for our early-access MVP pilot — multi-location centers and home-based sites. No setup fees, no complex onboarding: owner team controls, invitation-based setup, and shared classroom tablets when you need them.</p>
-            <a href="mailto:dailydot404@gmail.com?subject=Inquiry regarding DailyDotKids" class="btn btn-primary large">Claim Your Free Pilot Space</a>
+            <button type="button" class="btn btn-primary large open-inquiry">Claim Your Free Pilot Space</button>
         </div>
     </section>
 
@@ -274,6 +274,43 @@
             </p>
             <img class="lightbox-image" src="" alt="">
             <p class="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <div id="inquiry-modal" class="inquiry-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="inquiry-modal-title">
+        <button type="button" class="inquiry-backdrop" aria-label="Close form"></button>
+        <div class="inquiry-panel">
+            <button type="button" class="inquiry-close" aria-label="Close form">&times;</button>
+            <div class="inquiry-form-view" id="inquiry-form-view">
+                <h2 id="inquiry-modal-title">Join the MVP Pilot</h2>
+                <p class="inquiry-lead">Tell us about your center and we’ll reach out with free early-access details.</p>
+                <form id="inquiry-form" class="inquiry-form" novalidate>
+                    <div class="inquiry-field">
+                        <label for="inquiry-name">Name</label>
+                        <input id="inquiry-name" name="name" type="text" autocomplete="name" required>
+                    </div>
+                    <div class="inquiry-field">
+                        <label for="inquiry-email">Email</label>
+                        <input id="inquiry-email" name="email" type="email" autocomplete="email" required>
+                    </div>
+                    <div class="inquiry-field">
+                        <label for="inquiry-daycare">Daycare name</label>
+                        <input id="inquiry-daycare" name="daycare_name" type="text" autocomplete="organization">
+                    </div>
+                    <div class="inquiry-field">
+                        <label for="inquiry-message">Message</label>
+                        <textarea id="inquiry-message" name="message" rows="4" placeholder="Number of locations, children, or anything else we should know."></textarea>
+                    </div>
+                    <input type="text" name="_gotcha" class="inquiry-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <p class="inquiry-error" id="inquiry-error" hidden></p>
+                    <button type="submit" class="btn btn-primary inquiry-submit" id="inquiry-submit">Send inquiry</button>
+                </form>
+            </div>
+            <div class="inquiry-success-view" id="inquiry-success-view" hidden>
+                <h2>Thanks — we got it!</h2>
+                <p>We’ll review your inquiry and get back to you at the email you provided.</p>
+                <button type="button" class="btn btn-primary" id="inquiry-done">Close</button>
+            </div>
         </div>
     </div>
 
