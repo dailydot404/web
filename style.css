@@ -2,10 +2,15 @@
 :root {
     --primary: #ff5a5f;
     --secondary: #2ab7ca;
+    --purple: #6c63ff;
+    --purple-bg: #f0efff;
+    --purple-text: #4f46b8;
     --dark: #2b2d42;
     --light: #f8f9fa;
     --white: #ffffff;
     --gray: #6c757d;
+    --teal-bg: #e8f7f9;
+    --teal-text: #1a8a98;
     --transition: all 0.3s ease;
 }
 
@@ -97,13 +102,14 @@ body.lightbox-open {
     display: flex;
     list-style: none;
     align-items: center;
-    gap: 25px;
+    gap: 22px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--dark);
     font-weight: 500;
+    font-size: 0.95rem;
     transition: var(--transition);
 }
 
@@ -117,6 +123,7 @@ body.lightbox-open {
     color: var(--white);
     padding: 8px 16px;
     border-radius: 5px;
+    font-size: 0.95rem;
 }
 
 .nav-links .nav-cta:hover,
@@ -133,7 +140,7 @@ body.lightbox-open {
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 820px;
     margin: 0 auto;
 }
 
@@ -143,6 +150,16 @@ body.lightbox-open {
     line-height: 1.2;
     margin-bottom: 20px;
     letter-spacing: -1px;
+}
+
+.hero-tagline {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 14px;
 }
 
 .hero p {
@@ -168,6 +185,12 @@ body.lightbox-open {
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
+}
+
+.chip-highlight {
+    background-color: var(--teal-bg);
+    border-color: #b8e8ee;
+    color: var(--teal-text);
 }
 
 /* --- Buttons --- */
@@ -305,6 +328,14 @@ body.lightbox-open {
     flex-direction: row-reverse;
 }
 
+.highlight-section {
+    background: linear-gradient(135deg, #f8fdfe 0%, #eef9fb 100%);
+    border: 1px solid #d4eff3;
+    border-radius: 20px;
+    padding: 48px 40px;
+    margin-bottom: 120px;
+}
+
 .feature-text {
     flex: 1;
     max-width: 520px;
@@ -325,6 +356,121 @@ body.lightbox-open {
     font-weight: 700;
     margin-bottom: 15px;
     text-transform: uppercase;
+}
+
+.badge-teal {
+    background-color: var(--teal-bg);
+    color: var(--teal-text);
+}
+
+.badge-purple {
+    background-color: var(--purple-bg);
+    color: var(--purple-text);
+}
+
+/* --- Roles Section --- */
+.roles-section {
+    margin-bottom: 120px;
+}
+
+.role-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+.role-card {
+    background-color: var(--white);
+    border: 1px solid #e1e4e6;
+    border-radius: 16px;
+    padding: 28px 24px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.role-card.role-owner {
+    border-top: 4px solid var(--primary);
+}
+
+.role-card.role-admin {
+    border-top: 4px solid var(--purple);
+}
+
+.role-label {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--gray);
+    margin-bottom: 10px;
+}
+
+.role-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+}
+
+.role-card p {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+}
+
+.role-points {
+    list-style: none;
+}
+
+.role-points li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.role-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.permission-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.pill {
+    display: inline-block;
+    background-color: var(--purple-bg);
+    color: var(--purple-text);
+    border: 1px solid #d8d4ff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.roles-footnote {
+    text-align: center;
+    color: var(--gray);
+    font-size: 0.95rem;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* --- Scroll reveal --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .feature-text h2 {
@@ -364,12 +510,31 @@ body.lightbox-open {
     width: 100%;
 }
 
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .grid-4 {
     grid-template-columns: repeat(2, 1fr);
 }
 
 .grid-3 {
     grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-5 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.grid-5 .screenshot-wrapper:nth-child(1),
+.grid-5 .screenshot-wrapper:nth-child(2),
+.grid-5 .screenshot-wrapper:nth-child(3) {
+    grid-column: span 2;
+}
+
+.grid-5 .screenshot-wrapper:nth-child(4),
+.grid-5 .screenshot-wrapper:nth-child(5) {
+    grid-column: span 3;
 }
 
 .screenshot-wrapper {
@@ -403,6 +568,8 @@ body.lightbox-open {
     height: auto;
     display: block;
     object-fit: contain;
+    min-height: 120px;
+    background: linear-gradient(135deg, #f0f2f4 0%, #e8eaed 100%);
 }
 
 /* --- Lightbox --- */
@@ -610,12 +777,26 @@ body.lightbox-open {
         margin-bottom: 80px;
     }
 
+    .highlight-section {
+        padding: 32px 24px;
+        margin-bottom: 80px;
+    }
+
     .feature-text {
         max-width: 100%;
     }
 
-    .platform-grid {
+    .platform-grid,
+    .role-grid {
         grid-template-columns: 1fr;
+    }
+
+    .roles-section {
+        margin-bottom: 80px;
+    }
+
+    .grid-5 .screenshot-wrapper {
+        grid-column: span 6 !important;
     }
 }
 
@@ -634,7 +815,7 @@ body.lightbox-open {
         flex-direction: column;
         align-items: flex-start;
         padding: 90px 28px 28px;
-        gap: 20px;
+        gap: 18px;
         box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
         transform: translateX(100%);
         transition: transform 0.3s ease;
@@ -659,10 +840,16 @@ body.lightbox-open {
         gap: 10px;
     }
 
+    .grid-2,
     .grid-4,
-    .grid-3 {
+    .grid-3,
+    .grid-5 {
         grid-template-columns: 1fr;
         gap: 12px;
+    }
+
+    .grid-5 .screenshot-wrapper {
+        grid-column: span 1 !important;
     }
 
     .section-header h2,

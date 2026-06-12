@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DailyDotKids — simple childcare management for directors, teachers, and parents. Three dedicated apps, one connected daycare platform.">
-    <title>DailyDotKids - Simple Childcare Management Software</title>
+    <meta name="description" content="DailyDotKids — daycare management for owners, teachers, and parents. Three dedicated apps, one connected platform with owner team controls, shared classroom tablets, and real-time family updates.">
+    <title>DailyDotKids - Daycare, simplified.</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,6 +19,8 @@
             </button>
             <ul class="nav-links">
                 <li><a href="#platform">Platform</a></li>
+                <li><a href="#roles">Roles</a></li>
+                <li><a href="#shared-device">Shared Tablet</a></li>
                 <li><a href="#admin">Admins</a></li>
                 <li><a href="#teachers">Teachers</a></li>
                 <li><a href="#parents">Parents</a></li>
@@ -28,13 +30,15 @@
     </nav>
 
     <header class="hero">
-        <div class="hero-content">
+        <div class="hero-content reveal">
+            <p class="hero-tagline">Daycare, simplified.</p>
             <h1>The Simplest Way to Run Your Daycare</h1>
-            <p>DailyDotKids cuts out the hours of paperwork so your staff can focus on the kids, and parents stay connected throughout the day.</p>
+            <p>Owners stay in control. Teachers log the day in three taps. Parents follow along in real time — on personal phones or a shared classroom tablet.</p>
             <div class="hero-chips">
-                <span class="chip">Admin App</span>
+                <span class="chip">Owner &amp; Admin App</span>
                 <span class="chip">Teacher App</span>
                 <span class="chip">Parent App</span>
+                <span class="chip chip-highlight">Shared Classroom Device</span>
             </div>
             <div class="hero-actions">
                 <a href="mailto:dailydot404@gmail.com?subject=Inquiry regarding DailyDotKids" class="btn btn-primary">Join the MVP Pilot</a>
@@ -45,117 +49,195 @@
 
     <main class="container">
 
-        <section id="platform" class="platform-section">
+        <section id="platform" class="platform-section reveal">
             <div class="section-header">
                 <span class="badge">One Platform, Three Apps</span>
                 <h2>Everything your center needs — connected end to end</h2>
-                <p>Directors run the center from the Admin app. Teachers log the day from the classroom. Parents follow along from their phones. Everyone joins through secure invitation codes.</p>
+                <p>Owners and admins run the center from the Admin app. Teachers capture the classroom from phones or a shared tablet. Parents stay informed from theirs. Everyone joins through secure invitation codes — for multi-location centers and home-based daycares.</p>
             </div>
             <div class="platform-grid">
                 <article class="platform-card">
                     <div class="platform-icon admin">A</div>
                     <h3>Admin App</h3>
-                    <p>Locations, classes, rosters, categories, bulletins, daily reports, and staff time logs.</p>
+                    <p>Team management, delegated permissions, locations, classes, rosters, categories, bulletins, shared-device setup, and staff time logs.</p>
                 </article>
                 <article class="platform-card">
                     <div class="platform-icon teacher">T</div>
                     <h3>Teacher App</h3>
-                    <p>Fast activity logging, child check-in/out, clock in/out, and daily report generation.</p>
+                    <p>3-tap activity logging, class diary, record history, clock in/out, PIN switching on shared tablets, and daily reports.</p>
                 </article>
                 <article class="platform-card">
                     <div class="platform-icon parent">P</div>
                     <h3>Parent App</h3>
-                    <p>Live activity feed, daily reports, photo moments, and director announcements.</p>
+                    <p>Live activity feed, daily reports, photo media gallery, child details, and director announcements.</p>
                 </article>
             </div>
         </section>
 
-        <section id="admin" class="feature-split">
+        <section id="roles" class="roles-section reveal">
+            <div class="section-header">
+                <span class="badge badge-purple">Owner &amp; Team Controls</span>
+                <h2>Give owners full control — delegate the rest</h2>
+                <p>Multi-location centers and home-based daycares both get a clear hierarchy: one owner account with complete visibility, plus location admins who only see and change what you allow.</p>
+            </div>
+            <div class="role-grid">
+                <article class="role-card role-owner">
+                    <div class="role-label">Owner</div>
+                    <h3>Center-wide control</h3>
+                    <p>Full access to every location, class, and setting. Invite and manage your admin team, assign campuses, and decide who can change what.</p>
+                    <ul class="role-points">
+                        <li>All locations and classes</li>
+                        <li>Team invites, updates, and deactivation</li>
+                        <li>Device mode, categories, and policies</li>
+                    </ul>
+                </article>
+                <article class="role-card role-admin">
+                    <div class="role-label">Location Admin</div>
+                    <h3>Scoped day-to-day ops</h3>
+                    <p>Perfect for campus directors or lead teachers. Access only assigned locations and only the settings the owner delegates.</p>
+                    <div class="permission-pills">
+                        <span class="pill">Device &amp; shared tablet</span>
+                        <span class="pill">Clock-in policy</span>
+                        <span class="pill">Categories</span>
+                        <span class="pill">Locations</span>
+                        <span class="pill">Classes</span>
+                    </div>
+                </article>
+            </div>
+            <p class="roles-footnote">Home-based daycares use a single owner account with full access. Multi-location centers can add campus-specific admins without sharing owner credentials.</p>
+        </section>
+
+        <section id="shared-device" class="feature-split highlight-section reveal">
             <div class="feature-text">
-                <span class="badge">For Directors &amp; Admins</span>
-                <h2>Take control of your center without the paperwork chaos</h2>
-                <p>Managing a childcare center shouldn't mean drowning in forms. DailyDotKids centralizes locations, people, and communication into one clean dashboard.</p>
+                <span class="badge badge-teal">Shared Classroom Device</span>
+                <h2>One tablet per class — every teacher, zero password juggling</h2>
+                <p>Many centers keep a classroom iPad at the check-in desk. Owners enable shared mode once — location admins with device permission can help tune session timeouts. Teachers switch with a quick PIN and the tablet locks when idle.</p>
                 <ul class="benefit-list">
+                    <li><strong>Owner-controlled setup:</strong> Choose individual devices or shared classroom mode per center, with configurable teacher session and tablet lock timeouts.</li>
+                    <li><strong>Delegated device settings:</strong> Grant trusted admins permission to adjust shared-tablet timeouts without handing over full owner access.</li>
+                    <li><strong>PIN teacher switching:</strong> After the first sign-in, teachers hand off the tablet with a 4-digit PIN — no re-entering email and password between shifts.</li>
+                    <li><strong>Secure PIN reset:</strong> Owners and admins generate a new teacher device PIN by email — the PIN is never shown in the app for security.</li>
+                    <li><strong>Clock in/out on shared tablets:</strong> Staff clock in before logging activities; owners review time logs and outlier sessions from the admin dashboard.</li>
+                    <li><strong>Diary &amp; record stay visible:</strong> Class diary notes and activity history remain browsable on the shared device — only logging and clock actions require the active teacher.</li>
+                </ul>
+            </div>
+
+            <div class="feature-visual">
+                <div class="image-showcase grid-2" data-gallery="Shared Classroom Device">
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Admin shared device settings">
+                        <img src="images/admin/shared-device.png" alt="Admin settings for shared classroom device mode with session timeouts" loading="lazy">
+                    </button>
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Teacher clock on shared device">
+                        <img src="images/teacher/clock.png" alt="Teacher clock in and out screen on a shared classroom tablet" loading="lazy">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="admin" class="feature-split reveal">
+            <div class="feature-text">
+                <span class="badge">For Owners &amp; Admins</span>
+                <h2>Run your center without the paperwork chaos</h2>
+                <p>Whether you operate one home-based site or multiple campuses, DailyDotKids centralizes people, communication, and compliance into one clean dashboard — with role-based access built in.</p>
+                <ul class="benefit-list">
+                    <li><strong>Team Management:</strong> Owners invite admins, assign locations, grant delegated permissions, and deactivate accounts without losing history.</li>
                     <li><strong>Multi-Location Management:</strong> Create locations, organize classrooms and age groups, and manage rosters across every building.</li>
                     <li><strong>Enrollment &amp; Rosters:</strong> Add students and teachers, assign them to classes, and keep parent contact and emergency info on file.</li>
                     <li><strong>Category Configuration:</strong> Customize activity types — meals, naps, check-in/out, photos, notes, and more — for your center's workflow.</li>
-                    <li><strong>Bulletins &amp; Daily Reports:</strong> Send targeted announcements to families and review student activity timelines with PDF export.</li>
-                    <li><strong>Staff Time Logs:</strong> Review teacher clock-in and clock-out records across your team, with outlier session highlighting.</li>
-                    <li><strong>Invitation Onboarding:</strong> Invite teachers and parents with secure codes — no manual account setup required.</li>
+                    <li><strong>Bulletins &amp; Announcements:</strong> Send targeted announcements to families with PDF and image attachments and read/unread tracking.</li>
+                    <li><strong>Class Diary &amp; Class Record:</strong> Review class-wide diary notes and browse filtered activity and report timelines by date, student, and category.</li>
+                    <li><strong>Staff Time Logs:</strong> Review teacher clock-in and clock-out records per teacher or across your team, with outlier session highlighting.</li>
+                    <li><strong>Permission-Based Settings:</strong> Device mode, clock-in limits, categories, locations, and classes can be owner-only or delegated to location admins.</li>
+                    <li><strong>Invitation Onboarding:</strong> Invite teachers, parents, and admins with secure codes — no manual account setup required.</li>
                 </ul>
             </div>
 
             <div class="feature-visual">
                 <div class="image-showcase grid-4" data-gallery="Admin App">
                     <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Admin locations list">
-                        <img src="Admin1.png" alt="Admin locations list across multiple buildings" loading="lazy">
+                        <img src="images/admin/locations.png" alt="Admin locations list across multiple buildings" loading="lazy">
                     </button>
                     <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Admin student roster">
-                        <img src="Admin4.png" alt="Admin student roster with class and location assignments" loading="lazy">
-                    </button>
-                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Admin category configuration">
-                        <img src="Admin2.png" alt="Admin activity category configuration screen" loading="lazy">
+                        <img src="images/admin/students.png" alt="Admin student roster with class and location assignments" loading="lazy">
                     </button>
                     <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Admin teacher list">
-                        <img src="Admin3.png" alt="Admin teacher list with time logs tab" loading="lazy">
+                        <img src="images/admin/teachers.png" alt="Admin teacher list with time logs" loading="lazy">
+                    </button>
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Admin bulletins">
+                        <img src="images/admin/bulletins.png" alt="Admin bulletins and announcements composer" loading="lazy">
                     </button>
                 </div>
             </div>
         </section>
 
-        <section id="teachers" class="feature-split reverse">
+        <section id="teachers" class="feature-split reverse reveal">
             <div class="feature-text">
                 <span class="badge">For Classroom Teachers</span>
                 <h2>Log updates in 3 taps, then get back to the kids</h2>
-                <p>Teachers want to teach, not type. Log activities from a class roster, generate end-of-day reports, and keep parents in the loop without disrupting classroom flow.</p>
+                <p>Teachers want to teach, not type. Log activities from a class roster, add diary notes, browse class history, generate end-of-day reports, and keep parents in the loop — on a personal phone or the classroom tablet.</p>
                 <ul class="benefit-list">
                     <li><strong>3-Tap Activity Logging:</strong> Log meals, naps, bathroom breaks, photos, moods, and notes in seconds — for one child or in bulk.</li>
                     <li><strong>Check-In &amp; Check-Out:</strong> Record child arrivals and pickups through configurable activity categories, including who picked up.</li>
-                    <li><strong>Clock In &amp; Out:</strong> Teachers clock in before logging activities; directors review staff time logs from the admin dashboard.</li>
-                    <li><strong>Daily Reports:</strong> Generate summarized end-of-day reports for individual students or your whole class, and browse report history.</li>
+                    <li><strong>Class Diary:</strong> Add timestamped diary notes tagged to individual students — visible to admins and browsable on shared devices.</li>
+                    <li><strong>Class Record:</strong> Browse class activity and daily report history with date-range filters, category filters, and collapsible date sections.</li>
+                    <li><strong>Clock In &amp; Out:</strong> Teachers clock in before logging activities; works on personal devices and shared classroom tablets.</li>
+                    <li><strong>Shared Tablet PIN Flow:</strong> Switch teachers with a PIN, auto-lock when idle, and continue browsing diary and record between sessions.</li>
+                    <li><strong>Daily Reports:</strong> Generate summarized end-of-day reports for individual students or your whole class.</li>
+                    <li><strong>Quick Sign-In:</strong> Invitation-based teacher signup, remember-me, and Face ID / fingerprint unlock on supported devices.</li>
                     <li><strong>Class Roster at a Glance:</strong> See allergies, parent notes, and emergency contacts right on each student's card.</li>
                 </ul>
             </div>
 
             <div class="feature-visual">
-                <div class="image-showcase grid-3" data-gallery="Teacher App">
+                <div class="image-showcase grid-4" data-gallery="Teacher App">
                     <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Teacher class roster">
-                        <img src="Teacher2.png" alt="Teacher class roster with one-tap activity logging buttons" loading="lazy">
+                        <img src="images/teacher/students.png" alt="Teacher class roster with one-tap activity logging buttons" loading="lazy">
+                    </button>
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Teacher class diary">
+                        <img src="images/teacher/diary.png" alt="Teacher class diary with student-tagged notes" loading="lazy">
+                    </button>
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Teacher class record">
+                        <img src="images/teacher/record.png" alt="Teacher class record with activity and report history filters" loading="lazy">
                     </button>
                     <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Teacher clock in and out">
-                        <img src="Teacher1.png" alt="Teacher clock in and clock out screen" loading="lazy">
-                    </button>
-                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Teacher student card">
-                        <img src="Teacher3.png" alt="Teacher student card showing allergies, notes, and quick actions" loading="lazy">
+                        <img src="images/teacher/clock.png" alt="Teacher clock in and clock out screen" loading="lazy">
                     </button>
                 </div>
             </div>
         </section>
 
-        <section id="parents" class="feature-split">
+        <section id="parents" class="feature-split reveal">
             <div class="feature-text">
                 <span class="badge">For Families</span>
                 <h2>Keep parents connected, happy, and loyal</h2>
                 <p>Build trust from day one. Parents receive clean, beautifully formatted updates right on their phones — from live classroom moments to end-of-day summaries.</p>
                 <ul class="benefit-list">
+                    <li><strong>My Kids Dashboard:</strong> See every child linked to your account at a glance with quick access to each profile.</li>
                     <li><strong>Live Activity Feed:</strong> Follow teacher-logged updates throughout the day, organized by date with photos, moods, and notes.</li>
                     <li><strong>Daily Reports:</strong> Review summarized end-of-day reports by category — meals, naps, activities, and more — with timestamps and photos.</li>
-                    <li><strong>Photo Moments:</strong> View activity photos from the classroom and update your child's profile picture anytime.</li>
+                    <li><strong>Photo Media Gallery:</strong> Browse activity photos from the classroom in a dedicated media tab.</li>
+                    <li><strong>Child Details:</strong> Manage allergies, emergency contacts, and other profile info for every child on your account.</li>
                     <li><strong>Bulletins &amp; Announcements:</strong> Read director and admin announcements in-app, with PDF and image attachments and read/unread tracking.</li>
-                    <li><strong>Multi-Child Profiles:</strong> Manage allergies, emergency contacts, and other details for every child linked to your account.</li>
+                    <li><strong>Multi-Child Profiles:</strong> Switch between children with a tabbed layout built for families with more than one enrolled child.</li>
                 </ul>
             </div>
 
             <div class="feature-visual">
-                <div class="image-showcase grid-3" data-gallery="Parent App">
-                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent child profiles">
-                        <img src="Parent2.png" alt="Parent child profiles with allergies and emergency info" loading="lazy">
-                    </button>
-                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent bulletin inbox">
-                        <img src="Parent3.png" alt="Parent bulletin and announcements inbox" loading="lazy">
+                <div class="image-showcase grid-5" data-gallery="Parent App">
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent my kids dashboard">
+                        <img src="images/parent/my-kids.png" alt="Parent my kids dashboard with child profiles" loading="lazy">
                     </button>
                     <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent activity feed">
-                        <img src="Parent1.png" alt="Parent live activity feed with daily reports toggle" loading="lazy">
+                        <img src="images/parent/activities.png" alt="Parent live activity feed with photos and moods" loading="lazy">
+                    </button>
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent daily reports">
+                        <img src="images/parent/reports.png" alt="Parent daily reports by category" loading="lazy">
+                    </button>
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent media gallery">
+                        <img src="images/parent/media.png" alt="Parent photo media gallery from classroom activities" loading="lazy">
+                    </button>
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent bulletin board">
+                        <img src="images/parent/bulletin.png" alt="Parent bulletin board with daycare announcements" loading="lazy">
                     </button>
                 </div>
             </div>
@@ -163,10 +245,10 @@
 
     </main>
 
-    <section class="final-cta">
+    <section class="final-cta reveal">
         <div class="cta-content">
             <h2>Ready to simplify your childcare center?</h2>
-            <p>We are currently accepting a limited number of local daycares for our early-access MVP pilot. No setup fees, no complex onboarding — just three apps and invitation-based setup.</p>
+            <p>We are currently accepting a limited number of daycares for our early-access MVP pilot — multi-location centers and home-based sites. No setup fees, no complex onboarding: owner team controls, invitation-based setup, and shared classroom tablets when you need them.</p>
             <a href="mailto:dailydot404@gmail.com?subject=Inquiry regarding DailyDotKids" class="btn btn-primary large">Claim Your Free Pilot Space</a>
         </div>
     </section>
