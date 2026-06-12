@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
     const lightboxImage = lightbox.querySelector('.lightbox-image');
     const lightboxCaption = lightbox.querySelector('.lightbox-caption');
     const lightboxGalleryName = lightbox.querySelector('.lightbox-gallery-name');
@@ -240,10 +241,12 @@ document.addEventListener('DOMContentLoaded', () => {
             showNext();
         }
     });
+    }
 
     const FORMSPREE_URL = 'https://formspree.io/f/mqeogpop';
     const inquiryModal = document.getElementById('inquiry-modal');
     const inquiryForm = document.getElementById('inquiry-form');
+    if (inquiryModal && inquiryForm) {
     const inquiryFormView = document.getElementById('inquiry-form-view');
     const inquirySuccessView = document.getElementById('inquiry-success-view');
     const inquiryError = document.getElementById('inquiry-error');
@@ -336,4 +339,5 @@ document.addEventListener('DOMContentLoaded', () => {
             closeInquiryModal();
         }
     });
+    }
 });
