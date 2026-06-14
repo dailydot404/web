@@ -20,11 +20,9 @@
     ];
 
     const CTA_HREF = '#inquiry';
-    const LOGO_ICON =
-        '<img src="favicon.png" alt="" class="logo-icon" width="32" height="32" aria-hidden="true">';
 
     function renderLogo(href) {
-        return `<a href="${href}" class="logo">${LOGO_ICON}Daily<span>DotKids</span></a>`;
+        return `<a href="${href}" class="logo">DailyDotKids</a>`;
     }
 
     function getCurrentPage() {
