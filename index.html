@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DailyDotKids — daycare management for owners, teachers, and parents. Three dedicated apps, one connected platform with owner team controls, shared classroom tablets, and real-time family updates.">
+    <meta name="description" content="DailyDotKids — daycare management for BC licensed child care. Three dedicated apps with owner team controls, shared classroom tablets, real-time family updates, and record-keeping aligned with BC licensing requirements.">
     <title>DailyDotKids - Daycare, simplified.</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,7 +11,7 @@
 
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">Daily<span>DotKids</span></a>
+            <a href="#" class="logo">Daily<span>DotKids</span></a>
             <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
                 <span></span>
                 <span></span>
@@ -24,7 +24,8 @@
                 <li><a href="#admin">Admins</a></li>
                 <li><a href="#teachers">Teachers</a></li>
                 <li><a href="#parents">Parents</a></li>
-                <li><button type="button" class="nav-cta open-inquiry">Get Free Access</button></li>
+                <li><a href="#compliance">BC Compliance</a></li>
+                <li><a href="mailto:dailydot404@gmail.com?subject=Inquiry regarding DailyDotKids" class="nav-cta">Get Free Access</a></li>
             </ul>
         </div>
     </nav>
@@ -41,7 +42,7 @@
                 <span class="chip chip-highlight">Shared Classroom Device</span>
             </div>
             <div class="hero-actions">
-                <button type="button" class="btn btn-primary open-inquiry">Join the MVP Pilot</button>
+                <a href="mailto:dailydot404@gmail.com?subject=Inquiry regarding DailyDotKids" class="btn btn-primary">Join the MVP Pilot</a>
                 <a href="#platform" class="btn btn-secondary">See How It Works</a>
             </div>
         </div>
@@ -125,10 +126,10 @@
             <div class="feature-visual">
                 <div class="image-showcase grid-2" data-gallery="Shared Classroom Device">
                     <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Admin shared device settings">
-                        <img src="admin/shared-device.png" alt="Admin settings for shared classroom device mode with session timeouts" loading="lazy">
+                        <img src="images/admin/shared-device.png" alt="Admin settings for shared classroom device mode with session timeouts" loading="lazy">
                     </button>
                     <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Teacher clock on shared device">
-                        <img src="teacher/clock.png" alt="Teacher clock in and out screen on a shared classroom tablet" loading="lazy">
+                        <img src="images/teacher/clock.png" alt="Teacher clock in and out screen on a shared classroom tablet" loading="lazy">
                     </button>
                 </div>
             </div>
@@ -155,16 +156,16 @@
             <div class="feature-visual">
                 <div class="image-showcase grid-4" data-gallery="Admin App">
                     <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Admin locations list">
-                        <img src="admin/locations.png" alt="Admin locations list across multiple buildings" loading="lazy">
+                        <img src="images/admin/locations.png" alt="Admin locations list across multiple buildings" loading="lazy">
                     </button>
                     <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Admin student roster">
-                        <img src="admin/students.png" alt="Admin student roster with class and location assignments" loading="lazy">
+                        <img src="images/admin/students.png" alt="Admin student roster with class and location assignments" loading="lazy">
                     </button>
                     <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Admin teacher list">
-                        <img src="admin/teachers.png" alt="Admin teacher list with time logs" loading="lazy">
+                        <img src="images/admin/teachers.png" alt="Admin teacher list with time logs" loading="lazy">
                     </button>
                     <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Admin bulletins">
-                        <img src="admin/bulletins.png" alt="Admin bulletins and announcements composer" loading="lazy">
+                        <img src="images/admin/bulletins.png" alt="Admin bulletins and announcements composer" loading="lazy">
                     </button>
                 </div>
             </div>
@@ -228,17 +229,107 @@
                         <img src="parent/my-kids.png" alt="Parent my kids dashboard with child profiles" loading="lazy">
                     </button>
                     <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent activity feed">
-                        <img src="parent/activities.png" alt="Parent live activity feed with photos and moods" loading="lazy">
+                        <img src="images/parent/activities.png" alt="Parent live activity feed with photos and moods" loading="lazy">
                     </button>
                     <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent daily reports">
-                        <img src="parent/reports.png" alt="Parent daily reports by category" loading="lazy">
+                        <img src="images/parent/reports.png" alt="Parent daily reports by category" loading="lazy">
                     </button>
                     <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent media gallery">
-                        <img src="parent/media.png" alt="Parent photo media gallery from classroom activities" loading="lazy">
+                        <img src="images/parent/media.png" alt="Parent photo media gallery from classroom activities" loading="lazy">
                     </button>
                     <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent bulletin board">
-                        <img src="parent/bulletin.png" alt="Parent bulletin board with daycare announcements" loading="lazy">
+                        <img src="images/parent/bulletin.png" alt="Parent bulletin board with daycare announcements" loading="lazy">
                     </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="compliance" class="compliance-section reveal">
+            <div class="section-header">
+                <span class="badge badge-teal">BC Licensed Child Care</span>
+                <h2>Built with BC compliance in mind</h2>
+                <p>Licensed daycares in British Columbia must keep detailed records under the <em>Child Care Licensing Regulation</em>. We designed DailyDotKids to support those day-to-day record-keeping workflows — so your team spends less time on paperwork and more time with children.</p>
+            </div>
+
+            <div class="compliance-grid">
+                <article class="compliance-card">
+                    <h3>Attendance &amp; sign-in/out</h3>
+                    <p class="compliance-reg">BC records: daily attendance</p>
+                    <p>Teachers log arrivals and pickups through configurable Check-In and Check-Out categories — with timestamps, notes, and who picked up each child. Admins and teachers can review history in Class Record, filtered by date, student, and category.</p>
+                </article>
+                <article class="compliance-card">
+                    <h3>Emergency contacts</h3>
+                    <p class="compliance-reg">BC records: emergency contact information</p>
+                    <p>Store emergency contact name, phone, email, and relationship on each child's profile. Parents can keep details current from the Parent app; teachers see contacts on the class roster when they need them.</p>
+                </article>
+                <article class="compliance-card">
+                    <h3>Allergies &amp; special care</h3>
+                    <p class="compliance-reg">BC records: allergies and special care instructions</p>
+                    <p>Allergies and other care notes live on the student profile and appear on teacher roster cards — so staff have the right context before logging meals, health events, or daily activities.</p>
+                </article>
+                <article class="compliance-card">
+                    <h3>Health, medication &amp; incidents</h3>
+                    <p class="compliance-reg">BC records: health and medication logs</p>
+                    <p>Centers configure a Health activity category with options such as Symptoms, Medication, Incident, and Routine Check. Each entry is timestamped and tied to the child — a digital supplement to your existing medication and incident procedures, not a replacement for prescribed forms or physician instructions.</p>
+                </article>
+                <article class="compliance-card">
+                    <h3>Daily program &amp; family communication</h3>
+                    <p class="compliance-reg">BC records: program documentation &amp; parent communication</p>
+                    <p>Meals, naps, photos, moods, diary notes, daily reports, and director bulletins create a clear picture of each child's day — for families in real time and for your team when reviewing past care.</p>
+                </article>
+                <article class="compliance-card">
+                    <h3>Staff time on site</h3>
+                    <p class="compliance-reg">BC operations: staff supervision &amp; presence</p>
+                    <p>Teachers clock in and out before logging activities — on personal phones or shared classroom tablets. Owners and admins review per-teacher time logs and flagged outlier sessions from the admin dashboard.</p>
+                </article>
+                <article class="compliance-card">
+                    <h3>Secure, role-based access</h3>
+                    <p class="compliance-reg">BC &amp; privacy: protecting children's information</p>
+                    <p>Invitation-only accounts, owner vs. location-admin permissions, and scoped data access help keep sensitive child and family information visible only to the right people. See our <a href="privacy.html">Privacy Policy</a> for how we handle personal information under Canadian privacy law.</p>
+                </article>
+                <article class="compliance-card">
+                    <h3>Records for review</h3>
+                    <p class="compliance-reg">BC records: available for licensing inspection</p>
+                    <p>Class Record, class diary, daily reports, and admin roster views give you searchable digital records by date and student. Your center remains responsible for retention practices and any records the platform does not store.</p>
+                </article>
+            </div>
+
+            <div class="compliance-bottom">
+                <div class="compliance-roadmap">
+                    <h3>On our roadmap</h3>
+                    <p>We know licensed centres keep more than daily activity logs. These are the compliance features we are working toward — starting with a secure document vault and expiry reminders:</p>
+                    <ul>
+                        <li><strong>Compliance document vault</strong> — upload and organize immunization records, consent forms, staff CRCs, and certificates per child or staff member</li>
+                        <li><strong>Expiry tracking &amp; alerts</strong> — reminders before CRCs, first aid, or immunizations are due</li>
+                        <li><strong>Parent consent workflow</strong> — families upload or acknowledge forms; admins see who is still missing paperwork</li>
+                        <li><strong>Fire drill &amp; safety logbook</strong> — dated facility logs per location for drills and internal safety records</li>
+                        <li><strong>Policy library</strong> — centre policies in one place, with staff read-and-acknowledge tracking</li>
+                        <li><strong>Licensing visit export</strong> — printable or downloadable record packs for inspections</li>
+                    </ul>
+                    <p class="compliance-note">Until these ship, centres continue to keep those records in their existing files. Pilot partners help us prioritize what to build first.</p>
+                </div>
+                <div class="compliance-boundaries">
+                    <h3>What no app can do</h3>
+                    <p>Software can organize records and reminders — but it cannot replace the licensee, the law, or the work of running a safe centre. No childcare app — including DailyDotKids — can:</p>
+                    <ul>
+                        <li>Guarantee that your centre is compliant or licensed</li>
+                        <li>Take on the licensee's legal duties under BC child care law</li>
+                        <li>Conduct physical facility inspections or verify building and playground safety</li>
+                        <li>Automatically verify criminal record checks with police or government systems</li>
+                        <li>Provide medical, legal, or licensing advice</li>
+                        <li>Replace original signed paper where your licensing officer requires it</li>
+                        <li>File serious incident reports to BC licensing on your behalf</li>
+                        <li>Supervise children or enforce staff-to-child ratios in the classroom</li>
+                    </ul>
+                    <p class="compliance-note">Your team remains responsible for policies, training, ratios, safe premises, and every obligation on your facility licence.</p>
+                </div>
+                <div class="compliance-disclaimer">
+                    <p><strong>Important:</strong> DailyDotKids does not provide legal advice and does not certify that your center is compliant. The licensee is always responsible for meeting all requirements under the <em>Community Care and Assisted Living Act</em>, the <em>Child Care Licensing Regulation</em>, and your facility licence.</p>
+                    <p class="compliance-resources">Official BC resources:
+                        <a href="https://www.bclaws.gov.bc.ca/civix/document/id/loo66/loo66/319_89" target="_blank" rel="noopener noreferrer">Child Care Licensing Regulation</a>
+                        <span aria-hidden="true"> · </span>
+                        <a href="https://www2.gov.bc.ca/gov/content/family-social-supports/caring-for-young-children/information-for-partners-providers/rules-operating-licensed-day-care" target="_blank" rel="noopener noreferrer">Rules for licensed child care</a>
+                    </p>
                 </div>
             </div>
         </section>
@@ -249,14 +340,14 @@
         <div class="cta-content">
             <h2>Ready to simplify your childcare center?</h2>
             <p>We are currently accepting a limited number of daycares for our early-access MVP pilot — multi-location centers and home-based sites. No setup fees, no complex onboarding: owner team controls, invitation-based setup, and shared classroom tablets when you need them.</p>
-            <button type="button" class="btn btn-primary large open-inquiry">Claim Your Free Pilot Space</button>
+            <a href="mailto:dailydot404@gmail.com?subject=Inquiry regarding DailyDotKids" class="btn btn-primary large">Claim Your Free Pilot Space</a>
         </div>
     </section>
 
     <footer class="footer">
         <p>&copy; 2026 Anthor Canada corp. All rights reserved. Built for the future of early childhood education.</p>
         <p class="footer-links">
-            <a href="index.html">Home</a>
+            <a href="presentation.html">Presentation</a>
             <span>|</span>
             <a href="privacy.html">Privacy Policy</a>
             <span>|</span>
@@ -276,43 +367,6 @@
             </p>
             <img class="lightbox-image" src="" alt="">
             <p class="lightbox-caption"></p>
-        </div>
-    </div>
-
-    <div id="inquiry-modal" class="inquiry-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="inquiry-modal-title">
-        <button type="button" class="inquiry-backdrop" aria-label="Close form"></button>
-        <div class="inquiry-panel">
-            <button type="button" class="inquiry-close" aria-label="Close form">&times;</button>
-            <div class="inquiry-form-view" id="inquiry-form-view">
-                <h2 id="inquiry-modal-title">Join the MVP Pilot</h2>
-                <p class="inquiry-lead">Tell us about your center and we’ll reach out with free early-access details.</p>
-                <form id="inquiry-form" class="inquiry-form" novalidate>
-                    <div class="inquiry-field">
-                        <label for="inquiry-name">Name</label>
-                        <input id="inquiry-name" name="name" type="text" autocomplete="name" required>
-                    </div>
-                    <div class="inquiry-field">
-                        <label for="inquiry-email">Email</label>
-                        <input id="inquiry-email" name="email" type="email" autocomplete="email" required>
-                    </div>
-                    <div class="inquiry-field">
-                        <label for="inquiry-daycare">Daycare name</label>
-                        <input id="inquiry-daycare" name="daycare_name" type="text" autocomplete="organization">
-                    </div>
-                    <div class="inquiry-field">
-                        <label for="inquiry-message">Message</label>
-                        <textarea id="inquiry-message" name="message" rows="4" placeholder="Number of locations, children, or anything else we should know."></textarea>
-                    </div>
-                    <input type="text" name="_gotcha" class="inquiry-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
-                    <p class="inquiry-error" id="inquiry-error" hidden></p>
-                    <button type="submit" class="btn btn-primary inquiry-submit" id="inquiry-submit">Send inquiry</button>
-                </form>
-            </div>
-            <div class="inquiry-success-view" id="inquiry-success-view" hidden>
-                <h2>Thanks — we got it!</h2>
-                <p>We’ll review your inquiry and get back to you at the email you provided.</p>
-                <button type="button" class="btn btn-primary" id="inquiry-done">Close</button>
-            </div>
         </div>
     </div>
 

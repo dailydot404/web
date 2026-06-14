@@ -454,6 +454,135 @@ button.btn {
     font-weight: bold;
 }
 
+.roles-footnote {
+    text-align: center;
+    color: var(--gray);
+    font-size: 0.95rem;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* --- BC Compliance Section --- */
+.compliance-section {
+    margin-bottom: 120px;
+}
+
+.compliance-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.compliance-card {
+    background-color: var(--white);
+    border: 1px solid #e1e4e6;
+    border-radius: 16px;
+    padding: 24px 22px;
+    border-left: 4px solid var(--teal);
+}
+
+.compliance-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+.compliance-reg {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--teal-text);
+    margin-bottom: 10px;
+}
+
+.compliance-card p:last-child {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.compliance-card a {
+    color: var(--teal-text);
+    font-weight: 600;
+}
+
+.compliance-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.compliance-roadmap,
+.compliance-boundaries,
+.compliance-disclaimer {
+    background-color: var(--light);
+    border: 1px solid #e1e4e6;
+    border-radius: 16px;
+    padding: 24px 22px;
+}
+
+.compliance-roadmap {
+    border-left: 4px solid var(--teal);
+}
+
+.compliance-boundaries {
+    border-left: 4px solid var(--primary);
+}
+
+.compliance-roadmap h3,
+.compliance-boundaries h3,
+.compliance-disclaimer p {
+    margin-bottom: 12px;
+}
+
+.compliance-roadmap h3,
+.compliance-boundaries h3 {
+    font-size: 1.05rem;
+}
+
+.compliance-roadmap p,
+.compliance-boundaries p {
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+.compliance-roadmap ul,
+.compliance-boundaries ul {
+    margin: 0 0 12px;
+    padding-left: 1.2rem;
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+.compliance-roadmap li,
+.compliance-boundaries li {
+    margin-bottom: 8px;
+}
+
+.compliance-note {
+    font-size: 0.9rem !important;
+    margin-bottom: 0 !important;
+    font-style: italic;
+}
+
+.compliance-disclaimer {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #f8fdfe 0%, #eef9fb 100%);
+    border-color: #d4eff3;
+    border-left: none;
+}
+
+.compliance-disclaimer p:last-child {
+    margin-bottom: 0;
+}
+
+.compliance-resources a {
+    color: var(--teal-text);
+    font-weight: 600;
+}
+
 .permission-pills {
     display: flex;
     flex-wrap: wrap;
@@ -1023,11 +1152,14 @@ button.btn {
     }
 
     .platform-grid,
-    .role-grid {
+    .role-grid,
+    .compliance-grid,
+    .compliance-bottom {
         grid-template-columns: 1fr;
     }
 
-    .roles-section {
+    .roles-section,
+    .compliance-section {
         margin-bottom: 80px;
     }
 
