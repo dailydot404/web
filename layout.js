@@ -19,7 +19,7 @@
         { href: 'terms.html', label: 'Terms of Service', page: 'terms' },
     ];
 
-    const CTA_MAILTO = 'mailto:dailydot404@gmail.com?subject=Inquiry regarding DailyDotKids';
+    const CTA_HREF = '#inquiry';
 
     function getCurrentPage() {
         const fromBody = document.body.dataset.page;
@@ -62,7 +62,7 @@
         <ul class="nav-links">
             ${sectionItems}
             ${pageItems}
-            <li><a href="${CTA_MAILTO}" class="nav-cta">Get Free Access</a></li>
+            <li><a href="${CTA_HREF}" class="nav-cta inquiry-cta">Get Free Access</a></li>
         </ul>
     </div>
 </nav>`.trim();
@@ -80,7 +80,7 @@
         </button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="${CTA_MAILTO}" class="nav-cta">Get Free Access</a></li>
+            <li><a href="${CTA_HREF}" class="nav-cta inquiry-cta">Get Free Access</a></li>
         </ul>
     </div>
 </nav>`.trim();
