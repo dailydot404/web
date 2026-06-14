@@ -7,27 +7,9 @@
     <title>Privacy Policy - DailyDotKids</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="privacy">
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Daily<span>DotKids</span></a>
-            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links">
-                 <li><a href="index.html#platform">Platform</a></li>
-                <li><a href="index.html#roles">Roles</a></li>
-                <li><a href="index.html#shared-device">Shared Tablet</a></li>
-                <li><a href="index.html#admin">Admins</a></li>
-                <li><a href="index.html#teachers">Teachers</a></li>
-                <li><a href="index.html#parents">Parents</a></li>
-                <li><button type="button" class="nav-cta open-inquiry">Get Free Access</button></li>
-            </ul>
-        </div>
-    </nav>
+    <div id="site-header"></div>
 
     <main class="legal-page">
         <h1>Privacy Policy</h1>
@@ -60,58 +42,13 @@
         <h2>5. Contact Us</h2>
         <p>If you have any questions or data concerns regarding this policy, use the contact form on our website.</p>
         <div class="legal-contact-actions">
-            <button type="button" class="btn btn-primary open-inquiry">Contact us</button>
+            <a href="#inquiry" class="btn btn-primary inquiry-cta">Contact us</a>
         </div>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2026 Anthor Canada corp. All rights reserved. Built for the future of early childhood education.</p>
-        <p class="footer-links">
-            <a href="index.html">Home</a>
-            <span>|</span>
-            <a href="privacy.html" class="active">Privacy Policy</a>
-            <span>|</span>
-            <a href="terms.html">Terms of Service</a>
-        </p>
-    </footer>
+    <div id="site-footer"></div>
 
-    <div id="inquiry-modal" class="inquiry-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="inquiry-modal-title">
-        <button type="button" class="inquiry-backdrop" aria-label="Close form"></button>
-        <div class="inquiry-panel">
-            <button type="button" class="inquiry-close" aria-label="Close form">&times;</button>
-            <div class="inquiry-form-view" id="inquiry-form-view">
-                <h2 id="inquiry-modal-title">Join the MVP Pilot</h2>
-                <p class="inquiry-lead">Tell us about your center and we’ll reach out with free early-access details.</p>
-                <form id="inquiry-form" class="inquiry-form" novalidate>
-                    <div class="inquiry-field">
-                        <label for="inquiry-name">Name</label>
-                        <input id="inquiry-name" name="name" type="text" autocomplete="name" required>
-                    </div>
-                    <div class="inquiry-field">
-                        <label for="inquiry-email">Email</label>
-                        <input id="inquiry-email" name="email" type="email" autocomplete="email" required>
-                    </div>
-                    <div class="inquiry-field">
-                        <label for="inquiry-daycare">Daycare name</label>
-                        <input id="inquiry-daycare" name="daycare_name" type="text" autocomplete="organization">
-                    </div>
-                    <div class="inquiry-field">
-                        <label for="inquiry-message">Message</label>
-                        <textarea id="inquiry-message" name="message" rows="4" placeholder="Number of locations, children, or anything else we should know."></textarea>
-                    </div>
-                    <input type="text" name="_gotcha" class="inquiry-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
-                    <p class="inquiry-error" id="inquiry-error" hidden></p>
-                    <button type="submit" class="btn btn-primary inquiry-submit" id="inquiry-submit">Send inquiry</button>
-                </form>
-            </div>
-            <div class="inquiry-success-view" id="inquiry-success-view" hidden>
-                <h2>Thanks — we got it!</h2>
-                <p>We’ll review your inquiry and get back to you at the email you provided.</p>
-                <button type="button" class="btn btn-primary" id="inquiry-done">Close</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="layout.js"></script>
+    <script src="inquiry.js"></script>
 </body>
 </html>

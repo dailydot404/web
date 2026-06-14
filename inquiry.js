@@ -179,7 +179,7 @@
 
     function isInquiryTrigger(element) {
         if (!element) return false;
-        if (element.matches('.inquiry-cta, a[href="#inquiry"]')) return true;
+        if (element.matches('.inquiry-cta, .open-inquiry, a[href="#inquiry"]')) return true;
         if (element.matches('a[href^="mailto:"]')) {
             const href = element.getAttribute('href') || '';
             return (
