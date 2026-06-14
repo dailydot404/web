@@ -34,12 +34,18 @@ body.nav-open {
     padding: 15px 20px;
 }
 
-.logo {
+.navbar a.logo,
+.navbar a.logo:visited {
     font-size: 1.5rem;
     font-weight: 800;
-    color: var(--primary);
+    color: #ff5a5f;
     text-decoration: none;
     z-index: 1001;
+}
+
+.navbar a.logo:hover,
+.navbar a.logo:focus-visible {
+    color: #e04f54;
 }
 
 .nav-toggle {
