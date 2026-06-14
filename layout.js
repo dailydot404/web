@@ -2,19 +2,18 @@
     const NAV_SECTIONS = [
         { id: 'platform', label: 'Platform' },
         { id: 'roles', label: 'Roles' },
-        { id: 'shared-device', label: 'Shared Tablet' },
+        { id: 'shared-device', label: 'Tablet' },
         { id: 'admin', label: 'Admins' },
         { id: 'teachers', label: 'Teachers' },
         { id: 'parents', label: 'Parents' },
     ];
 
     const NAV_PAGES = [
-        { href: 'compliance.html', label: 'BC Compliance', page: 'compliance' },
+        { href: 'compliance.html', label: 'Compliance', page: 'compliance' },
     ];
 
     const FOOTER_LINKS = [
         { href: 'index.html', label: 'Home', page: 'home' },
-        { href: 'presentation.html', label: 'Presentation', page: 'presentation' },
         { href: 'compliance.html', label: 'BC Compliance', page: 'compliance' },
         { href: 'privacy.html', label: 'Privacy Policy', page: 'privacy' },
         { href: 'terms.html', label: 'Terms of Service', page: 'terms' },
@@ -69,9 +68,7 @@
 </nav>`.trim();
     }
 
-    function renderMinimalHeader(page) {
-        const presentationActive = page === 'presentation' ? ' class="active"' : '';
-
+    function renderMinimalHeader() {
         return `
 <nav class="navbar" aria-label="Site">
     <div class="nav-container">
@@ -83,7 +80,6 @@
         </button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="presentation.html"${presentationActive}>Presentation</a></li>
             <li><a href="${CTA_MAILTO}" class="nav-cta">Get Free Access</a></li>
         </ul>
     </div>
@@ -140,7 +136,7 @@
         });
 
         window.addEventListener('resize', () => {
-            if (window.innerWidth > 1100) closeMobileNav();
+            if (window.innerWidth > 1200) closeMobileNav();
         });
 
         navLinks.querySelectorAll('a').forEach((link) => {
@@ -160,7 +156,7 @@
 
         if (headerMount) {
             const chrome = headerMount.dataset.chrome || 'full';
-            const headerHtml = chrome === 'minimal' ? renderMinimalHeader(page) : renderFullHeader(page);
+            const headerHtml = chrome === 'minimal' ? renderMinimalHeader() : renderFullHeader(page);
             headerMount.outerHTML = headerHtml;
 
             if (chrome === 'minimal') {
