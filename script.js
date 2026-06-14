@@ -1,32 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar');
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     const sections = document.querySelectorAll('section[id]');
+    const revealElements = document.querySelectorAll('.reveal');
+
+    if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                });
+            },
+            { threshold: 0.12, rootMargin: '0px 0px -40px 0px' },
+        );
+
+        revealElements.forEach((element) => revealObserver.observe(element));
+    } else {
+        revealElements.forEach((element) => element.classList.add('is-visible'));
+    }
+
+    if (!navbar) return;
 
     const navHeight = () => navbar.offsetHeight;
-
-    function closeMobileNav() {
-        navLinks.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        document.body.classList.remove('nav-open');
-    }
-
-    function openMobileNav() {
-        navLinks.classList.add('open');
-        navToggle.setAttribute('aria-expanded', 'true');
-        document.body.classList.add('nav-open');
-    }
-
-    navToggle.addEventListener('click', () => {
-        const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
-        if (isOpen) {
-            closeMobileNav();
-        } else {
-            openMobileNav();
-        }
-    });
+    const closeMobileNav = () => window.SiteLayout?.navApi?.closeMobileNav?.();
 
     anchorLinks.forEach((link) => {
         link.addEventListener('click', (e) => {
@@ -51,22 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    document.addEventListener('click', (e) => {
-        if (
-            navLinks.classList.contains('open') &&
-            !navLinks.contains(e.target) &&
-            !navToggle.contains(e.target)
-        ) {
-            closeMobileNav();
-        }
-    });
-
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            closeMobileNav();
-        }
-    });
-
     const navSectionLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
     function updateActiveNav() {
@@ -87,26 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', updateActiveNav, { passive: true });
     updateActiveNav();
 
-    const revealElements = document.querySelectorAll('.reveal');
-    if ('IntersectionObserver' in window) {
-        const revealObserver = new IntersectionObserver(
-            (entries, observer) => {
-                entries.forEach((entry) => {
-                    if (!entry.isIntersecting) return;
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                });
-            },
-            { threshold: 0.12, rootMargin: '0px 0px -40px 0px' },
-        );
-
-        revealElements.forEach((element) => revealObserver.observe(element));
-    } else {
-        revealElements.forEach((element) => element.classList.add('is-visible'));
-    }
-
     const lightbox = document.getElementById('lightbox');
-    if (lightbox) {
+    if (!lightbox) return;
+
     const lightboxImage = lightbox.querySelector('.lightbox-image');
     const lightboxCaption = lightbox.querySelector('.lightbox-caption');
     const lightboxGalleryName = lightbox.querySelector('.lightbox-gallery-name');
@@ -241,105 +206,4 @@ document.addEventListener('DOMContentLoaded', () => {
             showNext();
         }
     });
-    }
-
-    const FORMSPREE_URL = 'https://formspree.io/f/mqeogpop';
-    const inquiryModal = document.getElementById('inquiry-modal');
-    const inquiryForm = document.getElementById('inquiry-form');
-    if (inquiryModal && inquiryForm) {
-    const inquiryFormView = document.getElementById('inquiry-form-view');
-    const inquirySuccessView = document.getElementById('inquiry-success-view');
-    const inquiryError = document.getElementById('inquiry-error');
-    const inquirySubmit = document.getElementById('inquiry-submit');
-    const inquiryDone = document.getElementById('inquiry-done');
-    const inquiryClose = inquiryModal.querySelector('.inquiry-close');
-    const inquiryBackdrop = inquiryModal.querySelector('.inquiry-backdrop');
-    const inquiryTriggers = document.querySelectorAll('.open-inquiry');
-
-    let inquiryLastFocused = null;
-
-    function showInquiryFormView() {
-        inquiryFormView.hidden = false;
-        inquirySuccessView.hidden = true;
-        inquiryError.hidden = true;
-        inquiryError.textContent = '';
-    }
-
-    function openInquiryModal() {
-        closeMobileNav();
-        showInquiryFormView();
-        inquiryLastFocused = document.activeElement;
-        inquiryModal.hidden = false;
-        inquiryModal.classList.add('is-open');
-        inquiryModal.setAttribute('aria-hidden', 'false');
-        document.body.classList.add('inquiry-open');
-        const firstField = document.getElementById('inquiry-name');
-        if (firstField) firstField.focus();
-    }
-
-    function closeInquiryModal() {
-        inquiryModal.hidden = true;
-        inquiryModal.classList.remove('is-open');
-        inquiryModal.setAttribute('aria-hidden', 'true');
-        document.body.classList.remove('inquiry-open');
-        if (inquiryLastFocused) {
-            inquiryLastFocused.focus();
-            inquiryLastFocused = null;
-        }
-    }
-
-    inquiryTriggers.forEach((trigger) => {
-        trigger.addEventListener('click', openInquiryModal);
-    });
-
-    inquiryClose.addEventListener('click', closeInquiryModal);
-    inquiryBackdrop.addEventListener('click', closeInquiryModal);
-    inquiryDone.addEventListener('click', closeInquiryModal);
-
-    inquiryForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        inquiryError.hidden = true;
-        inquiryError.textContent = '';
-
-        if (!inquiryForm.reportValidity()) {
-            return;
-        }
-
-        inquirySubmit.disabled = true;
-        inquirySubmit.textContent = 'Sending…';
-
-        try {
-            const response = await fetch(FORMSPREE_URL, {
-                method: 'POST',
-                body: new FormData(inquiryForm),
-                headers: { Accept: 'application/json' },
-            });
-
-            const data = await response.json().catch(() => ({}));
-
-            if (!response.ok) {
-                const message = data.error || 'Something went wrong. Please try again.';
-                throw new Error(message);
-            }
-
-            inquiryForm.reset();
-            inquiryFormView.hidden = true;
-            inquirySuccessView.hidden = false;
-            inquiryDone.focus();
-        } catch (error) {
-            inquiryError.textContent = error.message || 'Unable to send. Please try again.';
-            inquiryError.hidden = false;
-        } finally {
-            inquirySubmit.disabled = false;
-            inquirySubmit.textContent = 'Send inquiry';
-        }
-    });
-
-    document.addEventListener('keydown', (e) => {
-        if (inquiryModal.hidden) return;
-        if (e.key === 'Escape') {
-            closeInquiryModal();
-        }
-    });
-    }
 });

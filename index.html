@@ -3,32 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DailyDotKids — daycare management for BC licensed child care. Three dedicated apps with owner team controls, shared classroom tablets, real-time family updates, and record-keeping aligned with BC licensing requirements.">
+    <meta name="description" content="DailyDotKids — three connected apps for BC daycares. Owner controls, 3-tap teacher logging, parent updates, and shared classroom tablets. Free MVP pilot.">
     <title>DailyDotKids - Daycare, simplified.</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="home">
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">Daily<span>DotKids</span></a>
-            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#platform">Platform</a></li>
-                <li><a href="#roles">Roles</a></li>
-                <li><a href="#shared-device">Shared Tablet</a></li>
-                <li><a href="#admin">Admins</a></li>
-                <li><a href="#teachers">Teachers</a></li>
-                <li><a href="#parents">Parents</a></li>
-                <li><a href="#compliance">BC Compliance</a></li>
-                <li><a href="mailto:dailydot404@gmail.com?subject=Inquiry regarding DailyDotKids" class="nav-cta">Get Free Access</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div id="site-header"></div>
 
     <header class="hero">
         <div class="hero-content reveal">
@@ -114,12 +95,10 @@
                 <h2>One tablet per class — every teacher, zero password juggling</h2>
                 <p>Many centers keep a classroom iPad at the check-in desk. Owners enable shared mode once — location admins with device permission can help tune session timeouts. Teachers switch with a quick PIN and the tablet locks when idle.</p>
                 <ul class="benefit-list">
-                    <li><strong>Owner-controlled setup:</strong> Choose individual devices or shared classroom mode per center, with configurable teacher session and tablet lock timeouts.</li>
-                    <li><strong>Delegated device settings:</strong> Grant trusted admins permission to adjust shared-tablet timeouts without handing over full owner access.</li>
-                    <li><strong>PIN teacher switching:</strong> After the first sign-in, teachers hand off the tablet with a 4-digit PIN — no re-entering email and password between shifts.</li>
-                    <li><strong>Secure PIN reset:</strong> Owners and admins generate a new teacher device PIN by email — the PIN is never shown in the app for security.</li>
-                    <li><strong>Clock in/out on shared tablets:</strong> Staff clock in before logging activities; owners review time logs and outlier sessions from the admin dashboard.</li>
-                    <li><strong>Diary &amp; record stay visible:</strong> Class diary notes and activity history remain browsable on the shared device — only logging and clock actions require the active teacher.</li>
+                    <li><strong>Owner-controlled setup:</strong> Individual devices or shared classroom mode, with configurable session and lock timeouts.</li>
+                    <li><strong>PIN teacher switching:</strong> Hand off the tablet with a 4-digit PIN — no re-entering email and password between shifts.</li>
+                    <li><strong>Clock in/out on shared tablets:</strong> Staff clock in before logging; owners review time logs from the admin dashboard.</li>
+                    <li><strong>Diary &amp; record stay visible:</strong> Class notes and history stay browsable on the device — only logging and clock actions need the active teacher.</li>
                 </ul>
             </div>
 
@@ -135,22 +114,29 @@
             </div>
         </section>
 
+        <section class="mid-cta reveal">
+            <div class="mid-cta-inner">
+                <h2>See it on a 15-minute call</h2>
+                <p>Free MVP pilot for BC licensed centres — we'll walk through the apps live and answer your questions.</p>
+                <div class="mid-cta-actions">
+                    <a href="mailto:dailydot404@gmail.com?subject=Inquiry regarding DailyDotKids" class="btn btn-primary">Book a pilot chat</a>
+                    <a href="presentation.html" class="btn btn-secondary">View slide deck</a>
+                </div>
+            </div>
+        </section>
+
         <section id="admin" class="feature-split reveal">
             <div class="feature-text">
                 <span class="badge">For Owners &amp; Admins</span>
                 <h2>Run your center without the paperwork chaos</h2>
-                <p>Whether you operate one home-based site or multiple campuses, DailyDotKids centralizes people, communication, and compliance into one clean dashboard — with role-based access built in.</p>
+                <p>Whether you operate one home-based site or multiple campuses, DailyDotKids centralizes people, communication, and operations into one clean dashboard — with role-based access built in.</p>
                 <ul class="benefit-list">
-                    <li><strong>Team Management:</strong> Owners invite admins, assign locations, grant delegated permissions, and deactivate accounts without losing history.</li>
-                    <li><strong>Multi-Location Management:</strong> Create locations, organize classrooms and age groups, and manage rosters across every building.</li>
-                    <li><strong>Enrollment &amp; Rosters:</strong> Add students and teachers, assign them to classes, and keep parent contact and emergency info on file.</li>
-                    <li><strong>Category Configuration:</strong> Customize activity types — meals, naps, check-in/out, photos, notes, and more — for your center's workflow.</li>
-                    <li><strong>Bulletins &amp; Announcements:</strong> Send targeted announcements to families with PDF and image attachments and read/unread tracking.</li>
-                    <li><strong>Class Diary &amp; Class Record:</strong> Review class-wide diary notes and browse filtered activity and report timelines by date, student, and category.</li>
-                    <li><strong>Staff Time Logs:</strong> Review teacher clock-in and clock-out records per teacher or across your team, with outlier session highlighting.</li>
-                    <li><strong>Permission-Based Settings:</strong> Device mode, clock-in limits, categories, locations, and classes can be owner-only or delegated to location admins.</li>
-                    <li><strong>Invitation Onboarding:</strong> Invite teachers, parents, and admins with secure codes — no manual account setup required.</li>
+                    <li><strong>Team &amp; locations:</strong> Invite admins, assign campuses, delegate permissions, and manage rosters across every building.</li>
+                    <li><strong>Enrollment &amp; records:</strong> Students, teachers, emergency contacts, class diary, and filtered activity history in one place.</li>
+                    <li><strong>Family communication:</strong> Targeted bulletins with PDF and image attachments, plus read/unread tracking.</li>
+                    <li><strong>Staff time logs:</strong> Review clock-in and clock-out records per teacher, with outlier session highlighting.</li>
                 </ul>
+                <p class="feature-more"><a href="presentation.html">See the full platform walkthrough →</a></p>
             </div>
 
             <div class="feature-visual">
@@ -177,16 +163,12 @@
                 <h2>Log updates in 3 taps, then get back to the kids</h2>
                 <p>Teachers want to teach, not type. Log activities from a class roster, add diary notes, browse class history, generate end-of-day reports, and keep parents in the loop — on a personal phone or the classroom tablet.</p>
                 <ul class="benefit-list">
-                    <li><strong>3-Tap Activity Logging:</strong> Log meals, naps, bathroom breaks, photos, moods, and notes in seconds — for one child or in bulk.</li>
-                    <li><strong>Check-In &amp; Check-Out:</strong> Record child arrivals and pickups through configurable activity categories, including who picked up.</li>
-                    <li><strong>Class Diary:</strong> Add timestamped diary notes tagged to individual students — visible to admins and browsable on shared devices.</li>
-                    <li><strong>Class Record:</strong> Browse class activity and daily report history with date-range filters, category filters, and collapsible date sections.</li>
-                    <li><strong>Clock In &amp; Out:</strong> Teachers clock in before logging activities; works on personal devices and shared classroom tablets.</li>
-                    <li><strong>Shared Tablet PIN Flow:</strong> Switch teachers with a PIN, auto-lock when idle, and continue browsing diary and record between sessions.</li>
-                    <li><strong>Daily Reports:</strong> Generate summarized end-of-day reports for individual students or your whole class.</li>
-                    <li><strong>Quick Sign-In:</strong> Invitation-based teacher signup, remember-me, and Face ID / fingerprint unlock on supported devices.</li>
-                    <li><strong>Class Roster at a Glance:</strong> See allergies, parent notes, and emergency contacts right on each student's card.</li>
+                    <li><strong>3-tap activity logging:</strong> Meals, naps, photos, moods, and notes — for one child or in bulk from the class roster.</li>
+                    <li><strong>Check-in/out &amp; class diary:</strong> Record arrivals and pickups; add timestamped diary notes tagged to students.</li>
+                    <li><strong>Clock in/out &amp; PIN switching:</strong> Works on personal phones and shared tablets — switch teachers without re-login.</li>
+                    <li><strong>Daily reports &amp; roster context:</strong> End-of-day summaries plus allergies and emergency contacts on each student's card.</li>
                 </ul>
+                <p class="feature-more"><a href="presentation.html">See the full platform walkthrough →</a></p>
             </div>
 
             <div class="feature-visual">
@@ -213,14 +195,12 @@
                 <h2>Keep parents connected, happy, and loyal</h2>
                 <p>Build trust from day one. Parents receive clean, beautifully formatted updates right on their phones — from live classroom moments to end-of-day summaries.</p>
                 <ul class="benefit-list">
-                    <li><strong>My Kids Dashboard:</strong> See every child linked to your account at a glance with quick access to each profile.</li>
-                    <li><strong>Live Activity Feed:</strong> Follow teacher-logged updates throughout the day, organized by date with photos, moods, and notes.</li>
-                    <li><strong>Daily Reports:</strong> Review summarized end-of-day reports by category — meals, naps, activities, and more — with timestamps and photos.</li>
-                    <li><strong>Photo Media Gallery:</strong> Browse activity photos from the classroom in a dedicated media tab.</li>
-                    <li><strong>Child Details:</strong> Manage allergies, emergency contacts, and other profile info for every child on your account.</li>
-                    <li><strong>Bulletins &amp; Announcements:</strong> Read director and admin announcements in-app, with PDF and image attachments and read/unread tracking.</li>
-                    <li><strong>Multi-Child Profiles:</strong> Switch between children with a tabbed layout built for families with more than one enrolled child.</li>
+                    <li><strong>Live activity feed:</strong> Follow classroom updates throughout the day — photos, moods, and notes organized by date.</li>
+                    <li><strong>Daily reports &amp; media:</strong> End-of-day summaries by category plus a dedicated photo gallery from the classroom.</li>
+                    <li><strong>Child profiles:</strong> Allergies, emergency contacts, and other details — kept current from the Parent app.</li>
+                    <li><strong>Bulletins &amp; multi-child:</strong> Director announcements with attachments; tabbed layout for families with more than one child.</li>
                 </ul>
+                <p class="feature-more"><a href="presentation.html">See the full platform walkthrough →</a></p>
             </div>
 
             <div class="feature-visual">
@@ -244,92 +224,13 @@
             </div>
         </section>
 
-        <section id="compliance" class="compliance-section reveal">
+        <section class="compliance-teaser highlight-section reveal">
             <div class="section-header">
                 <span class="badge badge-teal">BC Licensed Child Care</span>
                 <h2>Built with BC compliance in mind</h2>
-                <p>Licensed daycares in British Columbia must keep detailed records under the <em>Child Care Licensing Regulation</em>. We designed DailyDotKids to support those day-to-day record-keeping workflows — so your team spends less time on paperwork and more time with children.</p>
-            </div>
-
-            <div class="compliance-grid">
-                <article class="compliance-card">
-                    <h3>Attendance &amp; sign-in/out</h3>
-                    <p class="compliance-reg">BC records: daily attendance</p>
-                    <p>Teachers log arrivals and pickups through configurable Check-In and Check-Out categories — with timestamps, notes, and who picked up each child. Admins and teachers can review history in Class Record, filtered by date, student, and category.</p>
-                </article>
-                <article class="compliance-card">
-                    <h3>Emergency contacts</h3>
-                    <p class="compliance-reg">BC records: emergency contact information</p>
-                    <p>Store emergency contact name, phone, email, and relationship on each child's profile. Parents can keep details current from the Parent app; teachers see contacts on the class roster when they need them.</p>
-                </article>
-                <article class="compliance-card">
-                    <h3>Allergies &amp; special care</h3>
-                    <p class="compliance-reg">BC records: allergies and special care instructions</p>
-                    <p>Allergies and other care notes live on the student profile and appear on teacher roster cards — so staff have the right context before logging meals, health events, or daily activities.</p>
-                </article>
-                <article class="compliance-card">
-                    <h3>Health, medication &amp; incidents</h3>
-                    <p class="compliance-reg">BC records: health and medication logs</p>
-                    <p>Centers configure a Health activity category with options such as Symptoms, Medication, Incident, and Routine Check. Each entry is timestamped and tied to the child — a digital supplement to your existing medication and incident procedures, not a replacement for prescribed forms or physician instructions.</p>
-                </article>
-                <article class="compliance-card">
-                    <h3>Daily program &amp; family communication</h3>
-                    <p class="compliance-reg">BC records: program documentation &amp; parent communication</p>
-                    <p>Meals, naps, photos, moods, diary notes, daily reports, and director bulletins create a clear picture of each child's day — for families in real time and for your team when reviewing past care.</p>
-                </article>
-                <article class="compliance-card">
-                    <h3>Staff time on site</h3>
-                    <p class="compliance-reg">BC operations: staff supervision &amp; presence</p>
-                    <p>Teachers clock in and out before logging activities — on personal phones or shared classroom tablets. Owners and admins review per-teacher time logs and flagged outlier sessions from the admin dashboard.</p>
-                </article>
-                <article class="compliance-card">
-                    <h3>Secure, role-based access</h3>
-                    <p class="compliance-reg">BC &amp; privacy: protecting children's information</p>
-                    <p>Invitation-only accounts, owner vs. location-admin permissions, and scoped data access help keep sensitive child and family information visible only to the right people. See our <a href="privacy.html">Privacy Policy</a> for how we handle personal information under Canadian privacy law.</p>
-                </article>
-                <article class="compliance-card">
-                    <h3>Records for review</h3>
-                    <p class="compliance-reg">BC records: available for licensing inspection</p>
-                    <p>Class Record, class diary, daily reports, and admin roster views give you searchable digital records by date and student. Your center remains responsible for retention practices and any records the platform does not store.</p>
-                </article>
-            </div>
-
-            <div class="compliance-bottom">
-                <div class="compliance-roadmap">
-                    <h3>On our roadmap</h3>
-                    <p>We know licensed centres keep more than daily activity logs. These are the compliance features we are working toward — starting with a secure document vault and expiry reminders:</p>
-                    <ul>
-                        <li><strong>Compliance document vault</strong> — upload and organize immunization records, consent forms, staff CRCs, and certificates per child or staff member</li>
-                        <li><strong>Expiry tracking &amp; alerts</strong> — reminders before CRCs, first aid, or immunizations are due</li>
-                        <li><strong>Parent consent workflow</strong> — families upload or acknowledge forms; admins see who is still missing paperwork</li>
-                        <li><strong>Fire drill &amp; safety logbook</strong> — dated facility logs per location for drills and internal safety records</li>
-                        <li><strong>Policy library</strong> — centre policies in one place, with staff read-and-acknowledge tracking</li>
-                        <li><strong>Licensing visit export</strong> — printable or downloadable record packs for inspections</li>
-                    </ul>
-                    <p class="compliance-note">Until these ship, centres continue to keep those records in their existing files. Pilot partners help us prioritize what to build first.</p>
-                </div>
-                <div class="compliance-boundaries">
-                    <h3>What no app can do</h3>
-                    <p>Software can organize records and reminders — but it cannot replace the licensee, the law, or the work of running a safe centre. No childcare app — including DailyDotKids — can:</p>
-                    <ul>
-                        <li>Guarantee that your centre is compliant or licensed</li>
-                        <li>Take on the licensee's legal duties under BC child care law</li>
-                        <li>Conduct physical facility inspections or verify building and playground safety</li>
-                        <li>Automatically verify criminal record checks with police or government systems</li>
-                        <li>Provide medical, legal, or licensing advice</li>
-                        <li>Replace original signed paper where your licensing officer requires it</li>
-                        <li>File serious incident reports to BC licensing on your behalf</li>
-                        <li>Supervise children or enforce staff-to-child ratios in the classroom</li>
-                    </ul>
-                    <p class="compliance-note">Your team remains responsible for policies, training, ratios, safe premises, and every obligation on your facility licence.</p>
-                </div>
-                <div class="compliance-disclaimer">
-                    <p><strong>Important:</strong> DailyDotKids does not provide legal advice and does not certify that your center is compliant. The licensee is always responsible for meeting all requirements under the <em>Community Care and Assisted Living Act</em>, the <em>Child Care Licensing Regulation</em>, and your facility licence.</p>
-                    <p class="compliance-resources">Official BC resources:
-                        <a href="https://www.bclaws.gov.bc.ca/civix/document/id/loo66/loo66/319_89" target="_blank" rel="noopener noreferrer">Child Care Licensing Regulation</a>
-                        <span aria-hidden="true"> · </span>
-                        <a href="https://www2.gov.bc.ca/gov/content/family-social-supports/caring-for-young-children/information-for-partners-providers/rules-operating-licensed-day-care" target="_blank" rel="noopener noreferrer">Rules for licensed child care</a>
-                    </p>
+                <p>Attendance, emergency contacts, health logs, staff time records, and secure role-based access — mapped to what licensed centres need to keep on file, with an honest view of what's on our roadmap and what no app can replace.</p>
+                <div class="compliance-teaser-actions">
+                    <a href="compliance.html" class="btn btn-secondary">How we support BC compliance</a>
                 </div>
             </div>
         </section>
@@ -344,16 +245,7 @@
         </div>
     </section>
 
-    <footer class="footer">
-        <p>&copy; 2026 Anthor Canada corp. All rights reserved. Built for the future of early childhood education.</p>
-        <p class="footer-links">
-            <a href="presentation.html">Presentation</a>
-            <span>|</span>
-            <a href="privacy.html">Privacy Policy</a>
-            <span>|</span>
-            <a href="terms.html">Terms of Service</a>
-        </p>
-    </footer>
+    <div id="site-footer"></div>
 
     <div id="lightbox" class="lightbox" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Screenshot gallery">
         <button type="button" class="lightbox-backdrop" aria-label="Close gallery"></button>
@@ -370,6 +262,7 @@
         </div>
     </div>
 
+    <script src="layout.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
