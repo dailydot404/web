@@ -20,6 +20,12 @@
     ];
 
     const CTA_HREF = '#inquiry';
+    const LOGO_ICON =
+        '<img src="favicon.png" alt="" class="logo-icon" width="32" height="32" aria-hidden="true">';
+
+    function renderLogo(href) {
+        return `<a href="${href}" class="logo">${LOGO_ICON}Daily<span>DotKids</span></a>`;
+    }
 
     function getCurrentPage() {
         const fromBody = document.body.dataset.page;
@@ -53,7 +59,7 @@
         return `
 <nav class="navbar" aria-label="Site">
     <div class="nav-container">
-        <a href="${logoHref}" class="logo">Daily<span>DotKids</span></a>
+        ${renderLogo(logoHref)}
         <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
             <span></span>
             <span></span>
@@ -72,7 +78,7 @@
         return `
 <nav class="navbar" aria-label="Site">
     <div class="nav-container">
-        <a href="index.html" class="logo">Daily<span>DotKids</span></a>
+        ${renderLogo('index.html')}
         <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
             <span></span>
             <span></span>

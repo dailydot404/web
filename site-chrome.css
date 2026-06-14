@@ -35,11 +35,22 @@ body.nav-open {
 }
 
 .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--dark);
     text-decoration: none;
     z-index: 1001;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    display: block;
+    object-fit: contain;
 }
 
 .logo span {
