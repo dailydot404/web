@@ -4,139 +4,209 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="D4LtdFpVEQ96V9S5k989u0OBDoK19Op78e2B8jK7k8M" />
-    <meta name="description" content="DailyDotKids — three connected apps for BC daycares. Owner controls, 3-tap teacher logging, parent updates, and shared classroom tablets. Free MVP pilot.">
-    <title>DailyDotKids - Daycare, simplified.</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
+    <meta name="description" content="DailyDotKids helps daycare owners run the classroom day, keep parents informed, store staff and child records, and track tuition. We do not process payments or replace your licence.">
+    <meta name="theme-color" content="#ff5a5f">
+    <meta property="og:title" content="DailyDotKids — software for daycare owners">
+    <meta property="og:description" content="Teachers log the classroom. Parents get updates. You keep files, fees, and staff hours in one place. Free pilot for a limited number of centres.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dailydot404.github.io/web/">
+    <meta property="og:image" content="https://dailydot404.github.io/web/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://dailydot404.github.io/web/og-image.png">
+    <title>DailyDotKids — software for daycare owners</title>
+    <link rel="icon" type="image/png" href="fav_icon.png">
+    <link rel="apple-touch-icon" href="fav_icon.png">
     <link rel="stylesheet" href="style.css">
 </head>
-<body data-page="home">
+<body>
+    <a class="skip-link" href="#offer">Skip to what we offer</a>
 
-    <div id="site-header"></div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Daily<span>DotKids</span></a>
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html#offer">What we offer</a></li>
+                <li><a href="index.html#pilot">How a pilot works</a></li>
+                <li><a href="compliance.html">Compliance</a></li>
+                <li><a href="#inquiry" class="nav-cta inquiry-cta">Free pilot</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <header class="hero">
-        <div class="hero-content reveal">
-            <p class="hero-tagline">Daycare, simplified.</p>
-            <h1>The Simplest Way to Run Your Daycare</h1>
-            <p>Owners stay in control. Teachers log the day in three taps. Parents follow along in real time — on personal phones or a shared classroom tablet.</p>
-            <div class="hero-chips">
-                <span class="chip">Owner &amp; Admin App</span>
-                <span class="chip">Teacher App</span>
-                <span class="chip">Parent App</span>
-                <span class="chip chip-highlight">Shared Classroom Device</span>
+    <header class="hero hero-home">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <p class="hero-kicker">For daycare owners</p>
+                <h1>See the day, keep the records, stay in control</h1>
+                <p>DailyDotKids is software for running your centre. Teachers log the classroom. Parents get updates. You keep files, fees, and staff hours in one place. We do not take parent payments, and we do not replace your licence.</p>
+                <div class="hero-actions">
+                    <a href="#inquiry" class="btn btn-primary inquiry-cta">Book a free pilot chat</a>
+                    <a href="#offer" class="btn btn-secondary">See what you get</a>
+                </div>
             </div>
-            <div class="hero-actions">
-                <a href="#inquiry" class="btn btn-primary inquiry-cta">Join the MVP Pilot</a>
-                <a href="#platform" class="btn btn-secondary">See How It Works</a>
+            <div class="hero-visual">
+                <button type="button" class="hero-phone screenshot-wrapper" aria-label="Enlarge: Teacher class roster">
+                    <img src="teacher/students.png" alt="Teacher app class roster with one-tap buttons for meals, naps, check-in, and photos" width="500" height="1024">
+                </button>
+                <p class="hero-phone-label">Teacher app — tap to enlarge</p>
             </div>
         </div>
     </header>
 
     <main class="container">
 
-        <section id="platform" class="platform-section reveal">
+        <section id="offer" class="offer-section">
             <div class="section-header">
-                <span class="badge">One Platform, Three Apps</span>
-                <h2>Everything your center needs — connected end to end</h2>
-                <p>Owners and admins run the center from the Admin app. Teachers capture the classroom from phones or a shared tablet. Parents stay informed from theirs. Everyone joins through secure invitation codes — for multi-location centers and home-based daycares.</p>
+                <span class="badge">What we offer</span>
+                <h2>Six things DailyDotKids does for your centre</h2>
+                <p>If you own or run a daycare, this is the product. Everything else on this page is detail.</p>
+            </div>
+            <div class="offer-grid">
+                <article class="offer-card">
+                    <h3>1. Run the centre</h3>
+                    <p>Locations, classes, students, teachers, and invitations — including a shared classroom tablet if you keep one iPad in the room.</p>
+                </article>
+                <article class="offer-card">
+                    <h3>2. Capture the day</h3>
+                    <p>Teachers check children in and out, log meals, naps, photos, and notes in a few taps, and clock in for their shift.</p>
+                </article>
+                <article class="offer-card">
+                    <h3>3. Keep parents informed</h3>
+                    <p>Families see the day’s updates, photos, daily reports, and your bulletins on their phone.</p>
+                </article>
+                <article class="offer-card">
+                    <h3>4. Keep staff and child files</h3>
+                    <p>Store immunizations, consents, CRCs, first aid, and certificates per child or staff member. We remind you before dated credentials expire.</p>
+                </article>
+                <article class="offer-card">
+                    <h3>5. Track tuition — not collect it</h3>
+                    <p>Set monthly fees for the whole daycare, a class, or a child. Send invoices and record Interac. Parents still pay you directly. We are not a payment app.</p>
+                </article>
+                <article class="offer-card">
+                    <h3>6. Alert the right people</h3>
+                    <p>Push notifications for classroom updates, clock-in, and invoices. Email for invitations, PINs, and credential reminders. Invoices are not emailed.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="not" class="does-doesnt-section">
+            <div class="now-later-grid now-later-grid-3">
+                <article class="now-later-card now-card">
+                    <p class="now-later-label">We do</p>
+                    <h3>Use DailyDotKids for this</h3>
+                    <ul>
+                        <li>Daily classroom records and parent communication</li>
+                        <li>Staff hours you can review in the Admin app</li>
+                        <li>A document vault with expiry reminders</li>
+                        <li>Tuition invoices and Interac tracking</li>
+                    </ul>
+                </article>
+                <article class="now-later-card dont-card">
+                    <p class="now-later-label">We do not</p>
+                    <h3>These stay out of the product</h3>
+                    <ul>
+                        <li>We do not take or process parent payments</li>
+                        <li>We do not make your centre licensed or certify you as compliant</li>
+                        <li>We do not email invoices or the classroom activity feed — those stay in the apps</li>
+                    </ul>
+                </article>
+                <article class="now-later-card later-card">
+                    <p class="now-later-label">Not yet</p>
+                    <h3>We are building these</h3>
+                    <ul>
+                        <li>A full licensing-visit pack (attendance register, staff-hours file, emergency-contact list)</li>
+                        <li>In-app parent consent tracking</li>
+                        <li>Fire-drill / safety logbook and a policy library with staff acknowledge</li>
+                    </ul>
+                    <p class="now-later-note"><a href="#now-later">See the roadmap below</a> for what we are building next.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="pilot" class="pilot-section">
+            <div class="section-header">
+                <span class="badge">Getting started</span>
+                <h2>How a free pilot works</h2>
+                <p>No public signup. We set your centre up, then you invite staff and families.</p>
+            </div>
+            <div class="offer-grid">
+                <article class="offer-card">
+                    <h3>1. Tell us about your centre</h3>
+                    <p>Send your centre name, city, province, and roughly how many children. We will reply to book a short walkthrough.</p>
+                </article>
+                <article class="offer-card">
+                    <h3>2. We set you up</h3>
+                    <p>We create your daycare in the Admin app and help you add locations, classes, teachers, and children.</p>
+                </article>
+                <article class="offer-card">
+                    <h3>3. You invite your people</h3>
+                    <p>Teachers and parents join with an invitation — not a public account. Optional: one shared tablet in the classroom.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="platform" class="platform-section">
+            <div class="section-header">
+                <span class="badge">How it is set up</span>
+                <h2>Three apps: you, your teachers, your families</h2>
+                <p>You run the centre from the Admin app. Teachers log the day from a phone or a shared classroom tablet. Parents follow along on theirs. Everyone joins with an invitation — not a public signup.</p>
             </div>
             <div class="platform-grid">
                 <article class="platform-card">
-                    <div class="platform-icon admin">A</div>
-                    <h3>Admin App</h3>
-                    <p>Team management, delegated permissions, locations, classes, rosters, categories, bulletins, shared-device setup, and staff time logs.</p>
+                    <a href="index.html#admin" class="platform-card-body">
+                        <div class="platform-icon admin">A</div>
+                        <h3>Admin App</h3>
+                        <p>Team and locations, rosters, categories, bulletins, and staff time logs.</p>
+                    </a>
+                    <p class="store-links">
+                        <a href="https://apps.apple.com/ca/app/dailydotkids-admin/id6778867318" target="_blank" rel="noopener noreferrer">App Store</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.anthor.dailydot.admin" target="_blank" rel="noopener noreferrer">Google Play</a>
+                    </p>
                 </article>
                 <article class="platform-card">
-                    <div class="platform-icon teacher">T</div>
-                    <h3>Teacher App</h3>
-                    <p>3-tap activity logging, class diary, record history, clock in/out, PIN switching on shared tablets, and daily reports.</p>
+                    <a href="index.html#teachers" class="platform-card-body">
+                        <div class="platform-icon teacher">T</div>
+                        <h3>Teacher App</h3>
+                        <p>3-tap activity logging, check-in/out, clock in/out, and PIN switching on shared tablets.</p>
+                    </a>
+                    <p class="store-links">
+                        <a href="https://apps.apple.com/ca/app/dailydotkids-teacher/id6779875014" target="_blank" rel="noopener noreferrer">App Store</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.anthor.dailydot.teacher" target="_blank" rel="noopener noreferrer">Google Play</a>
+                    </p>
                 </article>
                 <article class="platform-card">
-                    <div class="platform-icon parent">P</div>
-                    <h3>Parent App</h3>
-                    <p>Live activity feed, daily reports, photo media gallery, child details, and director announcements.</p>
+                    <a href="index.html#parents" class="platform-card-body">
+                        <div class="platform-icon parent">P</div>
+                        <h3>Parent App</h3>
+                        <p>Live activity feed, daily reports, photo gallery, and director announcements.</p>
+                    </a>
+                    <p class="store-links">
+                        <a href="https://apps.apple.com/ca/app/dailydotkids-parent/id6779875288" target="_blank" rel="noopener noreferrer">App Store</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.anthor.dailydot.parent" target="_blank" rel="noopener noreferrer">Google Play</a>
+                    </p>
                 </article>
             </div>
         </section>
 
-        <section id="roles" class="roles-section reveal">
-            <div class="section-header">
-                <span class="badge badge-purple">Owner &amp; Team Controls</span>
-                <h2>Give owners full control — delegate the rest</h2>
-                <p>Multi-location centers and home-based daycares both get a clear hierarchy: one owner account with complete visibility, plus location admins who only see and change what you allow.</p>
-            </div>
-            <div class="role-grid">
-                <article class="role-card role-owner">
-                    <div class="role-label">Owner</div>
-                    <h3>Center-wide control</h3>
-                    <p>Full access to every location, class, and setting. Invite and manage your admin team, assign campuses, and decide who can change what.</p>
-                    <ul class="role-points">
-                        <li>All locations and classes</li>
-                        <li>Team invites, updates, and deactivation</li>
-                        <li>Device mode, categories, and policies</li>
-                    </ul>
-                </article>
-                <article class="role-card role-admin">
-                    <div class="role-label">Location Admin</div>
-                    <h3>Scoped day-to-day ops</h3>
-                    <p>Perfect for campus directors or lead teachers. Access only assigned locations and only the settings the owner delegates.</p>
-                    <div class="permission-pills">
-                        <span class="pill">Device &amp; shared tablet</span>
-                        <span class="pill">Clock-in policy</span>
-                        <span class="pill">Categories</span>
-                        <span class="pill">Locations</span>
-                        <span class="pill">Classes</span>
-                    </div>
-                </article>
-            </div>
-            <p class="roles-footnote">Home-based daycares use a single owner account with full access. Multi-location centers can add campus-specific admins without sharing owner credentials.</p>
-        </section>
-
-        <section id="shared-device" class="feature-split highlight-section reveal">
+        <section id="admin" class="feature-split">
             <div class="feature-text">
-                <span class="badge badge-teal">Shared Classroom Device</span>
-                <h2>One tablet per class — every teacher, zero password juggling</h2>
-                <p>Many centers keep a classroom iPad at the check-in desk. Owners enable shared mode once — location admins with device permission can help tune session timeouts. Teachers switch with a quick PIN and the tablet locks when idle.</p>
+                <span class="badge">Your Admin app</span>
+                <h2>Run locations, people, and the day from one place</h2>
+                <p>This is the owner and director app. Set up the centre, invite staff and families, review hours, and send announcements — without a pile of separate spreadsheets.</p>
                 <ul class="benefit-list">
-                    <li><strong>Owner-controlled setup:</strong> Individual devices or shared classroom mode, with configurable session and lock timeouts.</li>
-                    <li><strong>PIN teacher switching:</strong> Hand off the tablet with a 4-digit PIN — no re-entering email and password between shifts.</li>
-                    <li><strong>Clock in/out on shared tablets:</strong> Staff clock in before logging; owners review time logs from the admin dashboard.</li>
-                    <li><strong>Diary &amp; record stay visible:</strong> Class notes and history stay browsable on the device — only logging and clock actions need the active teacher.</li>
-                </ul>
-            </div>
-
-            <div class="feature-visual">
-                <div class="image-showcase grid-2" data-gallery="Shared Classroom Device">
-                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Admin shared device settings">
-                        <img src="admin/shared-device.png" alt="Admin settings for shared classroom device mode with session timeouts" loading="lazy">
-                    </button>
-                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Teacher clock on shared device">
-                        <img src="teacher/clock.png" alt="Teacher clock in and out screen on a shared classroom tablet" loading="lazy">
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <section class="mid-cta reveal">
-            <div class="mid-cta-inner">
-                <h2>See it on a 15-minute call</h2>
-                <p>Free MVP pilot for BC licensed centres — we'll walk through the apps live and answer your questions.</p>
-                <div class="mid-cta-actions">
-                    <a href="#inquiry" class="btn btn-primary inquiry-cta">Book a pilot chat</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="admin" class="feature-split reveal">
-            <div class="feature-text">
-                <span class="badge">For Owners &amp; Admins</span>
-                <h2>Run your center without the paperwork chaos</h2>
-                <p>Whether you operate one home-based site or multiple campuses, DailyDotKids centralizes people, communication, and operations into one clean dashboard — with role-based access built in.</p>
-                <ul class="benefit-list">
-                    <li><strong>Team &amp; locations:</strong> Invite admins, assign campuses, delegate permissions, and manage rosters across every building.</li>
-                    <li><strong>Enrollment &amp; records:</strong> Students, teachers, emergency contacts, class diary, and filtered activity history in one place.</li>
-                    <li><strong>Family communication:</strong> Targeted bulletins with PDF and image attachments, plus read/unread tracking.</li>
-                    <li><strong>Staff time logs:</strong> Review clock-in and clock-out records per teacher, with outlier session highlighting.</li>
+                    <li><strong>Multi-Location Management:</strong> Create locations, organize classrooms and age groups, and manage rosters across every building.</li>
+                    <li><strong>Enrollment &amp; Rosters:</strong> Add students and teachers, assign them to classes, and keep parent contact and emergency info on file.</li>
+                    <li><strong>Category Configuration:</strong> Customize activity types — meals, naps, check-in/out, photos, notes, and more — for your centre's workflow.</li>
+                    <li><strong>Bulletins &amp; Daily Reports:</strong> Send targeted announcements to families and print generated daily-report PDFs.</li>
+                    <li><strong>Staff Time Logs:</strong> Review teacher clock-in and clock-out records across your team, with outlier session highlighting.</li>
+                    <li><strong>Invitation Onboarding:</strong> Invite teachers and parents with secure codes — no manual account setup required.</li>
                 </ul>
             </div>
 
@@ -158,90 +228,250 @@
             </div>
         </section>
 
-        <section id="teachers" class="feature-split reverse reveal">
+        <section id="teachers" class="feature-split reverse">
             <div class="feature-text">
-                <span class="badge">For Classroom Teachers</span>
-                <h2>Log updates in 3 taps, then get back to the kids</h2>
-                <p>Teachers want to teach, not type. Log activities from a class roster, add diary notes, browse class history, generate end-of-day reports, and keep parents in the loop — on a personal phone or the classroom tablet.</p>
+                <span class="badge">Your Teacher app</span>
+                <h2>Teachers log the day in a few taps</h2>
+                <p>Staff check children in and out, record meals, naps, photos, and notes from the class roster, then clock their own hours. Parents see those updates automatically — teachers do not need a separate message to each family.</p>
                 <ul class="benefit-list">
-                    <li><strong>3-tap activity logging:</strong> Meals, naps, photos, moods, and notes — for one child or in bulk from the class roster.</li>
-                    <li><strong>Check-in/out &amp; class diary:</strong> Record arrivals and pickups; add timestamped diary notes tagged to students.</li>
-                    <li><strong>Clock in/out &amp; PIN switching:</strong> Works on personal phones and shared tablets — switch teachers without re-login.</li>
-                    <li><strong>Daily reports &amp; roster context:</strong> End-of-day summaries plus allergies and emergency contacts on each student's card.</li>
+                    <li><strong>3-Tap Activity Logging:</strong> Log meals, naps, bathroom breaks, photos, moods, and notes in seconds — for one child or in bulk.</li>
+                    <li><strong>Check-In &amp; Check-Out:</strong> Record child arrivals and pickups through configurable activity categories, including who picked up.</li>
+                    <li><strong>Clock In &amp; Out:</strong> Teachers clock in before logging activities; directors review staff time logs from the admin dashboard.</li>
+                    <li><strong>Daily Reports:</strong> Generate summarized end-of-day reports for individual students or your whole class, and browse report history.</li>
+                    <li><strong>Class Roster at a Glance:</strong> See allergies, parent notes, and emergency contacts right on each student's card.</li>
                 </ul>
             </div>
 
             <div class="feature-visual">
-                <div class="image-showcase grid-4" data-gallery="Teacher App">
+                <div class="image-showcase grid-3" data-gallery="Teacher App">
                     <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Teacher class roster">
                         <img src="teacher/students.png" alt="Teacher class roster with one-tap activity logging buttons" loading="lazy">
-                    </button>
-                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Teacher class diary">
-                        <img src="teacher/diary.png" alt="Teacher class diary with student-tagged notes" loading="lazy">
-                    </button>
-                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Teacher class record">
-                        <img src="teacher/record.png" alt="Teacher class record with activity and report history filters" loading="lazy">
                     </button>
                     <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Teacher clock in and out">
                         <img src="teacher/clock.png" alt="Teacher clock in and clock out screen" loading="lazy">
                     </button>
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Teacher class diary">
+                        <img src="teacher/diary.png" alt="Teacher class diary with student-tagged notes" loading="lazy">
+                    </button>
                 </div>
             </div>
         </section>
 
-        <section id="parents" class="feature-split reveal">
+        <section id="parents" class="feature-split">
             <div class="feature-text">
-                <span class="badge">For Families</span>
-                <h2>Keep parents connected, happy, and loyal</h2>
-                <p>Build trust from day one. Parents receive clean, beautifully formatted updates right on their phones — from live classroom moments to end-of-day summaries.</p>
+                <span class="badge">Your Parent app</span>
+                <h2>Parents see the day without extra work from you</h2>
+                <p>Families get the activity feed, photos, daily reports, and your bulletins on their phone. They also see invoices and can mark Interac sent — they still pay you outside the app.</p>
                 <ul class="benefit-list">
-                    <li><strong>Live activity feed:</strong> Follow classroom updates throughout the day — photos, moods, and notes organized by date.</li>
-                    <li><strong>Daily reports &amp; media:</strong> End-of-day summaries by category plus a dedicated photo gallery from the classroom.</li>
-                    <li><strong>Child profiles:</strong> Allergies, emergency contacts, and other details — kept current from the Parent app.</li>
-                    <li><strong>Bulletins &amp; multi-child:</strong> Director announcements with attachments; tabbed layout for families with more than one child.</li>
+                    <li><strong>Live Activity Feed:</strong> Follow teacher-logged updates throughout the day, organized by date with photos, moods, and notes.</li>
+                    <li><strong>Daily Reports:</strong> Review summarized end-of-day reports by category — meals, naps, activities, and more — with timestamps and photos.</li>
+                    <li><strong>Photo Moments:</strong> View activity photos from the classroom and update your child's profile picture anytime.</li>
+                    <li><strong>Bulletins &amp; Announcements:</strong> Read director and admin announcements in-app, with PDF and image attachments and read/unread tracking.</li>
+                    <li><strong>Multi-Child Profiles:</strong> Manage allergies, emergency contacts, and other details for every child linked to your account.</li>
                 </ul>
             </div>
 
             <div class="feature-visual">
-                <div class="image-showcase grid-4" data-gallery="Parent App">
-                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent my kids dashboard">
-                        <img src="parent/my-kids.png" alt="Parent my kids dashboard with child profiles" loading="lazy">
+                <div class="image-showcase grid-3" data-gallery="Parent App">
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent child profiles">
+                        <img src="parent/my-kids.png" alt="Parent child profiles with allergies and emergency info" loading="lazy">
+                    </button>
+                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent bulletin inbox">
+                        <img src="parent/bulletin.png" alt="Parent bulletin and announcements inbox" loading="lazy">
                     </button>
                     <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent activity feed">
-                        <img src="parent/activities.png" alt="Parent live activity feed with photos and moods" loading="lazy">
-                    </button>
-                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent daily reports">
-                        <img src="parent/reports.png" alt="Parent daily reports by category" loading="lazy">
-                    </button>
-                    <button type="button" class="screenshot-wrapper" aria-label="Enlarge: Parent media gallery">
-                        <img src="parent/media.png" alt="Parent photo media gallery from classroom activities" loading="lazy">
+                        <img src="parent/activities.png" alt="Parent live activity feed with daily reports toggle" loading="lazy">
                     </button>
                 </div>
             </div>
         </section>
 
-        <section class="compliance-teaser highlight-section reveal">
+        <section id="billing" class="data-safety-section">
             <div class="section-header">
-                <span class="badge badge-teal">BC Licensed Child Care</span>
-                <h2>Built with BC compliance in mind</h2>
-                <p>Attendance, emergency contacts, health logs, staff time records, and secure role-based access — mapped to what licensed centres need to keep on file, with an honest view of what's on our roadmap and what no app can replace.</p>
-                <div class="compliance-teaser-actions">
-                    <a href="compliance.html" class="btn btn-secondary">How we support BC compliance</a>
-                </div>
+                <span class="badge">Tuition reporting</span>
+                <h2>Set fees, track invoices, and get alerts — without becoming a payment app</h2>
+                <p>DailyDotKids is not a payment platform. We help owners set monthly tuition, send invoices, record Interac payments, and keep parents informed. Families still pay the centre directly.</p>
+            </div>
+            <div class="data-safety-grid">
+                <article class="data-safety-card">
+                    <h3>Fees at every level</h3>
+                    <p>Set a monthly amount for the whole daycare, then override by location, class, or child when a family needs a different rate.</p>
+                </article>
+                <article class="data-safety-card">
+                    <h3>Invoices &amp; yearly receipts</h3>
+                    <p>Invoices are created for the next month and can also be sent one-off. Print PDF invoices and a yearly child-care expense receipt from recorded invoices — useful for records, not a tax form.</p>
+                </article>
+                <article class="data-safety-card">
+                    <h3>Interac tracking &amp; alerts</h3>
+                    <p>Parents see Interac instructions, tap when they've sent payment, and you confirm in the Admin app. Push alerts cover new invoices, payment submitted, approved or rejected, reminders, and overdue balances for owners.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="alerts" class="alerts-section">
+            <div class="section-header">
+                <span class="badge">Notifications</span>
+                <h2>Push and email alerts — and when we send each</h2>
+                <p>Families and staff hear about the day in the app. Email is reserved for invitations, credentials, and compliance reminders that should still arrive if the phone is off. Billing invoices are push-only — we do not email them.</p>
+            </div>
+            <div class="now-later-grid">
+                <article class="now-later-card now-card">
+                    <p class="now-later-label">Push notifications</p>
+                    <h3>In the apps</h3>
+                    <ul>
+                        <li><strong>Parents:</strong> new activity, photo, bulletin, and daily report ready</li>
+                        <li><strong>Parents:</strong> new invoice, payment reminder, Interac approved or rejected, yearly receipt shared</li>
+                        <li><strong>Admins:</strong> teacher clock in/out, long clock-in sessions, and new waitlist entries</li>
+                        <li><strong>Admins:</strong> parent marked Interac sent, and overdue tuition</li>
+                        <li><strong>Teachers:</strong> student info updated, and class reassignment (on a personal phone, not a shared tablet)</li>
+                        <li><strong>Everyone with vault on:</strong> credentials expiring or expired; teachers also get missing-ECE reminders</li>
+                    </ul>
+                    <p class="now-later-note">Each person can turn individual push types on or off in Settings.</p>
+                </article>
+                <article class="now-later-card now-later-card-muted">
+                    <p class="now-later-label">Email</p>
+                    <h3>In the inbox</h3>
+                    <ul>
+                        <li><strong>Invites:</strong> teacher, parent, admin, and owner invitations (and resends)</li>
+                        <li><strong>Account:</strong> password reset, device PIN, vault PIN, and account-deletion codes</li>
+                        <li><strong>Teachers:</strong> class reassignment</li>
+                        <li><strong>Vault:</strong> credential expiring or expired, plus a weekly missing-ECE digest for owners</li>
+                    </ul>
+                    <p class="now-later-note">We do not email classroom activity feeds or tuition invoices. Those stay in the apps as push alerts.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="data-safety" class="data-safety-section">
+            <div class="section-header">
+                <span class="badge">Data safety</span>
+                <h2>Built to protect children's and staff information</h2>
+                <p>Daycare records include health details, emergency contacts, and credentials. Centre records are stored in Canada. We encrypt sensitive fields in the database, encrypt vault files at rest, and hash passwords and PINs so they are never stored in plaintext.</p>
+            </div>
+            <div class="data-safety-grid data-safety-grid-4">
+                <article class="data-safety-card">
+                    <h3>Stored in Canada</h3>
+                    <p>Your centre’s records — the database, classroom photos, and vault files — are hosted in Google Cloud in Montreal. Push and email alerts may travel through the networks that deliver them to phones and inboxes.</p>
+                </article>
+                <article class="data-safety-card">
+                    <h3>Encrypted in the database</h3>
+                    <p>Allergies, dates of birth, emergency contacts, activity notes, daily-report PDFs, phone numbers, and vault document details are encrypted at rest with AES-256 before they are stored.</p>
+                </article>
+                <article class="data-safety-card">
+                    <h3>Encrypted vault files</h3>
+                    <p>Immunization records, consents, CRCs, certificates, and other vault uploads are stored as encrypted files — not as open documents on disk.</p>
+                </article>
+                <article class="data-safety-card">
+                    <h3>Hashed passwords and PINs</h3>
+                    <p>Account passwords, vault PINs, and shared-tablet PINs are one-way hashed. We cannot read them back, and a database copy is not enough to log in as a user.</p>
+                </article>
+            </div>
+            <p class="now-later-cta"><a href="privacy.html">Read how we handle personal information</a></p>
+        </section>
+
+        <section id="now-later" class="now-later-section">
+            <div class="section-header">
+                <span class="badge">Honest roadmap</span>
+                <h2>What we support today — and what we're building next</h2>
+                <p>DailyDotKids is live for classroom work, compliance documents, and tuition reporting. A few licensing workflows are still on the way. We keep this list current so centres know what is ready versus planned.</p>
+            </div>
+            <div class="now-later-grid">
+                <article class="now-later-card now-card">
+                    <p class="now-later-label">Available now</p>
+                    <h3>In the apps today</h3>
+                    <ul>
+                        <li>Three connected apps, invitation-only accounts, and shared classroom tablets</li>
+                        <li>Daily logging, check-in/out, reports, bulletins, and staff time logs</li>
+                        <li>Compliance vault, expiry reminders, tuition reporting, and push/email alerts — covered in the sections above</li>
+                    </ul>
+                </article>
+                <article class="now-later-card later-card">
+                    <p class="now-later-label">Coming next</p>
+                    <h3>On our roadmap</h3>
+                    <ul>
+                        <li><strong>Parent consent workflow</strong> — families acknowledge or complete forms in-app; admins see who is still missing paperwork</li>
+                        <li><strong>Fire drill &amp; safety logbook</strong> — dated facility logs per location for drills and internal safety records</li>
+                        <li><strong>Policy library</strong> — centre policies in one place, with staff read-and-acknowledge tracking</li>
+                        <li><strong>Licensing visit export</strong> — printable or downloadable record packs for inspections</li>
+                    </ul>
+                    <p class="now-later-note">Until these ship, centres continue to keep those records in their existing files. Pilot partners help us prioritize what to build first.</p>
+                </article>
+            </div>
+            <p class="now-later-cta"><a href="compliance.html">See how this maps to licensed child care</a></p>
+        </section>
+
+        <section id="faq" class="faq-section">
+            <div class="section-header">
+                <span class="badge">Questions owners ask</span>
+                <h2>Short answers before you email</h2>
+            </div>
+            <div class="faq-list">
+                <details>
+                    <summary>Is the pilot free?</summary>
+                    <p>Yes — for a limited number of centres. There is no setup fee. If we later offer a paid plan, we will talk with you before anything is billed.</p>
+                </details>
+                <details>
+                    <summary>Do you take parent payments?</summary>
+                    <p>No. Parents pay you directly, usually by Interac. The apps track invoices, who marked payment sent, and whether you confirmed it.</p>
+                </details>
+                <details>
+                    <summary>What devices do we need?</summary>
+                    <p>Admin, Teacher, and Parent apps are on the <a href="#platform">App Store and Google Play</a>. Teachers can also share one classroom tablet and switch with a PIN. Everyone still needs an invitation — downloading the app is not enough to sign up.</p>
+                </details>
+                <details>
+                    <summary>We are not in British Columbia. Can we still join?</summary>
+                    <p>Yes. The product is the same in every province. Licensing rules are local — see the <a href="compliance.html">Compliance</a> page for official government links.</p>
+                </details>
+                <details>
+                    <summary>Does this make our centre licensed or compliant?</summary>
+                    <p>No. You remain responsible for your licence. DailyDotKids helps you keep records and reminders; it does not certify you.</p>
+                </details>
+                <details>
+                    <summary>Where is our data stored?</summary>
+                    <p>Centre records — the database, photos, and vault files — are hosted in Google Cloud in Montreal, Canada. Push notifications and invitation emails may travel through the services that deliver them to phones and inboxes.</p>
+                </details>
+                <details>
+                    <summary>How do teachers and parents get accounts?</summary>
+                    <p>Invitation only. There is no public signup. You send invites from the Admin app; they join with a code.</p>
+                </details>
             </div>
         </section>
 
     </main>
 
-    <section class="final-cta reveal">
+    <section class="final-cta">
         <div class="cta-content">
-            <h2>Ready to simplify your childcare center?</h2>
-            <p>We are currently accepting a limited number of daycares for our early-access MVP pilot — multi-location centers and home-based sites. No setup fees, no complex onboarding: owner team controls, invitation-based setup, and shared classroom tablets when you need them.</p>
-            <a href="#inquiry" class="btn btn-primary large inquiry-cta">Claim Your Free Pilot Space</a>
+            <h2>Want this for your centre?</h2>
+            <p>We are taking a limited number of daycares into a free pilot. You get the three apps, document vault, tuition tracking, and alerts described above. Email us and we will walk through whether it fits how you run today.</p>
+            <a href="#inquiry" class="btn btn-primary large inquiry-cta">Book a free pilot chat</a>
+            <p class="cta-email">Or write us at <a href="mailto:dailydot404@gmail.com" class="inquiry-ignore">dailydot404@gmail.com</a></p>
         </div>
     </section>
 
-    <div id="site-footer"></div>
+    <footer class="footer">
+        <p class="footer-brand">Anthor Canada corp · Langley, British Columbia</p>
+        <p class="footer-contact">
+            <a href="tel:+12368621951">+1 236-862-1951</a>
+            <span aria-hidden="true"> · </span>
+            <a href="mailto:dailydot404@gmail.com" class="inquiry-ignore">dailydot404@gmail.com</a>
+        </p>
+        <p>&copy; 2026 Anthor Canada corp. All rights reserved.</p>
+        <p class="footer-links">
+            <a href="index.html">Home</a>
+            <span>|</span>
+            <a href="index.html#offer">What we offer</a>
+            <span>|</span>
+            <a href="index.html#now-later">Now &amp; next</a>
+            <span>|</span>
+            <a href="index.html#data-safety">Data safety</a>
+            <span>|</span>
+            <a href="compliance.html">Compliance</a>
+            <span>|</span>
+            <a href="privacy.html">Privacy Policy</a>
+            <span>|</span>
+            <a href="terms.html">Terms of Service</a>
+        </p>
+    </footer>
 
     <div id="lightbox" class="lightbox" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Screenshot gallery">
         <button type="button" class="lightbox-backdrop" aria-label="Close gallery"></button>
@@ -258,7 +488,6 @@
         </div>
     </div>
 
-    <script src="layout.js"></script>
     <script src="inquiry.js"></script>
     <script src="script.js"></script>
 </body>

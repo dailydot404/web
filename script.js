@@ -1,37 +1,45 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar');
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
     const sections = document.querySelectorAll('section[id]');
-    const revealElements = document.querySelectorAll('.reveal');
-
-    if ('IntersectionObserver' in window) {
-        const revealObserver = new IntersectionObserver(
-            (entries, observer) => {
-                entries.forEach((entry) => {
-                    if (!entry.isIntersecting) return;
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                });
-            },
-            { threshold: 0.12, rootMargin: '0px 0px -40px 0px' },
-        );
-
-        revealElements.forEach((element) => revealObserver.observe(element));
-    } else {
-        revealElements.forEach((element) => element.classList.add('is-visible'));
-    }
-
-    if (!navbar) return;
 
     const navHeight = () => navbar.offsetHeight;
-    const closeMobileNav = () => window.SiteLayout?.navApi?.closeMobileNav?.();
 
-    anchorLinks.forEach((link) => {
+    function hashFromHref(href) {
+        if (!href) return '';
+        const hashIndex = href.indexOf('#');
+        if (hashIndex === -1) return '';
+        return href.slice(hashIndex);
+    }
+
+    function closeMobileNav() {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('nav-open');
+    }
+
+    function openMobileNav() {
+        navLinks.classList.add('open');
+        navToggle.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('nav-open');
+    }
+
+    if (navToggle) navToggle.addEventListener('click', () => {
+        const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+        if (isOpen) {
+            closeMobileNav();
+        } else {
+            openMobileNav();
+        }
+    });
+
+    document.querySelectorAll('a[href*="#"]').forEach((link) => {
         link.addEventListener('click', (e) => {
-            const targetId = link.getAttribute('href');
-            if (!targetId || targetId === '#') return;
+            const hash = hashFromHref(link.getAttribute('href'));
+            if (!hash || hash === '#' || hash === '#inquiry') return;
 
-            const targetElement = document.querySelector(targetId);
+            const targetElement = document.querySelector(hash);
             if (!targetElement) return;
 
             e.preventDefault();
@@ -45,11 +53,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 behavior: 'smooth',
             });
 
-            history.replaceState(null, '', targetId);
+            history.replaceState(null, '', hash);
         });
     });
 
-    const navSectionLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    document.addEventListener('click', (e) => {
+        if (
+            navLinks.classList.contains('open') &&
+            !navLinks.contains(e.target) &&
+            !navToggle.contains(e.target)
+        ) {
+            closeMobileNav();
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            closeMobileNav();
+        }
+    });
+
+    const navSectionLinks = document.querySelectorAll('.nav-links a[href*="#"]');
 
     function updateActiveNav() {
         const scrollPos = window.scrollY + navHeight() + 40;
@@ -62,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         navSectionLinks.forEach((link) => {
-            link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
+            link.classList.toggle('active', hashFromHref(link.getAttribute('href')) === `#${currentId}`);
         });
     }
 
@@ -70,7 +94,9 @@ document.addEventListener('DOMContentLoaded', () => {
     updateActiveNav();
 
     const lightbox = document.getElementById('lightbox');
-    if (!lightbox) return;
+    if (!lightbox) {
+        return;
+    }
 
     const lightboxImage = lightbox.querySelector('.lightbox-image');
     const lightboxCaption = lightbox.querySelector('.lightbox-caption');

@@ -21,8 +21,8 @@
     <div class="inquiry-panel">
         <button type="button" class="inquiry-close" aria-label="Close form">&times;</button>
         <div id="inquiry-form-view">
-            <h2 id="inquiry-title">Join the MVP Pilot</h2>
-            <p class="inquiry-lead">Tell us about your center and we&rsquo;ll reach out with free early-access details.</p>
+            <h2 id="inquiry-title">Book a free pilot chat</h2>
+            <p class="inquiry-lead">Tell us about your centre. We&rsquo;ll reply to walk through whether DailyDotKids fits how you run today.</p>
             <form class="inquiry-form" id="inquiry-form" novalidate>
                 <div class="inquiry-field">
                     <label for="inquiry-name">Name</label>
@@ -33,12 +33,20 @@
                     <input id="inquiry-email" name="email" type="email" autocomplete="email" required>
                 </div>
                 <div class="inquiry-field">
-                    <label for="inquiry-daycare">Daycare name</label>
+                    <label for="inquiry-daycare">Centre name</label>
                     <input id="inquiry-daycare" name="daycare" type="text" autocomplete="organization">
                 </div>
                 <div class="inquiry-field">
+                    <label for="inquiry-location">City and province</label>
+                    <input id="inquiry-location" name="location" type="text" autocomplete="address-level2">
+                </div>
+                <div class="inquiry-field">
+                    <label for="inquiry-children">Approx. number of children</label>
+                    <input id="inquiry-children" name="children" type="text" inputmode="numeric">
+                </div>
+                <div class="inquiry-field">
                     <label for="inquiry-message">Message</label>
-                    <textarea id="inquiry-message" name="message" rows="4" placeholder="Optional — tell us about your center or what you&rsquo;d like to see."></textarea>
+                    <textarea id="inquiry-message" name="message" rows="4" placeholder="Optional — tell us how you run today, or what you need to see."></textarea>
                 </div>
                 <input class="inquiry-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
                 <p class="inquiry-error" id="inquiry-error" hidden></p>
@@ -131,8 +139,10 @@
             name: formData.get('name'),
             email: formData.get('email'),
             daycare: formData.get('daycare') || '',
+            location: formData.get('location') || '',
+            children: formData.get('children') || '',
             message: formData.get('message') || '',
-            _subject: 'DailyDotKids MVP pilot inquiry',
+            _subject: 'DailyDotKids pilot inquiry',
         };
 
         if (formData.get('_gotcha')) {

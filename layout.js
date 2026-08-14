@@ -1,11 +1,7 @@
 (function (global) {
     const NAV_SECTIONS = [
-        { id: 'platform', label: 'Platform' },
-        { id: 'roles', label: 'Roles' },
-        { id: 'shared-device', label: 'Tablet' },
-        { id: 'admin', label: 'Admins' },
-        { id: 'teachers', label: 'Teachers' },
-        { id: 'parents', label: 'Parents' },
+        { id: 'offer', label: 'What we offer' },
+        { id: 'pilot', label: 'How a pilot works' },
     ];
 
     const NAV_PAGES = [
@@ -14,7 +10,8 @@
 
     const FOOTER_LINKS = [
         { href: 'index.html', label: 'Home', page: 'home' },
-        { href: 'compliance.html', label: 'BC Compliance', page: 'compliance' },
+        { href: 'index.html#offer', label: 'What we offer', page: '' },
+        { href: 'compliance.html', label: 'Compliance', page: 'compliance' },
         { href: 'privacy.html', label: 'Privacy Policy', page: 'privacy' },
         { href: 'terms.html', label: 'Terms of Service', page: 'terms' },
     ];
@@ -66,7 +63,7 @@
         <ul class="nav-links">
             ${sectionItems}
             ${pageItems}
-            <li><a href="${CTA_HREF}" class="nav-cta inquiry-cta">Get Free Access</a></li>
+            <li><a href="${CTA_HREF}" class="nav-cta inquiry-cta">Free pilot</a></li>
         </ul>
     </div>
 </nav>`.trim();
@@ -84,7 +81,7 @@
         </button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="${CTA_HREF}" class="nav-cta inquiry-cta">Get Free Access</a></li>
+            <li><a href="${CTA_HREF}" class="nav-cta inquiry-cta">Free pilot</a></li>
         </ul>
     </div>
 </nav>`.trim();
