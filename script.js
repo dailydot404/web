@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('nav-open');
     }
 
-    navToggle.addEventListener('click', () => {
+    if (navToggle) navToggle.addEventListener('click', () => {
         const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
         if (isOpen) {
             closeMobileNav();
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href*="#"]').forEach((link) => {
         link.addEventListener('click', (e) => {
             const hash = hashFromHref(link.getAttribute('href'));
-            if (!hash || hash === '#') return;
+            if (!hash || hash === '#' || hash === '#inquiry') return;
 
             const targetElement = document.querySelector(hash);
             if (!targetElement) return;
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!img) return null;
 
         return {
-            src: img.src,
+            src: img.currentSrc || img.src,
             alt: img.alt,
         };
     }
