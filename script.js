@@ -2,10 +2,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.navbar');
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
     const sections = document.querySelectorAll('section[id]');
 
     const navHeight = () => navbar.offsetHeight;
+
+    function hashFromHref(href) {
+        if (!href) return '';
+        const hashIndex = href.indexOf('#');
+        if (hashIndex === -1) return '';
+        return href.slice(hashIndex);
+    }
 
     function closeMobileNav() {
         navLinks.classList.remove('open');
@@ -28,12 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    anchorLinks.forEach((link) => {
+    document.querySelectorAll('a[href*="#"]').forEach((link) => {
         link.addEventListener('click', (e) => {
-            const targetId = link.getAttribute('href');
-            if (!targetId || targetId === '#') return;
+            const hash = hashFromHref(link.getAttribute('href'));
+            if (!hash || hash === '#') return;
 
-            const targetElement = document.querySelector(targetId);
+            const targetElement = document.querySelector(hash);
             if (!targetElement) return;
 
             e.preventDefault();
@@ -47,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 behavior: 'smooth',
             });
 
-            history.replaceState(null, '', targetId);
+            history.replaceState(null, '', hash);
         });
     });
 
@@ -67,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    const navSectionLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    const navSectionLinks = document.querySelectorAll('.nav-links a[href*="#"]');
 
     function updateActiveNav() {
         const scrollPos = window.scrollY + navHeight() + 40;
@@ -80,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         navSectionLinks.forEach((link) => {
-            link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
+            link.classList.toggle('active', hashFromHref(link.getAttribute('href')) === `#${currentId}`);
         });
     }
 
@@ -88,6 +94,10 @@ document.addEventListener('DOMContentLoaded', () => {
     updateActiveNav();
 
     const lightbox = document.getElementById('lightbox');
+    if (!lightbox) {
+        return;
+    }
+
     const lightboxImage = lightbox.querySelector('.lightbox-image');
     const lightboxCaption = lightbox.querySelector('.lightbox-caption');
     const lightboxGalleryName = lightbox.querySelector('.lightbox-gallery-name');
