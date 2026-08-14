@@ -9,6 +9,119 @@
     let submitBtn = null;
     let lastFocusedElement = null;
 
+    function payloadFromForm(target) {
+        const formData = new FormData(target);
+        const city = String(formData.get('city') || '').trim();
+        const province = String(formData.get('province') || '').trim();
+        const location =
+            [city, province].filter(Boolean).join(', ') ||
+            String(formData.get('location') || '').trim();
+
+        return {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            daycare: formData.get('daycare') || '',
+            city,
+            province,
+            location,
+            children: formData.get('children') || '',
+            message: formData.get('message') || '',
+            _subject: 'DailyDotKids pilot signup',
+        };
+    }
+
+    async function postSignup(target, { errorNode, button, onSuccess }) {
+        if (errorNode) {
+            errorNode.textContent = '';
+            errorNode.hidden = true;
+        }
+
+        if (!target.reportValidity()) {
+            return;
+        }
+
+        const formData = new FormData(target);
+        if (formData.get('_gotcha')) {
+            onSuccess();
+            return;
+        }
+
+        const originalLabel = button ? button.textContent : '';
+        if (button) {
+            button.disabled = true;
+            button.textContent = 'Sending…';
+        }
+
+        try {
+            const response = await fetch(FORMSPREE_URL, {
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payloadFromForm(target)),
+            });
+
+            const body = await response.json().catch(() => ({}));
+
+            if (!response.ok) {
+                const message =
+                    typeof body.error === 'string'
+                        ? body.error
+                        : 'Something went wrong. Please try again or email dailydot404@gmail.com.';
+                if (errorNode) {
+                    errorNode.textContent = message;
+                    errorNode.hidden = false;
+                }
+                if (button) {
+                    button.disabled = false;
+                    button.textContent = originalLabel || 'Register for the free pilot';
+                }
+                return;
+            }
+
+            target.reset();
+            onSuccess();
+        } catch (_) {
+            if (errorNode) {
+                errorNode.textContent = 'Network error. Please check your connection and try again.';
+                errorNode.hidden = false;
+            }
+            if (button) {
+                button.disabled = false;
+                button.textContent = originalLabel || 'Register for the free pilot';
+            }
+        }
+    }
+
+    function showPageSuccess(card) {
+        const view = card.querySelector('.signup-form-view');
+        const success = card.querySelector('.signup-success-view');
+        if (view) view.hidden = true;
+        if (success) {
+            success.hidden = false;
+            success.focus?.();
+        }
+    }
+
+    function bindPageForms() {
+        document.querySelectorAll('.pilot-signup-form').forEach((pageForm) => {
+            pageForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+                const card = pageForm.closest('.signup-card') || pageForm.parentElement;
+                postSignup(pageForm, {
+                    errorNode: pageForm.querySelector('.inquiry-error'),
+                    button: pageForm.querySelector('.inquiry-submit'),
+                    onSuccess: () => showPageSuccess(card),
+                });
+            });
+        });
+
+        if (new URLSearchParams(global.location.search).get('sent') === '1') {
+            document.querySelectorAll('.signup-card').forEach(showPageSuccess);
+        }
+    }
+
     function mountModal() {
         if (document.getElementById('inquiry-modal')) {
             return;
@@ -21,8 +134,8 @@
     <div class="inquiry-panel">
         <button type="button" class="inquiry-close" aria-label="Close form">&times;</button>
         <div id="inquiry-form-view">
-            <h2 id="inquiry-title">Book a free pilot chat</h2>
-            <p class="inquiry-lead">Tell us about your centre. We&rsquo;ll reply to walk through whether DailyDotKids fits how you run today.</p>
+            <h2 id="inquiry-title">Register for the free pilot</h2>
+            <p class="inquiry-lead">Licensed centres anywhere in Canada. Send the form and we will email you to get started.</p>
             <form class="inquiry-form" id="inquiry-form" novalidate>
                 <div class="inquiry-field">
                     <label for="inquiry-name">Name</label>
@@ -34,11 +147,30 @@
                 </div>
                 <div class="inquiry-field">
                     <label for="inquiry-daycare">Centre name</label>
-                    <input id="inquiry-daycare" name="daycare" type="text" autocomplete="organization">
+                    <input id="inquiry-daycare" name="daycare" type="text" autocomplete="organization" required>
                 </div>
                 <div class="inquiry-field">
-                    <label for="inquiry-location">City and province</label>
-                    <input id="inquiry-location" name="location" type="text" autocomplete="address-level2">
+                    <label for="inquiry-city">City</label>
+                    <input id="inquiry-city" name="city" type="text" autocomplete="address-level2" required>
+                </div>
+                <div class="inquiry-field">
+                    <label for="inquiry-province">Province or territory</label>
+                    <select id="inquiry-province" name="province" required>
+                        <option value="">Select one</option>
+                        <option>Alberta</option>
+                        <option>British Columbia</option>
+                        <option>Manitoba</option>
+                        <option>New Brunswick</option>
+                        <option>Newfoundland and Labrador</option>
+                        <option>Northwest Territories</option>
+                        <option>Nova Scotia</option>
+                        <option>Nunavut</option>
+                        <option>Ontario</option>
+                        <option>Prince Edward Island</option>
+                        <option>Quebec</option>
+                        <option>Saskatchewan</option>
+                        <option>Yukon</option>
+                    </select>
                 </div>
                 <div class="inquiry-field">
                     <label for="inquiry-children">Approx. number of children</label>
@@ -46,16 +178,16 @@
                 </div>
                 <div class="inquiry-field">
                     <label for="inquiry-message">Message</label>
-                    <textarea id="inquiry-message" name="message" rows="4" placeholder="Optional — tell us how you run today, or what you need to see."></textarea>
+                    <textarea id="inquiry-message" name="message" rows="4" placeholder="Optional — how you run today, or what you need to see."></textarea>
                 </div>
                 <input class="inquiry-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
                 <p class="inquiry-error" id="inquiry-error" hidden></p>
-                <button type="submit" class="btn btn-primary inquiry-submit">Send inquiry</button>
+                <button type="submit" class="btn btn-primary inquiry-submit">Register for the free pilot</button>
             </form>
         </div>
         <div id="inquiry-success-view" class="inquiry-success-view" hidden>
-            <h2>Thanks &mdash; we got it!</h2>
-            <p>We&rsquo;ll review your inquiry and get back to you at the email you provided.</p>
+            <h2>Thanks &mdash; we got it</h2>
+            <p>We will email you at the address you provided to set up your centre.</p>
             <button type="button" class="btn btn-secondary" id="inquiry-success-close">Close</button>
         </div>
     </div>
@@ -73,7 +205,18 @@
         modal.querySelector('.inquiry-backdrop').addEventListener('click', closeInquiry);
         modal.querySelector('.inquiry-close').addEventListener('click', closeInquiry);
         document.getElementById('inquiry-success-close').addEventListener('click', closeInquiry);
-        form.addEventListener('submit', handleSubmit);
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            postSignup(form, {
+                errorNode: errorEl,
+                button: submitBtn,
+                onSuccess: () => {
+                    formView.hidden = true;
+                    successView.hidden = false;
+                    document.getElementById('inquiry-success-close').focus();
+                },
+            });
+        });
 
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Escape' && modal.classList.contains('is-open')) {
@@ -82,23 +225,16 @@
         });
     }
 
-    function showError(message) {
-        errorEl.textContent = message;
-        errorEl.hidden = false;
-    }
-
-    function clearError() {
-        errorEl.textContent = '';
-        errorEl.hidden = true;
-    }
-
     function openInquiry(trigger) {
         mountModal();
-        clearError();
         formView.hidden = false;
         successView.hidden = true;
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Send inquiry';
+        submitBtn.textContent = 'Register for the free pilot';
+        if (errorEl) {
+            errorEl.textContent = '';
+            errorEl.hidden = true;
+        }
 
         lastFocusedElement = trigger || document.activeElement;
 
@@ -123,67 +259,6 @@
         if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
             lastFocusedElement.focus();
             lastFocusedElement = null;
-        }
-    }
-
-    async function handleSubmit(event) {
-        event.preventDefault();
-        clearError();
-
-        if (!form.reportValidity()) {
-            return;
-        }
-
-        const formData = new FormData(form);
-        const payload = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            daycare: formData.get('daycare') || '',
-            location: formData.get('location') || '',
-            children: formData.get('children') || '',
-            message: formData.get('message') || '',
-            _subject: 'DailyDotKids pilot inquiry',
-        };
-
-        if (formData.get('_gotcha')) {
-            closeInquiry();
-            return;
-        }
-
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending…';
-
-        try {
-            const response = await fetch(FORMSPREE_URL, {
-                method: 'POST',
-                headers: {
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(payload),
-            });
-
-            const body = await response.json().catch(() => ({}));
-
-            if (!response.ok) {
-                const message =
-                    typeof body.error === 'string'
-                        ? body.error
-                        : 'Something went wrong. Please try again or email dailydot404@gmail.com.';
-                showError(message);
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Send inquiry';
-                return;
-            }
-
-            form.reset();
-            formView.hidden = true;
-            successView.hidden = false;
-            document.getElementById('inquiry-success-close').focus();
-        } catch (_) {
-            showError('Network error. Please check your connection and try again.');
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Send inquiry';
         }
     }
 
@@ -212,6 +287,12 @@
         },
         true,
     );
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', bindPageForms);
+    } else {
+        bindPageForms();
+    }
 
     global.InquiryModal = { open: openInquiry, close: closeInquiry };
 })();

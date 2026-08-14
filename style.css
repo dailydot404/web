@@ -261,25 +261,31 @@ body.inquiry-open {
 .btn {
     display: inline-block;
     padding: 12px 28px;
+    border: 2px solid transparent;
     border-radius: 6px;
     text-decoration: none;
+    font: inherit;
     font-weight: 600;
+    text-align: center;
+    cursor: pointer;
     transition: var(--transition);
 }
 
 .btn-primary {
     background-color: var(--primary);
+    border-color: var(--primary);
     color: var(--white);
 }
 
 .btn-primary:hover {
     background-color: #e04f54;
+    border-color: #e04f54;
 }
 
 .btn-secondary {
     background-color: transparent;
     color: var(--dark);
-    border: 2px solid var(--dark);
+    border-color: var(--dark);
 }
 
 .btn-secondary:hover {
@@ -1004,6 +1010,78 @@ body.inquiry-open {
     margin-bottom: 80px;
 }
 
+.signup-section {
+    background: var(--light);
+    border: 1px solid #e1e4e6;
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 80px;
+}
+
+.signup-hero .signup-hero-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+    align-items: start;
+    gap: 40px;
+}
+
+.signup-hero.hero-home,
+.signup-hero.hero-home .hero-content {
+    text-align: left;
+}
+
+.signup-points {
+    margin: 16px 0 0;
+    padding-left: 1.15rem;
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+.signup-points li + li {
+    margin-top: 8px;
+}
+
+.signup-card {
+    background: var(--white);
+    border: 1px solid #e1e4e6;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 16px 40px rgba(43, 45, 66, 0.08);
+    scroll-margin-top: 88px;
+}
+
+.signup-card h2,
+.signup-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 6px;
+}
+
+.signup-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+    gap: 40px;
+    align-items: start;
+}
+
+.signup-copy .badge {
+    margin-bottom: 14px;
+}
+
+.signup-copy h2 {
+    font-size: 1.75rem;
+    margin-bottom: 12px;
+}
+
+.signup-copy p {
+    color: var(--gray);
+    margin-bottom: 12px;
+}
+
+.inquiry-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
 .faq-list {
     max-width: 760px;
     margin: 0 auto;
@@ -1159,7 +1237,9 @@ body.inquiry-open {
         grid-template-columns: 1fr;
     }
 
-    .hero-inner {
+    .hero-inner,
+    .signup-hero .signup-hero-inner,
+    .signup-layout {
         grid-template-columns: 1fr;
         gap: 32px;
     }
@@ -1176,6 +1256,25 @@ body.inquiry-open {
 
     .hero-home .hero-actions {
         justify-content: center;
+    }
+
+    .signup-hero.hero-home .hero-content {
+        text-align: center;
+    }
+
+    .signup-hero .signup-points {
+        display: inline-block;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .signup-copy {
+        text-align: center;
+    }
+
+    .signup-section {
+        padding: 24px;
     }
 
     .province-grid {
@@ -1230,7 +1329,8 @@ body.inquiry-open {
     .grid-4,
     .grid-3,
     .offer-grid,
-    .province-grid {
+    .province-grid,
+    .inquiry-row {
         grid-template-columns: 1fr;
         gap: 12px;
     }
@@ -1341,8 +1441,10 @@ body.inquiry-open {
 }
 
 .inquiry-field input,
+.inquiry-field select,
 .inquiry-field textarea {
     width: 100%;
+    min-height: 44px;
     padding: 10px 12px;
     border: 1px solid #d1d5db;
     border-radius: 8px;
@@ -1351,7 +1453,16 @@ body.inquiry-open {
     background: var(--white);
 }
 
+.inquiry-field select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236c757d' d='M1.4 0 6 4.6 10.6 0 12 1.4 6 8 0 1.4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 36px;
+}
+
 .inquiry-field input:focus,
+.inquiry-field select:focus,
 .inquiry-field textarea:focus {
     outline: 2px solid rgba(42, 183, 202, 0.35);
     border-color: var(--secondary);

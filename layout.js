@@ -10,13 +10,14 @@
 
     const FOOTER_LINKS = [
         { href: 'index.html', label: 'Home', page: 'home' },
+        { href: 'signup.html', label: 'Register for the free pilot', page: 'signup' },
         { href: 'index.html#offer', label: 'What we offer', page: '' },
         { href: 'compliance.html', label: 'Compliance', page: 'compliance' },
         { href: 'privacy.html', label: 'Privacy Policy', page: 'privacy' },
         { href: 'terms.html', label: 'Terms of Service', page: 'terms' },
     ];
 
-    const CTA_HREF = '#inquiry';
+    const CTA_HREF = 'signup.html';
 
     function renderLogo(href) {
         return `<a href="${href}" class="logo">DailyDotKids</a>`;
@@ -63,7 +64,7 @@
         <ul class="nav-links">
             ${sectionItems}
             ${pageItems}
-            <li><a href="${CTA_HREF}" class="nav-cta inquiry-cta">Free pilot</a></li>
+            <li><a href="${CTA_HREF}" class="nav-cta">Register</a></li>
         </ul>
     </div>
 </nav>`.trim();
@@ -81,7 +82,7 @@
         </button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="${CTA_HREF}" class="nav-cta inquiry-cta">Free pilot</a></li>
+            <li><a href="${CTA_HREF}" class="nav-cta">Register</a></li>
         </ul>
     </div>
 </nav>`.trim();
