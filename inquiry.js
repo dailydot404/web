@@ -68,7 +68,7 @@
                 const message =
                     typeof body.error === 'string'
                         ? body.error
-                        : 'Something went wrong. Please try again or email dailydot404@gmail.com.';
+                        : 'Something went wrong. Please try again or email hello@dailydotkids.ca.';
                 if (errorNode) {
                     errorNode.textContent = message;
                     errorNode.hidden = false;
@@ -268,7 +268,7 @@
         if (element.matches('a[href^="mailto:"]')) {
             const href = element.getAttribute('href') || '';
             return (
-                href.includes('dailydot404@gmail.com') &&
+                href.includes('hello@dailydotkids.ca') &&
                 !element.classList.contains('inquiry-ignore')
             );
         }
