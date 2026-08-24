@@ -1,6 +1,11 @@
 # Admin web
 
-Directors open **https://dailydotkids.ca/admin/** on a computer or TV. That is a public static page on GitHub Pages. Daycare data is not public: they pair with the Admin phone app (QR or code). Invite-only centres do not need a separate GCP host for this.
+Directors can open Admin web two ways (both end when the session is closed or idle):
+
+1. **QR / pairing code** — open **https://dailydotkids.ca/admin/** and approve from the Admin app.
+2. **Unique link** — in the Admin app tap **Generate unique URL** and open `https://dailydotkids.ca/admin/?s=…`. That token is one session; it stops working when the session ends.
+
+The page itself is public static GitHub Pages. Data still requires a live web session.
 
 `admin-portal/` is a retired Vite prototype. It is gitignored and must not be published.
 
