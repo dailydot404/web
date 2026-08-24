@@ -11,6 +11,7 @@
     const FOOTER_LINKS = [
         { href: 'index.html', label: 'Home', page: 'home' },
         { href: 'signup.html', label: 'Register for the free pilot', page: 'signup' },
+        { href: 'admin/', label: 'Admin web', page: 'admin' },
         { href: 'index.html#offer', label: 'What we offer', page: '' },
         { href: 'compliance.html', label: 'Compliance', page: 'compliance' },
         { href: 'privacy.html', label: 'Privacy Policy', page: 'privacy' },
