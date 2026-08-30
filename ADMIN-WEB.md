@@ -37,4 +37,6 @@ npm run export:web:prod
 
 That writes `../web/admin/`. Commit and push the `web` repo so GitHub Pages updates `https://dailydotkids.ca/admin/`.
 
+Marketing screenshots for the homepage live in `screenshots/admin/` (not under `admin/`, which is reserved for the web app export).
+
 The published bundle talks to **prod** API. For demo, run `APP_ENV=demo npm run web` locally instead of using the public page.
