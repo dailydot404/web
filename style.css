@@ -1030,6 +1030,105 @@ body.inquiry-open {
     text-decoration: underline;
 }
 
+/* --- Pricing page --- */
+.pricing-section {
+    padding: 48px 0 24px;
+}
+
+.pricing-table-wrap {
+    overflow-x: auto;
+    margin-bottom: 24px;
+    border: 1px solid #e1e4e6;
+    border-radius: 14px;
+    background: var(--white);
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 640px;
+    font-size: 0.95rem;
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eef0f2;
+    vertical-align: top;
+}
+
+.pricing-table thead th {
+    background: var(--light);
+    font-weight: 700;
+    border-bottom: 2px solid #e1e4e6;
+}
+
+.pricing-table tbody th[scope="row"] {
+    font-weight: 600;
+    color: var(--dark);
+    width: 38%;
+}
+
+.pricing-table td {
+    text-align: center;
+    width: 20%;
+}
+
+.pricing-section-row th {
+    background: #fafbfc;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--gray);
+    font-weight: 700;
+}
+
+.pricing-note {
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+.terms-callout {
+    margin-top: 28px;
+    padding: 20px 22px;
+    background: #f7f9fb;
+    border: 1px solid #e1e4e6;
+    border-radius: 12px;
+}
+
+.terms-callout h3 {
+    margin: 0 0 8px;
+    font-size: 1.05rem;
+}
+
+.terms-callout p {
+    margin: 0;
+    color: var(--gray);
+    line-height: 1.55;
+}
+
+.terms-consent {
+    margin-top: 16px;
+}
+
+.terms-consent-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.92rem;
+    line-height: 1.45;
+    color: #444;
+    cursor: pointer;
+}
+
+.terms-consent-label input[type="checkbox"] {
+    margin-top: 3px;
+    flex-shrink: 0;
+    width: 1rem;
+    height: 1rem;
+}
+
 /* --- Compliance page --- */
 .compliance-page {
     padding-top: 40px;
