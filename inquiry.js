@@ -26,6 +26,8 @@
             location,
             children: formData.get('children') || '',
             message: formData.get('message') || '',
+            acceptedTerms: formData.get('acceptedTerms') === 'yes' ? 'yes' : '',
+            termsVersion: '2026-08',
             _subject: 'DailyDotKids pilot signup',
         };
     }
@@ -181,6 +183,12 @@
                     <textarea id="inquiry-message" name="message" rows="4" placeholder="Optional — how you run today, or what you need to see."></textarea>
                 </div>
                 <input class="inquiry-honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <div class="terms-consent">
+                    <label class="terms-consent-label">
+                        <input id="inquiry-terms" name="acceptedTerms" type="checkbox" value="yes" required>
+                        <span>I agree to the <a href="terms.html" target="_blank" rel="noopener">Terms of Service</a>. By registering, our centre accepts these terms in place of a separate written contract for trial and Free plans.</span>
+                    </label>
+                </div>
                 <p class="inquiry-error" id="inquiry-error" hidden></p>
                 <button type="submit" class="btn btn-primary inquiry-submit">Register for the free pilot</button>
             </form>
