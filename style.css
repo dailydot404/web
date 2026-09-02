@@ -1037,7 +1037,8 @@ body.inquiry-open {
 
 .pricing-table-wrap {
     overflow-x: auto;
-    margin-bottom: 24px;
+    max-width: 820px;
+    margin: 0 auto 24px;
     border: 1px solid #e1e4e6;
     border-radius: 14px;
     background: var(--white);
@@ -1048,24 +1049,26 @@ body.inquiry-open {
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
-    min-width: 560px;
+    min-width: 520px;
     font-size: 0.95rem;
 }
 
 .pricing-table col.pricing-col-feature {
-    width: 46%;
+    width: 48%;
 }
 
 .pricing-table col.pricing-col-plan {
-    width: 27%;
+    width: 26%;
 }
 
 .pricing-table th,
 .pricing-table td {
-    padding: 12px 16px;
+    padding: 12px 18px;
     border-bottom: 1px solid #eef0f2;
     vertical-align: middle;
+    text-align: left;
     word-wrap: break-word;
+    overflow-wrap: anywhere;
 }
 
 .pricing-table thead th {
@@ -1074,14 +1077,9 @@ body.inquiry-open {
     border-bottom: 2px solid #e1e4e6;
 }
 
-.pricing-table thead th:first-child,
-.pricing-table tbody th[scope="row"] {
-    text-align: left;
-}
-
 .pricing-table thead th:not(:first-child),
 .pricing-table td {
-    text-align: center;
+    border-left: 1px solid #eef0f2;
 }
 
 .pricing-table tbody th[scope="row"] {
@@ -1099,6 +1097,7 @@ body.inquiry-open {
     text-align: left;
     padding-top: 16px;
     padding-bottom: 10px;
+    border-left: none;
 }
 
 .pricing-table tbody tr:last-child th,
@@ -1109,6 +1108,9 @@ body.inquiry-open {
 .pricing-note {
     color: var(--gray);
     font-size: 0.95rem;
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .terms-callout {
