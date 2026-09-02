@@ -1,7 +1,7 @@
 (function (global) {
     const NAV_SECTIONS = [
         { id: 'offer', label: 'What we offer' },
-        { id: 'pilot', label: 'How a pilot works' },
+        { id: 'pilot', label: 'Getting started' },
     ];
 
     const NAV_PAGES = [
@@ -10,7 +10,7 @@
 
     const FOOTER_LINKS = [
         { href: 'index.html', label: 'Home', page: 'home' },
-        { href: 'signup.html', label: 'Register for the free pilot', page: 'signup' },
+        { href: 'signup.html', label: 'Contact us about a pilot', page: 'signup' },
         { href: 'admin/', label: 'Admin web', page: 'admin' },
         { href: 'index.html#offer', label: 'What we offer', page: '' },
         { href: 'compliance.html', label: 'Compliance', page: 'compliance' },

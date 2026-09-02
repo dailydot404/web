@@ -28,7 +28,7 @@
             message: formData.get('message') || '',
             acceptedTerms: formData.get('acceptedTerms') === 'yes' ? 'yes' : '',
             termsVersion: '2026-08',
-            _subject: 'DailyDotKids pilot signup',
+            _subject: 'DailyDotKids pilot inquiry',
         };
     }
 
@@ -77,7 +77,7 @@
                 }
                 if (button) {
                     button.disabled = false;
-                    button.textContent = originalLabel || 'Register for the free pilot';
+                    button.textContent = originalLabel || 'Contact us about a pilot';
                 }
                 return;
             }
@@ -91,7 +91,7 @@
             }
             if (button) {
                 button.disabled = false;
-                button.textContent = originalLabel || 'Register for the free pilot';
+                button.textContent = originalLabel || 'Contact us about a pilot';
             }
         }
     }
@@ -136,8 +136,8 @@
     <div class="inquiry-panel">
         <button type="button" class="inquiry-close" aria-label="Close form">&times;</button>
         <div id="inquiry-form-view">
-            <h2 id="inquiry-title">Register for the free pilot</h2>
-            <p class="inquiry-lead">Licensed centres anywhere in Canada. Send the form and we will email you to get started.</p>
+            <h2 id="inquiry-title">Contact us about a pilot</h2>
+            <p class="inquiry-lead">Licensed centres anywhere in Canada. Send the form and we will email you to discuss a structured pilot or guided setup.</p>
             <form class="inquiry-form" id="inquiry-form" novalidate>
                 <div class="inquiry-field">
                     <label for="inquiry-name">Name</label>
@@ -186,11 +186,11 @@
                 <div class="terms-consent">
                     <label class="terms-consent-label">
                         <input id="inquiry-terms" name="acceptedTerms" type="checkbox" value="yes" required>
-                        <span>I agree to the <a href="terms.html" target="_blank" rel="noopener">Terms of Service</a>. By registering, our centre accepts these terms in place of a separate written contract for trial and Free plans.</span>
+                        <span>I agree to the <a href="terms.html" target="_blank" rel="noopener">Terms of Service</a>. By registering, our centre accepts these terms in place of a separate written contract for Free plans.</span>
                     </label>
                 </div>
                 <p class="inquiry-error" id="inquiry-error" hidden></p>
-                <button type="submit" class="btn btn-primary inquiry-submit">Register for the free pilot</button>
+                <button type="submit" class="btn btn-primary inquiry-submit">Contact us about a pilot</button>
             </form>
         </div>
         <div id="inquiry-success-view" class="inquiry-success-view" hidden>
@@ -238,7 +238,7 @@
         formView.hidden = false;
         successView.hidden = true;
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Register for the free pilot';
+        submitBtn.textContent = 'Contact us about a pilot';
         if (errorEl) {
             errorEl.textContent = '';
             errorEl.hidden = true;
