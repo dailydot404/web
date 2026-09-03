@@ -2134,12 +2134,6 @@ body.inquiry-open {
     gap: 0.75rem;
 }
 
-.store-package {
-    font-size: 0.8rem;
-    margin: 0.25rem 0 0;
-    color: var(--gray);
-}
-
 .apps-help {
     margin-bottom: 3rem;
 }
