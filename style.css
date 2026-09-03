@@ -1019,8 +1019,38 @@ body.inquiry-open {
     gap: 24px;
 }
 
+.now-later-grid-full {
+    grid-template-columns: 1fr;
+}
+
 .now-later-grid-3 {
     grid-template-columns: repeat(3, 1fr);
+}
+
+.honest-limits-card {
+    max-width: none;
+    padding: 32px 36px;
+}
+
+.honest-limits-card .honest-limits-intro {
+    max-width: 72ch;
+}
+
+.honest-limits-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px 32px;
+    margin: 0 0 8px;
+}
+
+@media (max-width: 768px) {
+    .honest-limits-list {
+        grid-template-columns: 1fr;
+    }
+
+    .honest-limits-card {
+        padding: 28px 24px;
+    }
 }
 
 .now-later-card {
