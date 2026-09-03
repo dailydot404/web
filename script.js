@@ -93,6 +93,75 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', updateActiveNav, { passive: true });
     updateActiveNav();
 
+    const walkthrough = document.querySelector('[data-hero-walkthrough]');
+    const heroVideo = document.querySelector('.hero-video');
+    if (walkthrough) {
+        const slides = Array.from(walkthrough.querySelectorAll('.hero-slide'));
+        const dots = Array.from(walkthrough.querySelectorAll('.hero-slide-dots button'));
+        const caption = walkthrough.querySelector('[data-slide-caption]');
+        const captions = [
+            'Admin — set up the centre',
+            'Teacher — log the day in a few taps',
+            'Parent — families see updates',
+        ];
+        let index = 0;
+        let timer = 0;
+
+        const show = (next) => {
+            index = (next + slides.length) % slides.length;
+            slides.forEach((slide, i) => slide.classList.toggle('is-active', i === index));
+            dots.forEach((dot, i) => dot.classList.toggle('is-active', i === index));
+            if (caption) caption.textContent = captions[index];
+        };
+
+        const stop = () => {
+            window.clearInterval(timer);
+            timer = 0;
+        };
+
+        const start = () => {
+            stop();
+            if (slides.length < 2) return;
+            timer = window.setInterval(() => show(index + 1), 2800);
+        };
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                show(i);
+                start();
+            });
+        });
+
+        walkthrough.addEventListener('mouseenter', stop);
+        walkthrough.addEventListener('mouseleave', start);
+        walkthrough.addEventListener('focusin', stop);
+        walkthrough.addEventListener('focusout', start);
+        show(0);
+        start();
+
+        if (heroVideo) {
+            const videoCaption = document.querySelector('[data-video-caption]');
+            const videoFrame = document.querySelector('[data-hero-video-frame]');
+            const useRecordedVideo = () => {
+                if (!heroVideo.duration || !isFinite(heroVideo.duration) || heroVideo.videoWidth < 8) {
+                    return;
+                }
+                stop();
+                walkthrough.hidden = true;
+                if (videoFrame) videoFrame.hidden = false;
+                if (videoCaption) videoCaption.hidden = false;
+                heroVideo.play().catch(() => {});
+            };
+            heroVideo.addEventListener('loadeddata', useRecordedVideo);
+            heroVideo.addEventListener('error', () => {
+                if (videoFrame) videoFrame.hidden = true;
+                if (videoCaption) videoCaption.hidden = true;
+                walkthrough.hidden = false;
+                start();
+            });
+        }
+    }
+
     const lightbox = document.getElementById('lightbox');
     if (!lightbox) {
         return;

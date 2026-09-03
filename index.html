@@ -74,7 +74,7 @@
     </script>
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="style.css?v=20260903c">
+    <link rel="stylesheet" href="style.css?v=20260903g">
     <script>
       /* Preserve old deep links that moved off the homepage */
       (function () {
@@ -131,10 +131,35 @@
                 <p class="hero-store-hint">Need a walkthrough first? <a href="signup.html">Contact us about a pilot</a> · <a href="pricing.html">Free vs Paid</a></p>
             </div>
             <div class="hero-visual">
-                <button type="button" class="hero-phone screenshot-wrapper reveal-up" aria-label="Enlarge: Teacher class roster">
-                    <img src="teacher/students.webp" alt="Teacher app class roster with one-tap buttons for meals, naps, check-in, and photos" width="900" height="1957" fetchpriority="high" decoding="async">
-                </button>
-                <p class="hero-phone-label">Teacher app — tap to enlarge</p>
+                <div class="hero-demo">
+                    <div class="hero-phone-frame hero-video-frame" data-hero-video-frame hidden>
+                        <video
+                            class="hero-video"
+                            poster="screenshots/admin/students.webp"
+                            muted
+                            loop
+                            playsinline
+                            autoplay
+                            preload="metadata"
+                        >
+                            <source src="videos/start-on-free.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <p class="hero-phone-label" data-video-caption hidden>Start on Free → log in → choose teacher devices</p>
+                    <div class="hero-walkthrough" data-hero-walkthrough>
+                        <div class="hero-phone-frame" aria-live="polite">
+                            <img class="hero-slide is-active" src="screenshots/admin/students.webp" alt="Admin roster — set up the centre" width="900" height="1957">
+                            <img class="hero-slide" src="teacher/students.webp" alt="Teacher class roster — log meals, naps, and check-in" width="900" height="1957">
+                            <img class="hero-slide" src="parent/activities.webp" alt="Parent activity feed — families see the day" width="900" height="1957">
+                        </div>
+                        <p class="hero-phone-label" data-slide-caption>Admin — set up the centre</p>
+                        <div class="hero-slide-dots" role="tablist" aria-label="App walkthrough">
+                            <button type="button" class="is-active" aria-label="Admin app"></button>
+                            <button type="button" aria-label="Teacher app"></button>
+                            <button type="button" aria-label="Parent app"></button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -362,6 +387,6 @@
     </div>
 
     <script src="inquiry.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=20260903g"></script>
 </body>
 </html>
