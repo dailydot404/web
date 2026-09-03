@@ -251,8 +251,10 @@ body.inquiry-open {
     height: auto;
     display: block;
     border-radius: 28px;
-    border: 10px solid var(--dark);
-    box-shadow: 0 24px 50px rgba(43, 45, 66, 0.28);
+    border: 8px solid #1a2332;
+    box-shadow:
+        0 8px 0 #0f141c,
+        0 28px 60px rgba(26, 35, 50, 0.28);
 }
 
 .hero-phone-label {
@@ -1896,8 +1898,126 @@ body.inquiry-open {
     text-underline-offset: 3px;
 }
 
+.hero-store-label {
+    margin: 0 0 0.55rem;
+    font-size: 0.78rem;
+    font-weight: 750;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--secondary);
+}
+
+.hero-stores {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 0.55rem;
+    margin-bottom: 0.35rem;
+}
+
+.hero-home .hero-stores {
+    justify-content: flex-start;
+}
+
+.trust-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+}
+
+.trust-bar ul {
+    list-style: none;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.9rem 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.55rem 1.5rem;
+}
+
+.trust-bar li {
+    position: relative;
+    padding-left: 1.05rem;
+    font-size: 0.92rem;
+    font-weight: 650;
+    color: var(--ink);
+}
+
+.trust-bar li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.45em;
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+.step-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.step-grid li {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.3rem 1.3rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.85rem;
+    height: 1.85rem;
+    border-radius: 999px;
+    background: var(--primary-soft);
+    color: var(--primary-deep);
+    font-weight: 800;
+    font-size: 0.9rem;
+    margin-bottom: 0.7rem;
+}
+
+.step-grid h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.step-grid p {
+    margin: 0;
+    color: var(--gray);
+    font-size: 0.95rem;
+}
+
+.final-stores {
+    justify-content: center;
+    margin: 0 auto 1.1rem;
+}
+
+.final-cta .hero-store-hint,
+.final-cta .cta-email {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.offer-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-soft);
+}
+
 .freemium-strip {
-    margin: -1.25rem auto 2.5rem;
+    margin: 2rem auto 2.5rem;
     max-width: 1100px;
     padding: 0 20px;
 }
@@ -2206,7 +2326,8 @@ body.inquiry-open {
     .app-download-card,
     .signup-teaser-inner,
     .offer-grid-4,
-    .offer-grid-3 {
+    .offer-grid-3,
+    .step-grid {
         grid-template-columns: 1fr;
     }
 
