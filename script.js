@@ -162,6 +162,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Feature icon grids: click to show description (independent of lightbox)
+    document.querySelectorAll('[data-feature-icons]').forEach((grid) => {
+        const detail = grid.parentElement?.querySelector('[data-feature-detail]');
+        if (!detail) return;
+
+        const titleEl = detail.querySelector('.feature-detail-title');
+        const bodyEl = detail.querySelector('.feature-detail-body');
+        const buttons = Array.from(grid.querySelectorAll('.feature-icon-btn'));
+
+        const clear = () => {
+            buttons.forEach((btn) => btn.setAttribute('aria-expanded', 'false'));
+            detail.setAttribute('hidden', '');
+            if (titleEl) titleEl.textContent = '';
+            if (bodyEl) bodyEl.textContent = '';
+        };
+
+        const show = (btn) => {
+            const label = btn.querySelector('.feature-icon-label')?.textContent?.trim() || '';
+            const copyEl = btn.querySelector('.feature-icon-copy');
+            const copy = (copyEl?.textContent || copyEl?.innerText || '').trim();
+            buttons.forEach((item) => item.setAttribute('aria-expanded', item === btn ? 'true' : 'false'));
+            if (titleEl) titleEl.textContent = label;
+            if (bodyEl) bodyEl.textContent = copy;
+            detail.removeAttribute('hidden');
+        };
+
+        buttons.forEach((btn) => {
+            btn.addEventListener('click', (event) => {
+                event.preventDefault();
+                if (btn.getAttribute('aria-expanded') === 'true') {
+                    clear();
+                    return;
+                }
+                show(btn);
+            });
+        });
+    });
+
     const lightbox = document.getElementById('lightbox');
     if (!lightbox) {
         return;
@@ -268,6 +306,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     screenshotButtons.forEach((button) => {
         button.addEventListener('click', () => openLightbox(button));
+    });
+
+    document.querySelectorAll('[data-open-gallery]').forEach((trigger) => {
+        trigger.addEventListener('click', () => {
+            const showcase = trigger.closest('.feature-visual')?.querySelector('.image-showcase');
+            if (!showcase) return;
+            const shots = showcase.querySelectorAll('.screenshot-wrapper');
+            openLightbox(shots[1] || shots[0]);
+        });
     });
 
     lightboxClose.addEventListener('click', closeLightbox);
