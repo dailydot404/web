@@ -1535,6 +1535,47 @@ body.inquiry-open {
     margin-top: 8px;
 }
 
+.region-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 0 0 1.25rem;
+}
+
+.region-pill {
+    appearance: none;
+    border: 1px solid var(--line);
+    background: var(--white);
+    color: var(--secondary);
+    border-radius: 999px;
+    padding: 0.45rem 1.1rem;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.region-pill:hover {
+    border-color: var(--secondary);
+}
+
+.region-pill.is-active {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--white);
+}
+
+.region-panel-note {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin: 0 0 1.25rem;
+}
+
+.region-panel[hidden] {
+    display: none !important;
+}
+
 .legal-page {
     max-width: 800px;
     margin: 0 auto;
