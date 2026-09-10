@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Third parties that help Anthor Canada corp operate DailyDotKids, and where they process data.">
+    <title>Subprocessors — DailyDotKids</title>
+    <link rel="canonical" href="https://dailydotkids.ca/subprocessors.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=20260910a">
+    <style>
+      .subprocessor-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.25rem 0 2rem;
+        font-size: 0.95rem;
+      }
+      .subprocessor-table th,
+      .subprocessor-table td {
+        border: 1px solid rgba(0,0,0,0.12);
+        padding: 0.75rem 0.85rem;
+        text-align: left;
+        vertical-align: top;
+      }
+      .subprocessor-table th {
+        background: rgba(0,0,0,0.04);
+        font-weight: 700;
+      }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Daily<span>DotKids</span></a>
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+                        <ul class="nav-links">
+                <li><a href="pricing.html">Free plan</a></li>
+                <li><a href="apps.html">Get the apps</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="compliance.html">Compliance</a></li>
+                <li><a href="security.html">Security</a></li>
+                <li><a href="apps.html#admin-app" class="nav-cta">Start free</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <p class="hero-kicker">Transparency</p>
+            <h1>Subprocessors</h1>
+            <p>Companies that process personal information on our behalf to run DailyDotKids. Centre records stay in Canada on Google Cloud; some delivery services may operate globally.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="legal-page">
+            <p class="legal-updated">Last updated September 2026</p>
+
+            <h2>How to read this list</h2>
+            <p>Anthor Canada corp uses the following subprocessors to provide DailyDotKids. We require appropriate contractual and security measures with these providers. We will update this page when the list changes in a material way.</p>
+
+            <table class="subprocessor-table">
+                <thead>
+                    <tr>
+                        <th>Subprocessor</th>
+                        <th>Purpose</th>
+                        <th>Data / notes</th>
+                        <th>Primary location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Google Cloud Platform</strong> (Google LLC / Google Canada)</td>
+                        <td>Application hosting, database, file storage, secrets, build/deploy</td>
+                        <td>Centre and user records, photos, vault files, operational logs</td>
+                        <td><strong>Canada</strong> — <code>northamerica-northeast1</code> (Montréal) for production App Engine, Cloud SQL, and Cloud Storage used by DailyDotKids</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Firebase Cloud Messaging</strong> (Google)</td>
+                        <td>Push notifications to Admin, Teacher, and Parent apps</td>
+                        <td>Device tokens, notification payloads (limited content)</td>
+                        <td>Global delivery network (routing may leave Canada to reach a device)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Apple Inc.</strong></td>
+                        <td>iOS app distribution and TestFlight / App Store services</td>
+                        <td>Developer account, app binaries, store metadata; not our daycare database</td>
+                        <td>United States / global (Apple)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Play</strong> (Google)</td>
+                        <td>Android app distribution</td>
+                        <td>Developer account, app binaries, store metadata; not our daycare database</td>
+                        <td>Global (Google)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Not subprocessors (for clarity)</h2>
+            <ul class="benefit-list">
+                <li><strong>The daycare (our customer)</strong> is the organization that decides what child and family data to enter — typically the <em>controller</em> under Canadian privacy law. We act as their <em>processor / service provider</em> for the platform. See the <a href="dpa.html">DPA</a>.</li>
+                <li><strong>Parents and staff</strong> using the apps are end users invited by the centre, not vendors of Anthor.</li>
+            </ul>
+
+            <h2>Questions / updates</h2>
+            <p>If you need written notice of subprocessor changes for a contract, email <a href="mailto:hello@dailydotkids.ca" class="inquiry-ignore">hello@dailydotkids.ca</a>.</p>
+            <p>Related: <a href="security.html">Security &amp; data residency</a> · <a href="privacy.html">Privacy Policy</a></p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer-brand">Anthor Canada corp · Langley, British Columbia</p>
+        <p class="footer-contact">
+            <a href="tel:+12368621951">+1 236-862-1951</a>
+            <span aria-hidden="true"> · </span>
+            <a href="mailto:hello@dailydotkids.ca" class="inquiry-ignore">hello@dailydotkids.ca</a>
+        </p>
+        <p>&copy; 2026 Anthor Canada corp. All rights reserved.</p>
+        <p class="footer-links">
+            <a href="security.html">Security</a>
+            <span>|</span>
+            <a href="subprocessors.html">Subprocessors</a>
+            <span>|</span>
+            <a href="incident-response.html">Incident response</a>
+            <span>|</span>
+            <a href="dpa.html">DPA</a>
+            <span>|</span>
+            <a href="privacy.html">Privacy</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
