@@ -35,7 +35,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260910d">
+    <link rel="stylesheet" href="style.css?v=20260910e">
 </head>
 <body>
 
@@ -179,8 +179,20 @@
             </div>
 
             <div class="region-pills" role="tablist" aria-label="Licensing links by country">
-                <button type="button" class="region-pill is-active" role="tab" id="tab-canada" aria-selected="true" aria-controls="panel-canada" data-region="canada">Canada</button>
-                <button type="button" class="region-pill" role="tab" id="tab-usa" aria-selected="false" aria-controls="panel-usa" data-region="usa">USA</button>
+                <button type="button" class="region-pill is-active" role="tab" id="tab-canada" aria-selected="true" aria-controls="panel-canada" data-region="canada">
+                    <span class="region-pill-mark" aria-hidden="true">CA</span>
+                    <span class="region-pill-copy">
+                        <span class="region-pill-label">Canada</span>
+                        <span class="region-pill-meta">Provinces &amp; territories</span>
+                    </span>
+                </button>
+                <button type="button" class="region-pill" role="tab" id="tab-usa" aria-selected="false" aria-controls="panel-usa" data-region="usa">
+                    <span class="region-pill-mark" aria-hidden="true">US</span>
+                    <span class="region-pill-copy">
+                        <span class="region-pill-label">United States</span>
+                        <span class="region-pill-meta">States &amp; D.C.</span>
+                    </span>
+                </button>
             </div>
 
             <div id="panel-canada" class="region-panel" role="tabpanel" aria-labelledby="tab-canada">
