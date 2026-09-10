@@ -30,6 +30,11 @@
     box-sizing: border-box;
 }
 
+/* Never let later display:flex/grid rules resurrect hidden UI */
+[hidden] {
+    display: none !important;
+}
+
 body {
     font-family: var(--font-body);
     color: var(--dark);
@@ -55,6 +60,14 @@ body.nav-open,
 body.lightbox-open,
 body.inquiry-open {
     overflow: hidden;
+}
+
+body.nav-open::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: rgba(15, 23, 42, 0.42);
 }
 
 /* --- Navigation --- */
@@ -773,23 +786,11 @@ body.inquiry-open {
 }
 
 .feature-shot-extra {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    padding: 0 !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    clip: rect(0, 0, 0, 0) !important;
-    clip-path: inset(50%) !important;
-    white-space: nowrap !important;
-    border: 0 !important;
-    pointer-events: none;
+    display: none !important;
 }
 
 .feature-shot-extra img {
-    width: 1px !important;
-    height: 1px !important;
-    max-width: none !important;
+    display: none !important;
 }
 
 .feature-shot-caption {
@@ -903,7 +904,7 @@ body.inquiry-open {
 }
 
 .lightbox[hidden] {
-    display: none;
+    display: none !important;
 }
 
 .lightbox-backdrop {
@@ -2295,7 +2296,7 @@ body.inquiry-open {
 }
 
 .inquiry-modal.is-open {
-    display: flex;
+    display: flex !important;
 }
 
 .inquiry-backdrop {
@@ -2476,17 +2477,24 @@ body.inquiry-open {
     position: relative;
     overflow: hidden;
     background:
-        linear-gradient(180deg, rgba(247, 249, 251, 0.92), rgba(238, 242, 246, 0.96)),
-        radial-gradient(ellipse 70% 55% at 85% 15%, rgba(47, 111, 122, 0.08), transparent 60%),
-        radial-gradient(ellipse 55% 45% at 8% 30%, rgba(226, 75, 82, 0.07), transparent 55%);
+        linear-gradient(180deg, #f7f9fb 0%, #eef2f6 100%),
+        radial-gradient(ellipse 70% 55% at 85% 15%, rgba(47, 111, 122, 0.06), transparent 60%),
+        radial-gradient(ellipse 55% 45% at 8% 30%, rgba(226, 75, 82, 0.05), transparent 55%);
+}
+
+.hero-freemium .hero-inner {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-atmosphere {
     position: absolute;
+    z-index: 0;
     inset: auto -10% -30% 40%;
     height: 70%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.85), transparent 65%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.35), transparent 65%);
     pointer-events: none;
+    opacity: 0.55;
     animation: drift 14s ease-in-out infinite alternate;
 }
 
@@ -2946,10 +2954,11 @@ body.inquiry-open {
 }
 
 .navbar {
-    backdrop-filter: blur(12px);
-    background: rgba(255, 255, 255, 0.9);
-    border-bottom: 1px solid rgba(227, 232, 238, 0.85);
-    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 1px 0 rgba(26, 35, 50, 0.04);
 }
 
 .faq-list details {
