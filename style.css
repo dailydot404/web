@@ -247,7 +247,8 @@ body.inquiry-open {
 }
 
 .hero-demo {
-    width: 260px;
+    width: min(260px, 100%);
+    max-width: 100%;
 }
 
 .hero-video {
@@ -271,7 +272,8 @@ body.inquiry-open {
 
 .hero-phone-frame {
     position: relative;
-    width: 260px;
+    width: min(260px, 100%);
+    max-width: 100%;
     aspect-ratio: 9 / 19.5;
     border-radius: 28px;
     border: 8px solid #1a2332;
@@ -1681,6 +1683,7 @@ body.inquiry-open {
 .legal-page {
     max-width: 800px;
     margin: 0 auto;
+    overflow-wrap: break-word;
 }
 
 .legal-page h2 {
@@ -1921,6 +1924,11 @@ body.inquiry-open {
 }
 
 .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.35rem 0.65rem;
     margin-top: 10px;
     font-size: 0.8rem;
 }
@@ -1928,7 +1936,7 @@ body.inquiry-open {
 .footer-links a {
     color: #a0aec0;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0;
     transition: var(--transition);
 }
 
@@ -2012,7 +2020,7 @@ body.inquiry-open {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .nav-toggle {
         display: flex;
     }
@@ -2031,6 +2039,7 @@ body.inquiry-open {
         box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
         transform: translateX(100%);
         transition: transform 0.3s ease;
+        z-index: 1000;
     }
 
     .nav-links.open {
@@ -2318,7 +2327,11 @@ body.inquiry-open {
 
 @media (max-width: 420px) {
     .freemium-kicker {
-        padding: 0.35rem 0.65rem;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.35;
+        border-radius: 14px;
+        padding: 0.4rem 0.75rem;
         letter-spacing: 0.01em;
     }
 }
@@ -2763,16 +2776,29 @@ body.inquiry-open {
 @media (max-width: 992px) {
     .freemium-strip-inner,
     .app-download-card,
-    .signup-teaser-inner,
     .offer-grid-4,
     .offer-grid-3,
     .step-grid {
         grid-template-columns: 1fr;
     }
 
+    .signup-teaser-inner {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
     .freemium-strip-inner .btn,
     .signup-teaser-actions {
         width: 100%;
+    }
+
+    .signup-teaser-actions {
+        justify-content: stretch;
+    }
+
+    .signup-teaser-actions .btn {
+        flex: 1 1 auto;
+        text-align: center;
     }
 }
 
