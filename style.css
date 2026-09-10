@@ -1539,13 +1539,19 @@ body.inquiry-open {
     display: inline-flex;
     flex-wrap: wrap;
     gap: 0.35rem;
-    margin: 0.25rem 0 1.5rem;
+    margin: 0.25rem auto 1.5rem;
     padding: 0.35rem;
     background:
         linear-gradient(180deg, #ffffff, var(--secondary-soft));
     border: 1px solid var(--line);
     border-radius: 18px;
     box-shadow: 0 10px 28px rgba(47, 111, 122, 0.08);
+}
+
+.region-pills-wrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .region-pill {
@@ -1639,9 +1645,15 @@ body.inquiry-open {
 }
 
 @media (max-width: 560px) {
+    .region-pills-wrap {
+        display: block;
+    }
+
     .region-pills {
         display: flex;
         width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .region-pill {
