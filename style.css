@@ -758,15 +758,23 @@ body.inquiry-open {
 }
 
 .feature-shot-extra {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    clip-path: inset(50%) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+    pointer-events: none;
+}
+
+.feature-shot-extra img {
+    width: 1px !important;
+    height: 1px !important;
+    max-width: none !important;
 }
 
 .feature-shot-caption {
@@ -2051,9 +2059,8 @@ body.inquiry-open {
         padding: 20px;
     }
 
-    .hero-visual img,
-    .feature-visual img,
-    .screenshot-wrapper img,
+    /* Do not retarget .hero-slide or .feature-shot-extra imgs — absolute/clipped layout */
+    .feature-phone-shot img,
     .team-photo,
     .store-badge img {
         max-width: 100%;
@@ -2926,18 +2933,33 @@ body.inquiry-open {
         max-width: min(260px, 100%);
         margin-left: auto;
         margin-right: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-self: center;
         min-width: 0;
         box-sizing: border-box;
     }
 
+    .hero-walkthrough {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .hero-phone-frame {
+        position: relative;
         width: min(260px, 100%);
         margin-left: auto;
         margin-right: auto;
+        overflow: hidden;
+    }
+
+    .hero-slide {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        object-fit: cover;
+        object-position: top center;
     }
 
     .hero-phone-label,
@@ -2945,6 +2967,19 @@ body.inquiry-open {
         width: 100%;
         text-align: center;
         justify-content: center;
+    }
+
+    .feature-phone-showcase {
+        max-width: min(260px, 100%);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .feature-visual {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .nav-container {
