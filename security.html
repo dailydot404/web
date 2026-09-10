@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="How DailyDotKids hosts and protects daycare data in Canada — residency, access control, encryption, and operational security.">
+    <meta name="description" content="Canadian daycare data stays in Canada. How DailyDotKids hosts children’s and family records in-country on Google Cloud, with access control and encryption.">
     <title>Security &amp; data residency — DailyDotKids</title>
     <link rel="canonical" href="https://dailydotkids.ca/security.html">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -39,7 +39,7 @@
         <div class="hero-content">
             <p class="hero-kicker">Anthor Canada corp · Canada hosting</p>
             <h1>Security &amp; data residency</h1>
-            <p>Children’s and family information belongs in trusted hands. Here is how DailyDotKids hosts production data in Canada, who can see it, and how we protect it.</p>
+            <p>Canadian daycare data stays in Canada. We design DailyDotKids so children’s and family records are hosted in the same country (and cloud region) as the centres we serve — not shipped to a distant default region.</p>
         </div>
     </header>
 
@@ -48,15 +48,15 @@
             <p class="legal-updated">Last updated September 2026</p>
 
             <h2>In one sentence</h2>
-            <p>Production daycare records for DailyDotKids are hosted in <strong>Canada</strong> on Google Cloud, isolated per centre, encrypted in transit and (for sensitive fields) at rest, and accessible only to people your centre invites — we do not sell personal information.</p>
+            <p>For Canadian centres, production daycare records are kept <strong>in Canada</strong> on Google Cloud, isolated per centre, encrypted in transit and (for sensitive fields) at rest, and accessible only to people your centre invites — we do not sell personal information.</p>
 
             <h2>Where production data lives</h2>
             <ul class="benefit-list">
-                <li><strong>Region:</strong> Google Cloud <strong>northamerica-northeast1</strong> (Montréal, Québec).</li>
-                <li><strong>Workloads:</strong> App Engine (API), Cloud SQL (database), Cloud Storage (photos and vault files), Secret Manager (runtime secrets).</li>
-                <li><strong>Company:</strong> Anthor Canada corp, Langley, British Columbia.</li>
+                <li><strong>Canadian daycares:</strong> Centre database records, classroom photos, and vault files are hosted in Google Cloud <strong>northamerica-northeast1</strong> (Montréal, Québec) — <strong>in Canada</strong>, with the company based in Langley, British Columbia.</li>
+                <li><strong>Local to the country we serve:</strong> Our approach is to keep operational daycare data in-country for the market we operate in. Today that means Canada for Canadian centres. If we expand to other countries later, the same principle applies: keep that country’s daycare data local to that country/region where we offer production hosting.</li>
+                <li><strong>Workloads in that region:</strong> App Engine (API), Cloud SQL (database), Cloud Storage (photos and vault files), and Secret Manager (runtime secrets).</li>
             </ul>
-            <p>Push notifications and some email delivery may use global networks so a message can reach a phone or inbox. That is for delivery only — centre records in our database and file storage remain in the Canadian region above. See <a href="subprocessors.html">Subprocessors</a>.</p>
+            <p>Push notifications and some email delivery may use global networks so a message can reach a phone or inbox. That is for delivery only — centre records in our database and file storage for Canadian daycares remain in Canada. See <a href="subprocessors.html">Subprocessors</a>.</p>
 
             <h2>Who can access centre data</h2>
             <ul class="benefit-list">
