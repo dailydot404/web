@@ -2012,11 +2012,56 @@ body.inquiry-open {
     }
 
     .province-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     .offer-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+    }
+
+    .freemium-strip {
+        padding: 0;
+    }
+
+    .freemium-strip-inner {
+        padding: 1.15rem 1.1rem;
+    }
+
+    .container {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+    }
+
+    .hero {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+    }
+
+    .final-cta {
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
+    }
+
+    .trust-bar ul {
+        gap: 0.55rem 1rem;
+        justify-content: center;
+    }
+
+    .compliance-card {
+        padding: 20px;
+    }
+
+    .hero-visual img,
+    .feature-visual img,
+    .screenshot-wrapper img,
+    .team-photo,
+    .store-badge img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .hero-stores {
+        justify-content: center;
     }
 }
 
