@@ -11,12 +11,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260910k">
+    <link rel="stylesheet" href="style.css?v=20260910m">
     <style>
+      .subprocessor-table-wrap {
+        margin: 1.25rem 0 2rem;
+      }
       .subprocessor-table {
         width: 100%;
         border-collapse: collapse;
-        margin: 1.25rem 0 2rem;
         font-size: 0.95rem;
       }
       .subprocessor-table th,
@@ -25,10 +27,48 @@
         padding: 0.75rem 0.85rem;
         text-align: left;
         vertical-align: top;
+        overflow-wrap: anywhere;
       }
       .subprocessor-table th {
         background: rgba(0,0,0,0.04);
         font-weight: 700;
+      }
+      .subprocessor-table code {
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+      @media (max-width: 720px) {
+        .subprocessor-table thead {
+          display: none;
+        }
+        .subprocessor-table,
+        .subprocessor-table tbody,
+        .subprocessor-table tr,
+        .subprocessor-table td {
+          display: block;
+          width: 100%;
+        }
+        .subprocessor-table tr {
+          margin: 0 0 0.85rem;
+          padding: 0.85rem 0.95rem;
+          border: 1px solid rgba(0,0,0,0.12);
+          border-radius: 12px;
+          background: #fff;
+        }
+        .subprocessor-table td {
+          border: none;
+          padding: 0.35rem 0;
+        }
+        .subprocessor-table td::before {
+          display: block;
+          margin-bottom: 0.15rem;
+          font-size: 0.7rem;
+          font-weight: 750;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: #2f6f7a;
+          content: attr(data-label);
+        }
       }
     </style>
 </head>
@@ -69,6 +109,7 @@
             <h2>How to read this list</h2>
             <p>Anthor Canada corp uses the following subprocessors to provide DailyDotKids. We require appropriate contractual and security measures with these providers. We will update this page when the list changes in a material way.</p>
 
+            <div class="subprocessor-table-wrap">
             <table class="subprocessor-table">
                 <thead>
                     <tr>
@@ -80,31 +121,32 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Google Cloud Platform</strong> (Google LLC / Google Canada)</td>
-                        <td>Application hosting, database, file storage, secrets, build/deploy</td>
-                        <td>Centre and user records, photos, vault files, operational logs</td>
-                        <td><strong>Canada</strong> — <code>northamerica-northeast1</code> (Montréal) for production App Engine, Cloud SQL, and Cloud Storage used by DailyDotKids</td>
+                        <td data-label="Subprocessor"><strong>Google Cloud Platform</strong> (Google LLC / Google Canada)</td>
+                        <td data-label="Purpose">Application hosting, database, file storage, secrets, build/deploy</td>
+                        <td data-label="Data / notes">Centre and user records, photos, vault files, operational logs</td>
+                        <td data-label="Primary location"><strong>Canada</strong> — <code>northamerica-northeast1</code> (Montréal) for production App Engine, Cloud SQL, and Cloud Storage used by DailyDotKids</td>
                     </tr>
                     <tr>
-                        <td><strong>Firebase Cloud Messaging</strong> (Google)</td>
-                        <td>Push notifications to Admin, Teacher, and Parent apps</td>
-                        <td>Device tokens, notification payloads (limited content)</td>
-                        <td>Global delivery network (routing may leave Canada to reach a device)</td>
+                        <td data-label="Subprocessor"><strong>Firebase Cloud Messaging</strong> (Google)</td>
+                        <td data-label="Purpose">Push notifications to Admin, Teacher, and Parent apps</td>
+                        <td data-label="Data / notes">Device tokens, notification payloads (limited content)</td>
+                        <td data-label="Primary location">Global delivery network (routing may leave Canada to reach a device)</td>
                     </tr>
                     <tr>
-                        <td><strong>Apple Inc.</strong></td>
-                        <td>iOS app distribution and TestFlight / App Store services</td>
-                        <td>Developer account, app binaries, store metadata; not our daycare database</td>
-                        <td>United States / global (Apple)</td>
+                        <td data-label="Subprocessor"><strong>Apple Inc.</strong></td>
+                        <td data-label="Purpose">iOS app distribution and TestFlight / App Store services</td>
+                        <td data-label="Data / notes">Developer account, app binaries, store metadata; not our daycare database</td>
+                        <td data-label="Primary location">United States / global (Apple)</td>
                     </tr>
                     <tr>
-                        <td><strong>Google Play</strong> (Google)</td>
-                        <td>Android app distribution</td>
-                        <td>Developer account, app binaries, store metadata; not our daycare database</td>
-                        <td>Global (Google)</td>
+                        <td data-label="Subprocessor"><strong>Google Play</strong> (Google)</td>
+                        <td data-label="Purpose">Android app distribution</td>
+                        <td data-label="Data / notes">Developer account, app binaries, store metadata; not our daycare database</td>
+                        <td data-label="Primary location">Global (Google)</td>
                     </tr>
                 </tbody>
             </table>
+            </div>
 
             <h2>Not subprocessors (for clarity)</h2>
             <ul class="benefit-list">
