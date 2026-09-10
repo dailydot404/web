@@ -2166,8 +2166,15 @@ body.inquiry-open {
     font-weight: 700;
     letter-spacing: 0.02em;
     line-height: 1.35;
-    white-space: normal;
-    overflow-wrap: anywhere;
+    white-space: nowrap;
+}
+
+@media (max-width: 420px) {
+    .freemium-kicker {
+        font-size: 0.68rem;
+        padding: 0.35rem 0.7rem;
+        letter-spacing: 0.01em;
+    }
 }
 
 .hero-store-hint {
