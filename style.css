@@ -2155,24 +2155,27 @@ body.inquiry-open {
 }
 
 .freemium-kicker {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: max-content;
     max-width: 100%;
     background: var(--white);
     color: var(--secondary);
     border: 1px solid var(--line);
     border-radius: 999px;
-    padding: 0.4rem 0.9rem;
-    font-size: 0.8rem;
+    padding: 0.4rem 0.85rem;
+    font-size: clamp(0.62rem, 0.5rem + 1.6vw, 0.8rem);
     font-weight: 700;
-    letter-spacing: 0.02em;
-    line-height: 1.35;
+    letter-spacing: 0.015em;
+    line-height: 1.2;
     white-space: nowrap;
 }
 
 @media (max-width: 420px) {
     .freemium-kicker {
-        font-size: 0.68rem;
-        padding: 0.35rem 0.7rem;
+        padding: 0.35rem 0.65rem;
         letter-spacing: 0.01em;
     }
 }
