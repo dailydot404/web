@@ -272,7 +272,9 @@ body.inquiry-open {
 }
 
 .hero-video-frame[hidden],
-[data-video-caption][hidden] {
+[data-video-caption][hidden],
+[data-hero-walkthrough][hidden],
+.hero-walkthrough[hidden] {
     display: none !important;
 }
 
@@ -3073,7 +3075,7 @@ body.inquiry-open {
         box-sizing: border-box;
     }
 
-    .hero-walkthrough {
+    .hero-walkthrough:not([hidden]) {
         display: flex;
         flex-direction: column;
         align-items: center;

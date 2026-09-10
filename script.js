@@ -148,15 +148,32 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 stop();
                 walkthrough.hidden = true;
-                if (videoFrame) videoFrame.hidden = false;
-                if (videoCaption) videoCaption.hidden = false;
+                walkthrough.setAttribute('hidden', '');
+                if (videoFrame) {
+                    videoFrame.hidden = false;
+                    videoFrame.removeAttribute('hidden');
+                }
+                if (videoCaption) {
+                    videoCaption.hidden = false;
+                    videoCaption.removeAttribute('hidden');
+                }
                 heroVideo.play().catch(() => {});
             };
             heroVideo.addEventListener('loadeddata', useRecordedVideo);
+            if (heroVideo.readyState >= 2) {
+                useRecordedVideo();
+            }
             heroVideo.addEventListener('error', () => {
-                if (videoFrame) videoFrame.hidden = true;
-                if (videoCaption) videoCaption.hidden = true;
+                if (videoFrame) {
+                    videoFrame.hidden = true;
+                    videoFrame.setAttribute('hidden', '');
+                }
+                if (videoCaption) {
+                    videoCaption.hidden = true;
+                    videoCaption.setAttribute('hidden', '');
+                }
                 walkthrough.hidden = false;
+                walkthrough.removeAttribute('hidden');
                 start();
             });
         }
