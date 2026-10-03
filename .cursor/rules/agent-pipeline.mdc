@@ -3,11 +3,13 @@ description: DailyDot multi-agent pipeline pointers for web repo
 alwaysApply: true
 ---
 
-# Agent pack (web)
+# Agent pack (web = admin web host)
 
 World-class bar: never publish broken pages or unverified `admin/` (`world-class-engineering`).
 
+**Scope:** hosted Admin web (`admin/`) + supporting site pages. **Not** `meetings/` / sales leavebehinds.
+
 - **team-lead** — default NO-GO until link/e2e (and Admin Playwright if needed) green
 - **documenter** — store-listings What’s New + release sheet pointer (`dailydot_backend/docs/releases/`)
-- Admin export/pairing → `DailyDot_admin` (**admin-web**)
+- Admin UI / pairing / export → `DailyDot_admin` (**admin-web**)
 - UI matrix: `UI-TESTING.md`
