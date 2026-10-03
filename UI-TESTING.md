@@ -1,0 +1,72 @@
+# UI testing matrix — DailyDotKids
+
+Broken paths and blank screens should fail in CI or a local smoke before humans click around.
+
+## One command (recommended)
+
+From `dailydot_backend` (starts local backend if needed):
+
+```bash
+# Existing demo accounts + new invite/Free signup (API). Skip Maestro unless installed.
+SKIP_MAESTRO=1 ./scripts/run-ui-tests.sh
+
+# Existing accounts only (demo logins + full mobile path suites)
+ACCOUNT_MODE=existing ./scripts/run-ui-tests.sh
+
+# New accounts only (seed invites → API signup + Maestro signup UIs)
+ACCOUNT_MODE=new ./scripts/run-ui-tests.sh
+
+# Pick suites
+SUITES=api,web,invoice ACCOUNT_MODE=all SKIP_MAESTRO=1 ./scripts/run-ui-tests.sh
+```
+
+`ACCOUNT_MODE`:
+
+| Mode | What it verifies |
+|------|------------------|
+| `existing` | Demo logins (`parent1` / `owner1` / `teacher1`) + full Maestro path suites |
+| `new` | Fresh invites + invite signup + Free centre signup (API and/or Maestro) |
+| `all` | Both |
+
+## Per-surface commands
+
+| Surface | Tool | Command | CI |
+|---------|------|---------|----|
+| **Orchestrator** | bash | `dailydot_backend/scripts/run-ui-tests.sh` | Local |
+| **Marketing site** (`web`) | Static link scan + Playwright crawl | `python3 scripts/check-links.py` · `npm run test:e2e` | `.github/workflows/ui-smoke.yml` |
+| **Admin web** | Playwright pairing → tabs | `npm run test:e2e:web` | Local (needs demo backend) |
+| **Admin mobile** | Maestro | `npm run smoke:local` (full) / signup: `admin-signup-invite.yaml`, `admin-signup-free.yaml` | Simulator |
+| **Parent** | Maestro | `npm run smoke:local` / signup: `parent-signup.yaml` | Simulator |
+| **Teacher** | Maestro | `npm run smoke:local` / signup: `teacher-signup.yaml` | Simulator |
+| **Superadmin** | Playwright | `npm run test:e2e` | `.github/workflows/e2e.yml` |
+| **Invoice Manager** | Playwright | `npm run test:e2e` | `.github/workflows/e2e.yml` |
+
+## Demo credentials (existing accounts)
+
+| Role | Email | Password |
+|------|-------|----------|
+| Parent | `parent1@demo.com` | `password` |
+| Admin / owner | `owner1@demo.com` | `password` |
+| Teacher | `teacher1@demo.com` | `password` |
+| Superadmin | `dailydot404+superadmin+demo@gmail.com` | `dailydot404+demo` |
+| Invoice Manager | `admin` | `ChangeMe123!` |
+
+## New accounts
+
+`scripts/seed-e2e-invites.sh` creates unused invite codes + Free-signup emails under `scripts/.e2e/ui-new-accounts.env`. The orchestrator consumes them for API and Maestro signup flows.
+
+## What “broken path” means here
+
+1. **Static site** — `href`/`src` points at a file that does not exist (caught by `check-links.py`).
+2. **Web apps** — nav route loads but shell crashes / redirects wrongly (Playwright).
+3. **Mobile** — tab or More menu destination is blank or unreachable (Maestro).
+4. **Accounts** — existing demo login fails, or new invite/Free signup cannot complete and re-login.
+
+## Adding coverage
+
+- New marketing page → `web/e2e/links.spec.ts` `SEED_PATHS`.
+- New admin More option → `DailyDot_admin/e2e/flows/more-all.yaml`.
+- New parent/teacher surface → `*-all-flows.yaml`.
+- New signup field → matching `*-signup*.yaml` + testIDs.
+- New superadmin sidebar item → `Layout.tsx` + `e2e/routes.spec.ts`.
+- New invoice route → `invoice_flattener/e2e/smoke.spec.ts`.

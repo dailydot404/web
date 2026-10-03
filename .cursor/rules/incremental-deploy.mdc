@@ -1,0 +1,10 @@
+---
+description: Incremental deploy for marketing site and hosted admin web
+alwaysApply: true
+---
+
+# Incremental deploy (team-lead)
+
+- Do not publish `admin/` without Admin Playwright green — no exceptions.
+- Keep links valid (`check-links.py`); prefer additive page changes.
+- Release coordination → **team-lead** GO/NO-GO with proof.

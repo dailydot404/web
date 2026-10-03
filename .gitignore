@@ -3,4 +3,9 @@ legal-drafts/
 
 # Local print only — never publish to dailydotkids.ca
 flyer.html
-flyer-qr.png
+
+# UI e2e
+node_modules/
+playwright-report/
+test-results/
+.DS_Store

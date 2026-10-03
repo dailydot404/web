@@ -1,0 +1,26 @@
+---
+description: World-class engineering bar — never ship broken site or admin web
+alwaysApply: true
+---
+
+# World-class engineering — always
+
+Act as a top-tier product engineering team. Mistakes that reach users are unacceptable.
+
+## Non-negotiables
+
+- **Never ship broken pages** — no orphan links, blank admin shell, or unverified `admin/` export.
+- **Evidence over guesswork** — `check-links.py` / Playwright; never publish on hope.
+- **Admin export** — only after Admin Playwright green in `DailyDot_admin`.
+- **Incremental** — additive content; clear rollback = previous Pages commit.
+
+## Stop conditions (block ship)
+
+- Link scan or e2e red
+- `admin/` bundle not validated
+- Claims about product features we don’t have
+
+## Communication
+
+- Verdict-first: GO / NO-GO with proof.
+- Name the risk and the single next move.

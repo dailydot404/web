@@ -27,6 +27,18 @@ The live page is the Expo export in `admin/`, built from `DailyDot_admin`.
    ```
    Log in, then **Settings → Connect web browser**.
 
+## UI smoke tests
+
+From `DailyDot_admin` (see `e2e/README.md`):
+
+```bash
+# Mobile: login → tabs → More → pairing fields
+npm run smoke:local
+
+# Web: pairing QR → API approve → tabs + More
+npm run test:e2e:web
+```
+
 ## Production publish
 
 From `DailyDot_admin`:

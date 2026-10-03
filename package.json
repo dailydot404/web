@@ -1,0 +1,12 @@
+{
+  "name": "dailydotkids-web-e2e",
+  "private": true,
+  "scripts": {
+    "test:links": "python3 scripts/check-links.py",
+    "test:e2e": "playwright test",
+    "test:ui": "npm run test:links && npm run test:e2e"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0"
+  }
+}
