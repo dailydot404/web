@@ -15,13 +15,16 @@ Copy-paste text for production listings. Keep in sync with [pricing.html](./pric
 
 ## What's New (next release — all 3 apps)
 
-```
-Start on Free — no credit card required.
+Versions: Admin **1.0.16** · Teacher **1.0.17** · Parent **1.0.13** · Backend **1.1.0**  
+Full sheet: `dailydot_backend/docs/releases/2026-10-03-facility-wide-release.md`
 
-• Self-serve Free plan in the Admin app: tap Start on Free, set up your centre, and invite your team the same day
-• Free includes core classroom tools for small centres (1 location, 1 class, up to 8 students)
-• Upgrade to Paid for unlimited capacity and compliance tools — billing, vault, safety logbook, policy library, and licensing export
-• See full plan details at dailydotkids.ca/pricing
+```
+Improvements for day-to-day centre ops — clearer Help, in-app update prompts, and more reliable sign-in.
+
+• Admin: same-day class moves, facility-wide teacher access, licensing visit prep, and safety log schedules
+• Teacher: temporary class coverage and clearer class grouping when your centre allows it
+• Parent: Help and guidance when you need a quick answer
+• Stability and notification improvements across the apps
 ```
 
 ---
