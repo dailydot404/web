@@ -16,9 +16,9 @@ Copy-paste text for production listings. Keep in sync with [pricing.html](./pric
 ## What's New (next release — all 3 apps)
 
 Versions: Admin **1.0.16** · Teacher **1.0.17** · Parent **1.0.13** · Backend **1.1.1**  
-*(Confirm marketing versions unused in store; bump via deployer if already consumed.)*  
+SHAs: backend `44ff5f9` · admin `b42e7a79` · teacher `4588a865` · parent `f3a7bf13`  
 Full sheet: `dailydot_backend/docs/releases/2026-10-03-ui-prefs-release.md`  
-(Submit only after Maestro login green.)
+Gates proven for this train: compat PASS · Admin/Teacher/Parent Maestro smoke (iOS+Android vs local) · Admin Playwright · Superadmin e2e 7/7.
 
 **Shared (Play + App Store — all three)**
 ```
@@ -38,6 +38,7 @@ A calmer sign-in and clearer centre setup.
 • Face ID / fingerprint when you tap the button — not on every open
 • Gentler update reminders with a Later option (required updates unchanged)
 • Notifications without a surprise permission prompt at launch
+• Profile is under More — easy to open anytime
 • More reliable Locations management
 • Setup checklist progress syncs when you’re signed in on more than one device
 ```
