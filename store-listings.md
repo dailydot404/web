@@ -16,16 +16,52 @@ Copy-paste text for production listings. Keep in sync with [pricing.html](./pric
 ## What's New (next release — all 3 apps)
 
 Versions: Admin **1.0.16** · Teacher **1.0.17** · Parent **1.0.13** · Backend **1.1.1**  
-Full sheet: `dailydot_backend/docs/releases/2026-10-03-tour-prefs-release.md`  
+*(Confirm marketing versions unused in store; bump via deployer if already consumed.)*  
+Full sheet: `dailydot_backend/docs/releases/2026-10-03-ui-prefs-release.md`  
 (Submit only after Maestro login green.)
 
+**Shared (Play + App Store — all three)**
 ```
-Smoother sign-in — setup tips and tours stay dismissed after reinstall, with clearer Help when you want a replay.
+A calmer start to each day — sign in when you’re ready, fewer surprise prompts, and Help when you want a tour.
 
-• Admin: first-hour checklist behaves correctly when you tap Not now; setup progress syncs across devices
-• Teacher & Parent: app tours no longer reappear after you’ve already dismissed them
-• Clearer connection messages when the network is flaky
+• Face ID / fingerprint: use the button on the sign-in screen (no automatic prompt)
+• Update reminders are gentler; you can choose Later (required updates still apply)
+• Notifications: we don’t ask for permission until you’re ready
+• Teacher & Parent: tours stay in Help until you start them
 • Stability improvements across the apps
+```
+
+**Admin**
+```
+A calmer sign-in and clearer centre setup.
+
+• Face ID / fingerprint when you tap the button — not on every open
+• Gentler update reminders with a Later option (required updates unchanged)
+• Notifications without a surprise permission prompt at launch
+• More reliable Locations management
+• Setup checklist progress syncs when you’re signed in on more than one device
+```
+
+**Teacher**
+```
+Stay focused on the classroom.
+
+• Face ID / fingerprint when you choose — no automatic prompt on open
+• Gentler update reminders with a Later option
+• No surprise notification permission at launch
+• In-app tour stays in Help until you want it
+• Stability improvements for shared classroom devices
+```
+
+**Parent**
+```
+Small polish for everyday use.
+
+• Face ID / fingerprint when you tap — not on every open
+• Gentler update reminders with a Later option
+• Turn on notifications from Settings when you’re ready
+• In-app guide stays in Help until you start it
+• Stability improvements
 ```
 
 ---

@@ -20,6 +20,31 @@ ACCOUNT_MODE=new ./scripts/run-ui-tests.sh
 SUITES=api,web,invoice ACCOUNT_MODE=all SKIP_MAESTRO=1 ./scripts/run-ui-tests.sh
 ```
 
+## Mobile Maestro — one shared sim (recommended)
+
+Maestro does **not** need a new simulator per app. Prefer one iOS sim + one Android AVD, Admin → Teacher → Parent, uninstall between apps.
+
+```bash
+# Smoke on shared iOS + Android (pins device, never calls `maestro start-device`)
+./scripts/maestro-sequential.sh
+
+# iOS only / Android only
+PLATFORMS=ios ./scripts/maestro-sequential.sh
+PLATFORMS=android FLOW=smoke ./scripts/maestro-sequential.sh
+
+# Shared device names (defaults)
+#   IOS_SIM_NAME=dailydot-admin-18
+#   ANDROID_AVD=Pixel_9_Pro
+```
+
+Rules:
+
+1. **Do not** run `maestro start-device` for DailyDot — it creates extra stock sims.
+2. Boot **one** iOS 18.3 sim (`dailydot-admin-18`) and shut down `dailydot-teacher-18` / `dailydot-parent-18` during sequential runs.
+3. Pin with `maestro test --device <udid|emulator-serial>` or `MAESTRO_DEVICE=… npm run smoke:local`.
+4. After each app: uninstall `com.anthor.dailydot.*.local` so the next app starts clean (`UNINSTALL_AFTER=1`).
+5. Bundle IDs differ (`.admin.local` / `.teacher.local` / `.parent.local`) so native libs do not conflict on the same device; versions are aligned on RN 0.83.6 / Expo 55.
+
 `ACCOUNT_MODE`:
 
 | Mode | What it verifies |
