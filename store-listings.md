@@ -15,16 +15,17 @@ Copy-paste text for production listings. Keep in sync with [pricing.html](./pric
 
 ## What's New (next release — all 3 apps)
 
-Versions: Admin **1.0.16** · Teacher **1.0.17** · Parent **1.0.13** · Backend **1.1.0**  
-Full sheet: `dailydot_backend/docs/releases/2026-10-03-facility-wide-release.md`
+Versions: Admin **1.0.16** · Teacher **1.0.17** · Parent **1.0.13** · Backend **1.1.1**  
+Full sheet: `dailydot_backend/docs/releases/2026-10-03-tour-prefs-release.md`  
+(Submit only after Maestro login green.)
 
 ```
-Improvements for day-to-day centre ops — clearer Help, in-app update prompts, and more reliable sign-in.
+Smoother sign-in — setup tips and tours stay dismissed after reinstall, with clearer Help when you want a replay.
 
-• Admin: same-day class moves, facility-wide teacher access, licensing visit prep, and safety log schedules
-• Teacher: temporary class coverage and clearer class grouping when your centre allows it
-• Parent: Help and guidance when you need a quick answer
-• Stability and notification improvements across the apps
+• Admin: first-hour checklist behaves correctly when you tap Not now; setup progress syncs across devices
+• Teacher & Parent: app tours no longer reappear after you’ve already dismissed them
+• Clearer connection messages when the network is flaky
+• Stability improvements across the apps
 ```
 
 ---

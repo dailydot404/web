@@ -18,7 +18,7 @@ Release owner for the **admin web host** in `web` (`admin/` from DailyDot_admin)
 
 ## Roster note
 
-**documenter** updates `store-listings.md` What’s New for store submits (canonical skill in `dailydot_backend`). Admin UI work stays in `DailyDot_admin` (**admin-web**).
+**documenter** updates `store-listings.md` What’s New for store submits (canonical skill in `dailydot_backend`). Admin UI work stays in `DailyDot_admin` (**admin-web**). **ui-ux** critiques admin shell density/pairing before polish ships.
 
 ## Gates
 

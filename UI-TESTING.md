@@ -34,10 +34,10 @@ SUITES=api,web,invoice ACCOUNT_MODE=all SKIP_MAESTRO=1 ./scripts/run-ui-tests.sh
 |---------|------|---------|----|
 | **Orchestrator** | bash | `dailydot_backend/scripts/run-ui-tests.sh` | Local |
 | **Marketing site** (`web`) | Static link scan + Playwright crawl | `python3 scripts/check-links.py` · `npm run test:e2e` | `.github/workflows/ui-smoke.yml` |
-| **Admin web** | Playwright pairing → tabs | `npm run test:e2e:web` | Local (needs demo backend) |
-| **Admin mobile** | Maestro | `npm run smoke:local` (full) / signup: `admin-signup-invite.yaml`, `admin-signup-free.yaml` | Simulator |
-| **Parent** | Maestro | `npm run smoke:local` / signup: `parent-signup.yaml` | Simulator |
-| **Teacher** | Maestro | `npm run smoke:local` / signup: `teacher-signup.yaml` | Simulator |
+| **Admin web** | Playwright pairing → tabs + CRUD (API-driven; FABs read-only) | `npm run test:e2e:web` / `npm run test:e2e:web:crud` | Local (needs demo backend) |
+| **Admin mobile** | Maestro | `npm run smoke:local` / `npm run smoke:local:crud` / signup: `admin-signup-invite.yaml`, `admin-signup-free.yaml` | Simulator |
+| **Parent** | Maestro | `npm run smoke:local` / `npm run smoke:local:crud` / signup: `parent-signup.yaml` | Simulator |
+| **Teacher** | Maestro | `npm run smoke:local` / `npm run smoke:local:crud` / signup: `teacher-signup.yaml` | Simulator |
 | **Superadmin** | Playwright | `npm run test:e2e` | `.github/workflows/e2e.yml` |
 | **Invoice Manager** | Playwright | `npm run test:e2e` | `.github/workflows/e2e.yml` |
 
@@ -61,12 +61,26 @@ SUITES=api,web,invoice ACCOUNT_MODE=all SKIP_MAESTRO=1 ./scripts/run-ui-tests.sh
 2. **Web apps** — nav route loads but shell crashes / redirects wrongly (Playwright).
 3. **Mobile** — tab or More menu destination is blank or unreachable (Maestro).
 4. **Accounts** — existing demo login fails, or new invite/Free signup cannot complete and re-login.
+5. **CRUD** — create/edit/delete does not persist or the list/details do not reflect the change (per-entity Maestro flows + admin web Playwright matrix).
+6. **App tour** — first login may show the tour; after complete / “Never show me again”, `/ui-preferences` `tourSeen` must prevent auto-show on next login (Help can still start the tour).
+
+## CRUD matrix (comprehensive)
+
+Each app’s `e2e/CRUD-MATRIX.md` is the checklist. Orchestrator runs `*-crud.yaml` after path smoke when Maestro is enabled.
+
+| Surface | Suite | Entities covered |
+|---------|-------|------------------|
+| **Admin mobile** | `DailyDot_admin` `npm run smoke:local:crud` | Location, class, student, teacher, bulletin, waitlist |
+| **Admin web** | `DailyDot_admin` `npm run test:e2e:web:crud` | FAB gate + API CUD for student, teacher, bulletin, waitlist, location, class |
+| **Teacher** | `DailyDot_teacher` `npm run smoke:local:crud` | Diary note, clock in/out, time logs shell |
+| **Parent** | `DailyDot_parent` `npm run smoke:local:crud` | Allergies, other info, emergency contact |
 
 ## Adding coverage
 
 - New marketing page → `web/e2e/links.spec.ts` `SEED_PATHS`.
 - New admin More option → `DailyDot_admin/e2e/flows/more-all.yaml`.
 - New parent/teacher surface → `*-all-flows.yaml`.
+- New mutable record type → new `flows/crud-*.yaml` (or Playwright test), wire into `*-crud.yaml`, update that app’s `e2e/CRUD-MATRIX.md` + this table.
 - New signup field → matching `*-signup*.yaml` + testIDs.
 - New superadmin sidebar item → `Layout.tsx` + `e2e/routes.spec.ts`.
 - New invoice route → `invoice_flattener/e2e/smoke.spec.ts`.

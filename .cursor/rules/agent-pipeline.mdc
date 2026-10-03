@@ -10,6 +10,7 @@ World-class bar: never publish broken pages or unverified `admin/` (`world-class
 **Scope:** hosted Admin web (`admin/`) + supporting site pages. **Not** `meetings/` / sales leavebehinds.
 
 - **team-lead** — default NO-GO until link/e2e (and Admin Playwright if needed) green
+- **ui-ux** — UX critique for admin web shell + supporting pages
 - **documenter** — store-listings What’s New + release sheet pointer (`dailydot_backend/docs/releases/`)
 - Admin UI / pairing / export → `DailyDot_admin` (**admin-web**)
 - UI matrix: `UI-TESTING.md`
