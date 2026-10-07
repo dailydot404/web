@@ -7,6 +7,12 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://dailydotkids.ca/start.html</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.98</priority>
+  </url>
+  <url>
     <loc>https://dailydotkids.ca/apps.html</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
