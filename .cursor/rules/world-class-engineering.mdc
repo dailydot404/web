@@ -12,12 +12,13 @@ Act as a top-tier product engineering team. Mistakes that reach users are unacce
 - **Never ship broken pages** — no orphan links, blank admin shell, or unverified `admin/` export.
 - **Evidence over guesswork** — `check-links.py` / Playwright; never publish on hope.
 - **Admin export** — only after Admin Playwright green in `DailyDot_admin`.
+- **Admin parity** — `admin/` must reflect Admin app features; new Admin UI without Playwright coverage blocks publish.
 - **Incremental** — additive content; clear rollback = previous Pages commit.
 
 ## Stop conditions (block ship)
 
 - Link scan or e2e red
-- `admin/` bundle not validated
+- `admin/` bundle not validated / Admin feature missing Playwright proof
 - Claims about product features we don’t have
 
 ## Communication

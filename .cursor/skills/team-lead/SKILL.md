@@ -13,6 +13,7 @@ Release owner for the **admin web host** in `web` (`admin/` from DailyDot_admin)
 
 - Never ship broken pages or blank admin shell.
 - `admin/` only after **admin-web** Playwright green in `DailyDot_admin`.
+- New Admin app features must already be on admin web with Playwright before export/publish.
 - Evidence: `check-links.py`, `npm run test:e2e` as applicable.
 - Rollback = previous GitHub Pages commit.
 

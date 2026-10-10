@@ -1,9 +1,11 @@
 ---
-description: Incremental deploy for hosted admin web (and supporting site pages)alwaysApply: true
+description: Incremental deploy for hosted admin web (and supporting site pages)
+alwaysApply: true
 ---
 
 # Incremental deploy (team-lead)
 
 - Do not publish `admin/` without Admin Playwright green — no exceptions.
+- Admin app features must already be on admin web with Playwright before `admin/` export/publish.
 - Keep links valid (`check-links.py`); prefer additive page changes.
 - Release coordination → **team-lead** GO/NO-GO with proof.
