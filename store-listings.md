@@ -15,53 +15,51 @@ Copy-paste text for production listings. Keep in sync with [pricing.html](./pric
 
 ## What's New (next release — all 3 apps)
 
-Versions: Admin **1.0.16** · Teacher **1.0.17** · Parent **1.0.13** · Backend **1.1.1**  
-SHAs: backend `44ff5f9` · admin `b42e7a79` · teacher `4588a865` · parent `f3a7bf13`  
-Full sheet: `dailydot_backend/docs/releases/2026-10-03-ui-prefs-release.md`  
-Gates proven for this train: compat PASS · Admin/Teacher/Parent Maestro smoke (iOS+Android vs local) · Admin Playwright · Superadmin e2e 7/7.
+Versions: Admin **1.0.17** · Teacher **1.0.18** · Parent **1.0.14** · Backend **1.1.3**  
+SHAs: backend `20524b4` · admin `b8723383` · teacher `5520ba5d` · parent `04e8f402` · web `582ef8c`  
+Gates: compat PASS on prod promote · Admin Arrange Maestro + Playwright · Admin/Parent/Teacher Maestro smoke (this train) · Superadmin e2e earlier green.
 
 **Shared (Play + App Store — all three)**
 ```
-A calmer start to each day — sign in when you’re ready, fewer surprise prompts, and Help when you want a tour.
+Stay in the loop — and keep DailyDotKids feeling calm when you open the app.
 
-• Face ID / fingerprint: use the button on the sign-in screen (no automatic prompt)
-• Update reminders are gentler; you can choose Later (required updates still apply)
-• Notifications: we don’t ask for permission until you’re ready
-• Teacher & Parent: tours stay in Help until you start them
-• Stability improvements across the apps
+• Notification history in the app, with a clear unread count
+• Mark alerts read when you’re done with them
+• Choose how long notification history is kept (in Profile / settings)
+• Gentler sign-in and update reminders (Face ID when you tap; Later on optional updates)
+• Stability improvements
 ```
 
 **Admin**
 ```
-A calmer sign-in and clearer centre setup.
+Make the home screen yours — and catch centre alerts without digging.
 
-• Face ID / fingerprint when you tap the button — not on every open
-• Gentler update reminders with a Later option (required updates unchanged)
-• Notifications without a surprise permission prompt at launch
-• Profile is under More — easy to open anytime
-• More reliable Locations management
-• Setup checklist progress syncs when you’re signed in on more than one device
+• Arrange home & More: pick bottom tabs, pin favourites, and reorder tools
+• Search tools from the header to jump straight where you need
+• Notification inbox with unread badge; open history from Profile
+• Help stays easy to find from the header path
+• Same Arrange experience on Admin web (after pairing)
 ```
 
 **Teacher**
 ```
-Stay focused on the classroom.
+Classroom alerts, without the clutter.
 
-• Face ID / fingerprint when you choose — no automatic prompt on open
-• Gentler update reminders with a Later option
-• No surprise notification permission at launch
-• In-app tour stays in Help until you want it
-• Stability improvements for shared classroom devices
+• Notification bell with unread count on the home header
+• Open your notification history and mark items read
+• Retention choice for how long history is kept
+• Shared-tablet friendly: calm prompts and fewer interruptions
+• Stability improvements for everyday classroom use
 ```
 
 **Parent**
 ```
-Small polish for everyday use.
+Know what’s new for your child, at a glance.
 
-• Face ID / fingerprint when you tap — not on every open
-• Gentler update reminders with a Later option
-• Turn on notifications from Settings when you’re ready
-• In-app guide stays in Help until you start it
+• Notification bell with unread count
+• Open notification history and mark items read
+• Choose how long history is kept in settings
+• Calmer sign-in and update reminders
 • Stability improvements
 ```
 
