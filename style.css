@@ -3004,9 +3004,11 @@ body.nav-open::before {
     z-index: 0;
     inset: auto -10% -30% 40%;
     height: 70%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.35), transparent 65%);
+    background:
+        radial-gradient(circle at 40% 40%, rgba(226, 75, 82, 0.14), transparent 55%),
+        radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent 65%);
     pointer-events: none;
-    opacity: 0.55;
+    opacity: 0.85;
     animation: drift 14s ease-in-out infinite alternate;
 }
 
@@ -4109,13 +4111,13 @@ body[data-page="home"] .faq-compact .faq-list {
 
 /* --- Hero brand + flow hint --- */
 .hero-brand {
-    margin: 0 0 0.55rem;
+    margin: 0 0 0.65rem;
     font-family: var(--font-display);
-    font-size: clamp(1.55rem, 1.2rem + 1.6vw, 2.15rem);
+    font-size: clamp(2rem, 1.55rem + 2.2vw, 2.85rem);
     font-weight: 700;
     letter-spacing: -0.02em;
     color: var(--ink);
-    line-height: 1.1;
+    line-height: 1.08;
 }
 
 .hero-brand span {
@@ -4124,11 +4126,12 @@ body[data-page="home"] .faq-compact .faq-list {
 
 .hero-home .hero-content h1 {
     font-family: var(--font-display);
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    font-size: clamp(2.15rem, 1.7rem + 2vw, 3.15rem);
-    line-height: 1.12;
+    font-weight: 650;
+    letter-spacing: -0.025em;
+    font-size: clamp(1.55rem, 1.25rem + 1.3vw, 2.15rem);
+    line-height: 1.2;
     margin-bottom: 0.85rem;
+    color: var(--dark);
 }
 
 .hero-home .hero-content > p:not(.hero-brand):not(.hero-store-label):not(.hero-store-hint):not(.hero-pain):not(.hero-try-note):not(.hero-lead) {
@@ -4215,8 +4218,9 @@ body[data-page="home"] .faq-compact .faq-list {
     padding: 1.25rem 1rem 1.1rem;
     border-radius: 28px;
     background:
-        radial-gradient(ellipse 70% 60% at 50% 0%, rgba(255, 255, 255, 0.9), transparent 70%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, rgba(238, 245, 246, 0.9) 100%);
+        radial-gradient(ellipse 55% 50% at 70% 10%, rgba(226, 75, 82, 0.1), transparent 60%),
+        radial-gradient(ellipse 70% 60% at 50% 0%, rgba(255, 255, 255, 0.92), transparent 70%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.78) 0%, rgba(247, 249, 251, 0.95) 100%);
     border: 1px solid rgba(227, 232, 238, 0.9);
     box-shadow: 0 24px 60px rgba(26, 35, 50, 0.08);
     opacity: 0.92;
@@ -4881,6 +4885,8 @@ body.start-page {
     inset: 0;
     pointer-events: none;
     background:
+        radial-gradient(circle at 18% 12%, rgba(226, 75, 82, 0.12), transparent 42%),
+        radial-gradient(circle at 82% 78%, rgba(47, 111, 122, 0.1), transparent 45%),
         radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.55), transparent 40%);
     animation: start-glow 8s ease-in-out infinite alternate;
 }
@@ -4894,12 +4900,23 @@ body.start-page {
     position: relative;
     width: 100%;
     max-width: 560px;
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.95);
     border: 1px solid var(--line);
     border-radius: 18px;
     padding: 2rem 1.65rem 1.75rem;
     box-shadow: var(--shadow-soft);
     animation: start-rise 0.55s ease both;
+}
+
+.start-panel::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1.25rem;
+    bottom: 1.25rem;
+    width: 3px;
+    border-radius: 0 3px 3px 0;
+    background: var(--primary);
 }
 
 @keyframes start-rise {
