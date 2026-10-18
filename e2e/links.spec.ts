@@ -44,6 +44,21 @@ function toPath(href: string, base: string): string | null {
 }
 
 test.describe('Marketing site link smoke', () => {
+  test('primary Start free buttons resolve to start.html', async ({ page }) => {
+    for (const seed of ['/', '/pricing.html', '/compare.html', '/compare-brightwheel.html']) {
+      await page.goto(seed, { waitUntil: 'domcontentloaded' });
+      const hrefs = await page.$$eval('a.btn-primary', (nodes) =>
+        nodes
+          .filter((n) => /start free/i.test(n.textContent || ''))
+          .map((n) => n.getAttribute('href') || ''),
+      );
+      expect(hrefs.length, `expected Start free CTA on ${seed}`).toBeGreaterThan(0);
+      for (const href of hrefs) {
+        expect(href, `${seed} Start free → ${href}`).toMatch(/start\.html/);
+      }
+    }
+  });
+
   test('seed pages load and same-origin hrefs are not 404', async ({ page, request, baseURL }) => {
     expect(baseURL).toBeTruthy();
     const broken: string[] = [];

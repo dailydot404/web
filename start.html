@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20261017a">
+    <link rel="stylesheet" href="style.css?v=20261018a">
 </head>
 <body class="start-page" data-page="start">
     <a class="skip-link" href="#start-form">Skip to start free form</a>
@@ -39,22 +39,49 @@
         <div class="start-atmosphere" aria-hidden="true"></div>
         <div class="start-panel">
             <p class="start-brand" aria-label="DailyDotKids">Daily<span>DotKids</span></p>
-            <h1>Start free — daycare software for your centre</h1>
-            <p class="start-lead">Create your Free daycare software account here — no credit card. Then install Admin and log in with the same email.</p>
+            <h1>Start free for your centre</h1>
+            <p class="start-lead">Create your Free account here — no credit card. Then install Admin and log in with the same email.</p>
+            <p class="start-trust">Free: 1 class · 8 students · 2 teachers · 16 parents. Data stored in Canada. <a href="security.html">Security</a></p>
 
             <form class="start-form" id="start-form" novalidate>
                 <div class="start-field">
                     <label for="daycareName">Centre name</label>
                     <input id="daycareName" name="daycareName" type="text" autocomplete="organization" required maxlength="120">
                 </div>
+                <div class="start-field">
+                    <label for="ownerEmail">Your email</label>
+                    <input id="ownerEmail" name="ownerEmail" type="email" autocomplete="email" required maxlength="160">
+                </div>
                 <div class="start-row">
-                    <div class="start-field">
-                        <label for="ownerEmail">Your email</label>
-                        <input id="ownerEmail" name="ownerEmail" type="email" autocomplete="email" required maxlength="160">
-                    </div>
                     <div class="start-field">
                         <label for="ownerPhone">Phone</label>
                         <input id="ownerPhone" name="ownerPhone" type="tel" autocomplete="tel" required maxlength="40">
+                    </div>
+                    <div class="start-field">
+                        <label for="timezone">Timezone</label>
+                        <select id="timezone" name="timezone" required>
+                            <optgroup label="Canada">
+                                <option value="America/Vancouver">Pacific — Vancouver</option>
+                                <option value="America/Edmonton">Mountain — Edmonton / Calgary</option>
+                                <option value="America/Winnipeg">Central — Winnipeg</option>
+                                <option value="America/Regina">Saskatchewan — Regina</option>
+                                <option value="America/Toronto" selected>Eastern — Toronto / Ottawa</option>
+                                <option value="America/Halifax">Atlantic — Halifax</option>
+                                <option value="America/St_Johns">Newfoundland — St. John’s</option>
+                                <option value="America/Whitehorse">Yukon — Whitehorse</option>
+                                <option value="America/Yellowknife">NWT — Yellowknife</option>
+                                <option value="America/Iqaluit">Nunavut — Iqaluit</option>
+                            </optgroup>
+                            <optgroup label="United States">
+                                <option value="America/Los_Angeles">Pacific — Los Angeles</option>
+                                <option value="America/Denver">Mountain — Denver</option>
+                                <option value="America/Chicago">Central — Chicago</option>
+                                <option value="America/New_York">Eastern — New York</option>
+                                <option value="America/Phoenix">Arizona — Phoenix</option>
+                                <option value="Pacific/Honolulu">Hawaii — Honolulu</option>
+                                <option value="America/Anchorage">Alaska — Anchorage</option>
+                            </optgroup>
+                        </select>
                     </div>
                 </div>
                 <div class="start-field">
@@ -62,28 +89,10 @@
                     <input id="address" name="address" type="text" autocomplete="street-address" required maxlength="240">
                 </div>
                 <div class="start-field">
-                    <label for="timezone">Timezone</label>
-                    <select id="timezone" name="timezone" required>
-                        <option value="America/Vancouver">Pacific — Vancouver</option>
-                        <option value="America/Edmonton">Mountain — Edmonton / Calgary</option>
-                        <option value="America/Winnipeg">Central — Winnipeg</option>
-                        <option value="America/Regina">Saskatchewan — Regina</option>
-                        <option value="America/Toronto" selected>Eastern — Toronto / Ottawa</option>
-                        <option value="America/Halifax">Atlantic — Halifax</option>
-                        <option value="America/St_Johns">Newfoundland — St. John’s</option>
-                        <option value="America/Whitehorse">Yukon — Whitehorse</option>
-                        <option value="America/Yellowknife">Northwest Territories — Yellowknife</option>
-                        <option value="America/Iqaluit">Nunavut — Iqaluit</option>
-                    </select>
-                </div>
-                <div class="start-row">
-                    <div class="start-field">
-                        <label for="password">Password</label>
+                    <label for="password">Password</label>
+                    <div class="start-password-row">
                         <input id="password" name="password" type="password" autocomplete="new-password" required minlength="6" maxlength="128">
-                    </div>
-                    <div class="start-field">
-                        <label for="confirmPassword">Confirm password</label>
-                        <input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" required minlength="6" maxlength="128">
+                        <button type="button" class="start-show-password" id="toggle-password" aria-pressed="false">Show</button>
                     </div>
                 </div>
                 <label class="start-terms">
@@ -92,7 +101,7 @@
                 </label>
                 <p class="start-error" id="start-error" hidden role="alert"></p>
                 <button type="submit" class="btn btn-primary start-submit" id="start-submit">Start free</button>
-                <p class="start-fine">No credit card. Free includes core classroom tools with capacity limits. <a href="pricing.html">See Free vs Paid</a>.</p>
+                <p class="start-fine">No credit card. Prefer the app first? <a href="apps.html#admin-app">Download Admin</a> · <a href="pricing.html">Free vs Paid</a></p>
             </form>
 
             <div class="start-success" id="start-success" hidden>
@@ -122,7 +131,7 @@
         </p>
     </footer>
 
-    <script src="analytics.js?v=20260927a"></script>
-    <script src="start.js?v=20261007a"></script>
+    <script src="analytics.js?v=20261018a"></script>
+    <script src="start.js?v=20261018a"></script>
 </body>
 </html>

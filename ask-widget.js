@@ -8,7 +8,7 @@
     var FAQ = [
         {
             q: 'How do I start free?',
-            a: 'Install DailyDotKids Admin from the App Store or Google Play, tap Start on Free, set up your centre, then invite teachers and parents with codes. No credit card.',
+            a: 'Create your Free centre at dailydotkids.ca/start.html — no credit card. Then install DailyDotKids Admin and log in with the same email. Invite teachers and parents with codes.',
         },
         {
             q: 'What is on Free?',

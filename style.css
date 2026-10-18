@@ -5106,3 +5106,118 @@ body.start-page {
 .explore-links a:hover {
     color: var(--primary-deep);
 }
+
+/* Tier-1 marketing: founder note, product story, start form polish */
+.founder-note {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.25rem;
+    align-items: start;
+    max-width: 44rem;
+    margin: 2.5rem auto;
+    padding: 1.35rem 1.4rem;
+    border-top: 1px solid rgba(36, 48, 65, 0.1);
+    border-bottom: 1px solid rgba(36, 48, 65, 0.1);
+}
+.founder-note-compact {
+    margin: 1.75rem auto 2rem;
+    max-width: 52rem;
+}
+.founder-photo {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #f0f2f5;
+}
+.founder-note-compact .founder-photo {
+    width: 72px;
+    height: 72px;
+}
+.founder-copy h2 {
+    margin: 0 0 0.45rem;
+    font-size: 1.25rem;
+    color: var(--ink);
+}
+.founder-copy p {
+    margin: 0 0 0.55rem;
+    color: var(--gray);
+    line-height: 1.55;
+}
+.founder-meta {
+    font-size: 0.95rem;
+}
+.founder-meta a {
+    font-weight: 700;
+    color: var(--ink);
+}
+.not-do-line {
+    text-align: center;
+    margin: 0.85rem auto 0;
+    max-width: 40rem;
+    font-size: 0.95rem;
+    color: var(--gray);
+}
+.not-do-line a {
+    font-weight: 700;
+    color: var(--ink);
+}
+.product-story .section-header p {
+    max-width: 36rem;
+    margin: 0.5rem auto 0;
+    color: var(--gray);
+}
+.product-story-media {
+    max-width: 36rem;
+    margin: 1.25rem auto 0;
+}
+.product-story-video {
+    width: 100%;
+    border-radius: 14px;
+    background: #1a2332;
+    aspect-ratio: 16 / 9;
+}
+.start-trust {
+    margin: 0 0 1.15rem;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: var(--gray);
+}
+.start-trust a {
+    font-weight: 700;
+    color: var(--ink);
+}
+.start-password-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem;
+    align-items: center;
+}
+.start-show-password {
+    border: 1px solid rgba(36, 48, 65, 0.18);
+    background: #fff;
+    color: var(--ink);
+    border-radius: 8px;
+    padding: 0.55rem 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.pricing-footnote {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--gray);
+    margin-top: 0.2rem;
+}
+.compare-checked {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-top: 0.35rem;
+}
+@media (max-width: 640px) {
+    .founder-note {
+        grid-template-columns: 1fr;
+        justify-items: start;
+    }
+}

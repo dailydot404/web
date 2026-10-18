@@ -4,7 +4,9 @@
  * Events still push to window.dataLayer when the ID is empty (for future GTM).
  */
 (function (global) {
-    var GA4_MEASUREMENT_ID = ''; // e.g. 'G-XXXXXXXXXX'
+    // Prefer window.DDK_GA4_ID (set in a small inline snippet) or leave empty.
+    // First-party page views still POST to /api/public/website-page-view when GA4 is off.
+    var GA4_MEASUREMENT_ID = global.DDK_GA4_ID || ''; // e.g. 'G-XXXXXXXXXX'
 
     var dataLayer = (global.dataLayer = global.dataLayer || []);
 
@@ -81,11 +83,16 @@
             var link = event.target.closest && event.target.closest('a');
             if (!link) return;
             var href = link.getAttribute('href') || '';
-            if (href.indexOf('apps.html#admin-app') === -1 && !link.classList.contains('nav-cta')) {
-                return;
-            }
+            var label = (link.textContent || '').replace(/\s+/g, ' ').trim().toLowerCase();
+            var isStart =
+                href.indexOf('start.html') !== -1 ||
+                link.classList.contains('nav-cta') ||
+                link.classList.contains('hero-start-btn') ||
+                label.indexOf('start free') !== -1;
+            if (!isStart) return;
             track('start_free_click', {
                 link_url: href,
+                link_label: label.slice(0, 80),
                 page_path: global.location.pathname,
             });
         });
