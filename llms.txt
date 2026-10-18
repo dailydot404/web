@@ -19,7 +19,12 @@
 - About: https://dailydotkids.ca/about.html
 - Compliance / licensing: https://dailydotkids.ca/compliance.html
 - Licensing visit prep: https://dailydotkids.ca/licensing-visit-prep.html
-- Canada: https://dailydotkids.ca/daycare-software-canada.html
+- Canada (daycare & childcare software): https://dailydotkids.ca/daycare-software-canada.html
+- Childcare software Canada: https://dailydotkids.ca/childcare-software-canada.html
+- Free daycare software: https://dailydotkids.ca/free-daycare-software.html
+- Daycare attendance software: https://dailydotkids.ca/daycare-attendance-software.html
+- How to switch to daycare software: https://dailydotkids.ca/how-to-switch-daycare-software.html
+- Start free: https://dailydotkids.ca/start.html
 - USA: https://dailydotkids.ca/daycare-software-usa.html
 - Ontario: https://dailydotkids.ca/daycare-software-ontario.html
 - British Columbia: https://dailydotkids.ca/daycare-software-british-columbia.html
@@ -33,7 +38,7 @@
 - Billing: https://dailydotkids.ca/daycare-billing.html
 - Compare: https://dailydotkids.ca/compare.html
 - vs paper / clipboards: https://dailydotkids.ca/compare-paper.html
-- vs Lillio (HiMama): https://dailydotkids.ca/compare-lillio.html
+- vs Lillio / HiMama (HiMama is now Lillio): https://dailydotkids.ca/compare-lillio.html
 - vs Brightwheel: https://dailydotkids.ca/compare-brightwheel.html
 - vs Procare: https://dailydotkids.ca/compare-procare.html
 - Security: https://dailydotkids.ca/security.html

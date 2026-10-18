@@ -7,6 +7,11 @@ const SEED_PATHS = [
   '/',
   '/about.html',
   '/404.html',
+  '/daycare-software-canada.html',
+  '/childcare-software-canada.html',
+  '/free-daycare-software.html',
+  '/daycare-attendance-software.html',
+  '/compare.html',
   '/meetings/top-tier-nicole-leavebehind.html',
   '/meetings/top-tier-nicole.html',
 ];
