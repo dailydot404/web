@@ -37,7 +37,7 @@
 
 body {
     font-family: var(--font-body);
-    color: var(--dark);
+    color: var(--ink);
     line-height: 1.65;
     background-color: var(--surface-muted);
     scroll-behavior: smooth;
@@ -52,6 +52,7 @@ code {
 }
 
 h1, h2, h3 {
+    font-family: var(--font-display);
     color: var(--ink);
     line-height: 1.25;
 }
