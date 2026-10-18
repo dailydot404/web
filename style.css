@@ -5278,6 +5278,36 @@ body.start-page {
     margin: 0;
     min-width: 34rem;
 }
+.compare-table-wrap-master .compare-table-master {
+    min-width: 52rem;
+    font-size: 0.9rem;
+}
+.compare-table-master thead th a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: rgba(226, 75, 82, 0.35);
+    text-underline-offset: 3px;
+}
+.compare-table-master thead th:nth-child(2) a {
+    text-decoration: none;
+}
+.compare-table-master tbody th {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: #fff;
+    box-shadow: 4px 0 8px rgba(26, 35, 50, 0.04);
+}
+.compare-table-master thead th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: var(--light, #f6f7f8);
+}
+.compare-table-master tbody td:last-child {
+    color: inherit;
+    font-weight: inherit;
+}
 .compare-table-wrap::before {
     content: none;
 }
