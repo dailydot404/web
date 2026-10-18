@@ -5221,6 +5221,161 @@ body.start-page {
     color: var(--gray);
     margin-top: 0.35rem;
 }
+
+/* Compare pages — scorecard-first, mobile-friendly */
+.hero-compare {
+    padding: 100px 20px 20px;
+    text-align: center;
+}
+.hero-compare .hero-content {
+    max-width: 38rem;
+}
+.hero-compare .hero-content > p:not(.hero-kicker) {
+    margin-bottom: 1rem;
+    font-size: 1.02rem;
+}
+.hero-compare .hero-actions {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.hero-compare .breadcrumbs {
+    margin-bottom: 0.5rem;
+}
+.compare-legal {
+    text-align: center;
+    max-width: 40rem;
+    margin: 1.25rem auto 0;
+    font-size: 0.78rem;
+    color: var(--gray);
+    line-height: 1.4;
+}
+.compare-more-strip {
+    text-align: center;
+    margin: 0.5rem 0 2rem;
+    font-size: 0.95rem;
+    color: var(--gray);
+}
+.compare-more-strip a {
+    font-weight: 650;
+    color: var(--ink);
+}
+.compare-fit {
+    text-align: center;
+    max-width: 40rem;
+    margin: 1rem auto 0;
+    font-size: 0.95rem;
+    color: var(--gray);
+}
+.compare-table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: #fff;
+}
+.compare-table-wrap .compare-table {
+    margin: 0;
+    min-width: 34rem;
+}
+.compare-table-wrap::before {
+    content: none;
+}
+@media (max-width: 800px) {
+    .hero-compare {
+        padding: 88px 16px 12px;
+    }
+    .hero-compare h1 {
+        font-size: var(--hero-title-mobile);
+        margin-bottom: 0.55rem;
+    }
+    .hero-compare .hero-content > p:not(.hero-kicker) {
+        font-size: 0.98rem;
+        margin-bottom: 0.85rem;
+    }
+    body[data-page^="compare"] .trust-bar {
+        padding: 0.5rem 12px;
+    }
+    body[data-page^="compare"] .trust-bar ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.35rem 0.75rem;
+        padding: 0.55rem 4px;
+        justify-items: start;
+    }
+    body[data-page^="compare"] .trust-bar li {
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+    body[data-page^="compare"] .breadcrumbs {
+        display: none;
+    }
+    body[data-page^="compare"] .guide-page {
+        padding-top: 0.75rem;
+    }
+    body[data-page^="compare"] #owner-assessment .section-header {
+        margin-bottom: 0.75rem;
+    }
+    body[data-page^="compare"] #owner-assessment .section-header p {
+        font-size: 0.95rem;
+        margin: 0;
+    }
+    .compare-assess-card {
+        padding: 1rem 1.1rem 1.15rem;
+    }
+    .compare-assess-card li {
+        font-size: 0.9rem;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+    }
+    .compare-table-wrap {
+        margin: 1rem -4px;
+        border-radius: 10px;
+    }
+    .compare-table-wrap::after {
+        content: "Swipe to see all columns →";
+        display: block;
+        padding: 0.45rem 0.75rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--gray);
+        background: var(--surface-muted);
+        border-top: 1px solid var(--line);
+    }
+    .compare-table th,
+    .compare-table td {
+        padding: 0.65rem 0.75rem;
+        font-size: 0.88rem;
+    }
+    /* Horizontal phone strip — avoid three full-height screenshots stacked */
+    .compare-shot-grid {
+        display: flex;
+        gap: 1rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        padding: 0.25rem 0.25rem 1rem;
+        margin: 1rem 0 1.5rem;
+        align-items: end;
+    }
+    .compare-shot-grid figure {
+        flex: 0 0 min(42vw, 160px);
+        scroll-snap-align: start;
+    }
+    .compare-shot-grid img {
+        max-width: 100%;
+        border-radius: 1rem;
+    }
+    .compare-shot-grid figcaption {
+        font-size: 0.8rem;
+    }
+    .trust-bar ul {
+        gap: 0.35rem 0.85rem;
+        font-size: 0.85rem;
+        justify-content: center;
+    }
+}
+
 @media (max-width: 640px) {
     .founder-note {
         grid-template-columns: 1fr;
