@@ -20,6 +20,10 @@
     --transition: all 0.25s ease;
     --font-display: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
     --font-body: "Manrope", "Segoe UI", sans-serif;
+    /* Shared hero type scale — home and interior pages (product, pricing, etc.) */
+    --hero-title: clamp(1.55rem, 1.25rem + 1.3vw, 2.15rem);
+    --hero-title-mobile: clamp(1.7rem, 7vw, 2.15rem);
+    --hero-lead: 1.12rem;
     --shadow-soft: 0 14px 40px rgba(26, 35, 50, 0.07);
     --radius: 14px;
 }
@@ -256,17 +260,18 @@ body.nav-open::before {
 }
 
 .hero h1 {
-    font-size: 3rem;
-    font-weight: 800;
+    font-size: var(--hero-title);
+    font-weight: 650;
     line-height: 1.2;
     margin-bottom: 20px;
-    letter-spacing: -1px;
+    letter-spacing: -0.025em;
 }
 
 .hero p {
-    font-size: 1.25rem;
+    font-size: var(--hero-lead);
     color: var(--gray);
     margin-bottom: 25px;
+    line-height: 1.55;
 }
 
 .hero-chips {
@@ -2567,7 +2572,7 @@ body.nav-open::before {
 
 @media (max-width: 576px) {
     .hero h1 {
-        font-size: clamp(1.7rem, 7vw, 2.1rem);
+        font-size: var(--hero-title-mobile);
     }
 
     .hero-actions {
@@ -2974,8 +2979,8 @@ body.nav-open::before {
 }
 
 .hero h1 {
-    font-size: clamp(2.2rem, 4.5vw, 3.15rem);
-    font-weight: 600;
+    font-size: var(--hero-title);
+    font-weight: 650;
 }
 
 .section-header h2 {
@@ -3212,7 +3217,7 @@ body.nav-open::before {
     }
 
     .hero-stage .hero-content h1 {
-        font-size: clamp(1.7rem, 1.35rem + 3.2vw, 2.35rem);
+        font-size: var(--hero-title-mobile);
     }
 
     .hero-pain {
@@ -3912,9 +3917,9 @@ body[data-page="home"] .faq-compact .faq-list {
     }
 
     .hero-home .hero-content h1 {
-        font-size: clamp(1.7rem, 7.2vw, 2.2rem);
+        font-size: var(--hero-title-mobile);
         line-height: 1.2;
-        letter-spacing: -0.02em;
+        letter-spacing: -0.025em;
     }
 
     .hero-home .hero-stores {
@@ -4129,21 +4134,21 @@ body[data-page="home"] .faq-compact .faq-list {
     font-family: var(--font-display);
     font-weight: 650;
     letter-spacing: -0.025em;
-    font-size: clamp(1.55rem, 1.25rem + 1.3vw, 2.15rem);
+    font-size: var(--hero-title);
     line-height: 1.2;
     margin-bottom: 0.85rem;
     color: var(--dark);
 }
 
 .hero-home .hero-content > p:not(.hero-brand):not(.hero-store-label):not(.hero-store-hint):not(.hero-pain):not(.hero-try-note):not(.hero-lead) {
-    font-size: 1.12rem;
+    font-size: var(--hero-lead);
     line-height: 1.55;
     max-width: 34rem;
     margin-bottom: 1.35rem;
 }
 
 .hero-lead {
-    font-size: 1.12rem;
+    font-size: var(--hero-lead);
     line-height: 1.55;
     max-width: 34rem;
     margin: 0 auto 1.35rem;
