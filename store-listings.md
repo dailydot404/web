@@ -15,52 +15,47 @@ Copy-paste text for production listings. Keep in sync with [pricing.html](./pric
 
 ## What's New (next release — all 3 apps)
 
-Versions: Admin **1.0.17** · Teacher **1.0.18** · Parent **1.0.14** · Backend **1.1.3**  
-SHAs: backend `20524b4` · admin `b8723383` · teacher `5520ba5d` · parent `04e8f402` · web `582ef8c`  
-Gates: compat PASS on prod promote · Admin Arrange Maestro + Playwright · Admin/Parent/Teacher Maestro smoke (this train) · Superadmin e2e earlier green.
+Versions: Admin **1.0.17** · Teacher **1.0.18** · Parent **1.0.14** · Backend **1.1.4**  
+Gates: Parent family-care Maestro PASS · Admin shift Maestro PASS · Teacher family-care Maestro PASS · Admin Playwright 36 passed. Not submitted. Do not publish admin web until these store builds are out.
 
 **Shared (Play + App Store — all three)**
 ```
-Stay in the loop — and keep DailyDotKids feeling calm when you open the app.
+A clearer picture of the day, for the centre and for families.
 
-• Notification history in the app, with a clear unread count
-• Mark alerts read when you’re done with them
-• Choose how long notification history is kept (in Profile / settings)
-• Gentler sign-in and update reminders (Face ID when you tap; Later on optional updates)
+• Needs from the centre, kept separate from the daily log
+• Pickup plans families and teachers can both see
+• Choose a color theme
 • Stability improvements
 ```
 
 **Admin**
 ```
-Make the home screen yours — and catch centre alerts without digging.
+Family details on the student card, and a shift you can review.
 
-• Arrange home & More: pick bottom tabs, pin favourites, and reorder tools
-• Search tools from the header to jump straight where you need
-• Notification inbox with unread badge; open history from Profile
-• Help stays easy to find from the header path
-• Same Arrange experience on Admin web (after pairing)
+• Needs from the family and the pickup list, on the student record
+• Open During this shift on a time log to see what was recorded
+• Color themes in settings
+• Stability improvements
 ```
 
 **Teacher**
 ```
-Classroom alerts, without the clutter.
+Ask families for what the room needs, and see who is picking up.
 
-• Notification bell with unread count on the home header
-• Open your notification history and mark items read
-• Retention choice for how long history is kept
-• Shared-tablet friendly: calm prompts and fewer interruptions
-• Stability improvements for everyday classroom use
+• Send a need from the student record
+• See who may pick up, and who must not
+• The week’s pickup plan on the same screen
+• Color themes in settings
 ```
 
 **Parent**
 ```
-Know what’s new for your child, at a glance.
+Know what the centre is asking for, and who picks up this week.
 
-• Notification bell with unread count
-• Open notification history and mark items read
-• Choose how long history is kept in settings
-• Calmer sign-in and update reminders
-• Stability improvements
+• Needs from you, with unread items first
+• Mark a request read when you’ve seen it
+• Who may pick up, and who must not
+• Set who picks up each day
 ```
 
 ---
