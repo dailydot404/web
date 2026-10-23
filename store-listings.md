@@ -15,7 +15,7 @@ Copy-paste text for production listings. Keep in sync with [pricing.html](./pric
 
 ## What's New (next release — all 3 apps)
 
-Versions: Admin **1.0.17** · Teacher **1.0.18** · Parent **1.0.14** · Backend **1.1.4**  
+Versions: Admin **1.0.18** · Teacher **1.0.19** · Parent **1.0.15** · Backend **1.1.4**  
 Gates: Parent family-care Maestro PASS · Admin shift Maestro PASS · Teacher family-care Maestro PASS · Admin Playwright 36 passed. Not submitted. Do not publish admin web until these store builds are out.
 
 **Shared (Play + App Store — all three)**
