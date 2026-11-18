@@ -19,10 +19,16 @@
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://dailydotkids.ca/pricing.html</loc>
-    <lastmod>2026-10-17</lastmod>
+    <loc>https://dailydotkids.ca/free.html</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://dailydotkids.ca/pricing.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://dailydotkids.ca/product.html</loc>

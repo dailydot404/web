@@ -12,11 +12,11 @@
         },
         {
             q: 'What is on Free?',
-            a: '1 location · 1 class · 8 students · 2 teachers · 16 parents. Attendance, classroom logs, and parent updates. Paid adds more capacity, vault, invoices, and licensing export.',
+            a: 'Full platform free: unlimited capacity, classroom tools, licensing visit export, vault, billing tracking, safety logbook, and policy library. No credit card.',
         },
         {
             q: 'Do I need a sales call?',
-            a: 'No. Start Free yourself in the Admin app. Message us here if you want help or a Paid / pilot conversation.',
+            a: 'No. Create your centre at Start free, then install Admin. Message us here if you want setup help.',
         },
         {
             q: 'Where is data stored?',

@@ -93,20 +93,17 @@ START ON FREE
 • Invite teachers and parents with invitation codes
 • $0 forever on Free — no expiry
 
-FREE PLAN INCLUDES
-• 1 location, 1 class, up to 8 students, 2 teachers, and 16 parent accounts
+FREE PLAN INCLUDES (FULL PLATFORM)
+• Unlimited locations, classes, students, teachers, and parent accounts
 • Daily activities, photos, daily reports, and bulletins
 • Teacher clock-in and timesheets
 • Waitlist and shared classroom tablet (PIN switch)
-• Push notifications for classroom updates
-
-UPGRADE TO PAID
-Need more capacity or compliance tools? Contact us for Paid:
-• Unlimited locations, classes, students, teachers, and parent accounts
-• Tuition billing and invoices (we do not process payments — parents pay you directly)
+• Tuition billing tracking and invoices (we do not process payments)
 • Document vault with expiry reminders
 • Fire drill and safety logbook
 • Policy library with staff acknowledgments
+• Licensing visit checklists and export
+• Push notifications for classroom updates
 • Licensing visit export packs
 • Priority support and onboarding
 
@@ -179,7 +176,7 @@ SHARED CLASSROOM TABLET
 Centres can keep one iPad in the room. Teachers switch profiles with a PIN — no personal device required.
 
 ABOUT DAILYDOTKIDS PLANS
-Centres can run on our Free plan (core classroom tools with capacity limits) or upgrade to Paid for unlimited capacity and compliance features. Plan details: dailydotkids.ca/pricing.html
+Full platform free for licensed centres — unlimited capacity and compliance tools included. Details: dailydotkids.ca/free.html
 
 DailyDotKids is operated by Anthor Canada Corp. We do not process parent payments and we do not certify your centre’s licence.
 

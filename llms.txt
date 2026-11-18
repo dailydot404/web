@@ -5,15 +5,15 @@
 
 ## Product
 - Three apps: Admin (owners/directors), Teacher (educators), Parent (families)
-- Free plan: self-serve in Admin app, no credit card — 1 location, 1 class, 8 students, 2 teachers, 16 parent accounts
-- Paid plan: unlimited capacity + compliance tools (credentials vault, billing/invoice tracking, safety logbook, licensing visit prep & export)
+- Free plan: full platform free via Start free — unlimited capacity + compliance tools, no credit card
+- No separate Paid gate for core compliance tools; centres still collect tuition themselves
 - Does NOT process parent tuition payments (centres collect Interac/other themselves; apps track invoices)
 - Does NOT certify regulatory compliance or replace a facility licence
 
 ## Key URLs
 - Home: https://dailydotkids.ca/
 - FAQ: https://dailydotkids.ca/faq.html
-- Pricing: https://dailydotkids.ca/pricing.html
+- Free usage: https://dailydotkids.ca/free.html
 - Product: https://dailydotkids.ca/product.html
 - Apps: https://dailydotkids.ca/apps.html
 - About: https://dailydotkids.ca/about.html

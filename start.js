@@ -92,8 +92,8 @@
     var password = document.getElementById('password').value || '';
     var acceptedTerms = document.getElementById('acceptedTerms').checked;
 
-    if (!daycareName || !ownerEmail || !ownerPhone || !address || !timezone) {
-      showError('Centre name, email, phone, address, and timezone are required.');
+    if (!daycareName || !ownerEmail || !timezone) {
+      showError('Centre name, email, and timezone are required.');
       track('start_submit_error', { reason: 'missing_fields' });
       return;
     }
@@ -159,7 +159,7 @@
           message: err && err.message ? String(err.message).slice(0, 120) : 'unknown',
         });
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Start free';
+        submitBtn.textContent = 'Create free centre';
       });
   });
 })();

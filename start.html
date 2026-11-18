@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20261018h">
+    <link rel="stylesheet" href="style.css?v=20261118d">
 </head>
 <body class="start-page" data-page="start">
     <a class="skip-link" href="#start-form">Skip to start free form</a>
@@ -31,7 +31,7 @@
     <nav class="navbar start-nav">
         <div class="nav-container">
             <a href="/" class="logo">Daily<span>DotKids</span></a>
-            <a href="pricing.html" class="start-nav-quiet">Free vs Paid</a>
+            <a href="free.html" class="start-nav-quiet">What’s free</a>
         </div>
     </nav>
 
@@ -40,78 +40,92 @@
         <div class="start-panel">
             <p class="start-brand" aria-label="DailyDotKids">Daily<span>DotKids</span></p>
             <h1>Start free for your centre</h1>
-            <p class="start-lead">Create your Free account here — no credit card. Then install Admin and log in with the same email.</p>
-            <p class="start-trust">Published Free limits: 1 location · 1 class · up to 8 students · 2 teachers · 16 parent accounts. Data stored in Canada. <a href="security.html">Security</a></p>
+            <p class="start-lead">Create your account — no credit card, no sales call. Full platform free (we don’t process tuition). Then install Admin and log in with the same email.</p>
+
+            <ul class="start-trust-chips" aria-label="Why directors start here">
+                <li>Full platform free</li>
+                <li>Data in Canada</li>
+                <li>No credit card</li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="security.html">Security</a></li>
+            </ul>
 
             <form class="start-form" id="start-form" novalidate>
                 <div class="start-field">
                     <label for="daycareName">Centre name</label>
-                    <input id="daycareName" name="daycareName" type="text" autocomplete="organization" required maxlength="120">
+                    <input id="daycareName" name="daycareName" type="text" autocomplete="organization" required maxlength="120" placeholder="e.g. Sunshine Daycare">
                 </div>
                 <div class="start-field">
-                    <label for="ownerEmail">Your email</label>
-                    <input id="ownerEmail" name="ownerEmail" type="email" autocomplete="email" required maxlength="160">
-                </div>
-                <div class="start-row">
-                    <div class="start-field">
-                        <label for="ownerPhone">Phone</label>
-                        <input id="ownerPhone" name="ownerPhone" type="tel" autocomplete="tel" required maxlength="40">
-                    </div>
-                    <div class="start-field">
-                        <label for="timezone">Timezone</label>
-                        <select id="timezone" name="timezone" required>
-                            <optgroup label="Canada">
-                                <option value="America/Vancouver">Pacific — Vancouver</option>
-                                <option value="America/Edmonton">Mountain — Edmonton / Calgary</option>
-                                <option value="America/Winnipeg">Central — Winnipeg</option>
-                                <option value="America/Regina">Saskatchewan — Regina</option>
-                                <option value="America/Toronto" selected>Eastern — Toronto / Ottawa</option>
-                                <option value="America/Halifax">Atlantic — Halifax</option>
-                                <option value="America/St_Johns">Newfoundland — St. John’s</option>
-                                <option value="America/Whitehorse">Yukon — Whitehorse</option>
-                                <option value="America/Yellowknife">NWT — Yellowknife</option>
-                                <option value="America/Iqaluit">Nunavut — Iqaluit</option>
-                            </optgroup>
-                            <optgroup label="United States">
-                                <option value="America/Los_Angeles">Pacific — Los Angeles</option>
-                                <option value="America/Denver">Mountain — Denver</option>
-                                <option value="America/Chicago">Central — Chicago</option>
-                                <option value="America/New_York">Eastern — New York</option>
-                                <option value="America/Phoenix">Arizona — Phoenix</option>
-                                <option value="Pacific/Honolulu">Hawaii — Honolulu</option>
-                                <option value="America/Anchorage">Alaska — Anchorage</option>
-                            </optgroup>
-                        </select>
-                    </div>
+                    <label for="ownerEmail">Your work email</label>
+                    <input id="ownerEmail" name="ownerEmail" type="email" autocomplete="email" required maxlength="160" placeholder="you@yourcentre.ca">
                 </div>
                 <div class="start-field">
-                    <label for="address">Centre address</label>
-                    <input id="address" name="address" type="text" autocomplete="street-address" required maxlength="240">
-                </div>
-                <div class="start-field">
-                    <label for="password">Password</label>
+                    <label for="password">Password <span class="start-optional">(min 6 characters)</span></label>
                     <div class="start-password-row">
                         <input id="password" name="password" type="password" autocomplete="new-password" required minlength="6" maxlength="128">
                         <button type="button" class="start-show-password" id="toggle-password" aria-pressed="false">Show</button>
                     </div>
                 </div>
+                <div class="start-field">
+                    <label for="timezone">Timezone</label>
+                    <select id="timezone" name="timezone" required>
+                        <optgroup label="Canada">
+                            <option value="America/Vancouver">Pacific — Vancouver</option>
+                            <option value="America/Edmonton">Mountain — Edmonton / Calgary</option>
+                            <option value="America/Winnipeg">Central — Winnipeg</option>
+                            <option value="America/Regina">Saskatchewan — Regina</option>
+                            <option value="America/Toronto" selected>Eastern — Toronto / Ottawa</option>
+                            <option value="America/Halifax">Atlantic — Halifax</option>
+                            <option value="America/St_Johns">Newfoundland — St. John’s</option>
+                            <option value="America/Whitehorse">Yukon — Whitehorse</option>
+                            <option value="America/Yellowknife">NWT — Yellowknife</option>
+                            <option value="America/Iqaluit">Nunavut — Iqaluit</option>
+                        </optgroup>
+                        <optgroup label="United States">
+                            <option value="America/Los_Angeles">Pacific — Los Angeles</option>
+                            <option value="America/Denver">Mountain — Denver</option>
+                            <option value="America/Chicago">Central — Chicago</option>
+                            <option value="America/New_York">Eastern — New York</option>
+                            <option value="America/Phoenix">Arizona — Phoenix</option>
+                            <option value="Pacific/Honolulu">Hawaii — Honolulu</option>
+                            <option value="America/Anchorage">Alaska — Anchorage</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <details class="start-more">
+                    <summary>Optional — phone &amp; address <span class="start-optional">(you can add these later in Admin)</span></summary>
+                    <div class="start-field">
+                        <label for="ownerPhone">Phone</label>
+                        <input id="ownerPhone" name="ownerPhone" type="tel" autocomplete="tel" maxlength="40">
+                    </div>
+                    <div class="start-field">
+                        <label for="address">Centre address</label>
+                        <input id="address" name="address" type="text" autocomplete="street-address" maxlength="240">
+                    </div>
+                </details>
+
                 <label class="start-terms">
                     <input id="acceptedTerms" name="acceptedTerms" type="checkbox" required>
-                    <span>I agree to the <a href="terms.html" target="_blank" rel="noopener noreferrer">Terms of Service</a></span>
+                    <span>I agree to the <a href="terms.html" target="_blank" rel="noopener noreferrer">Terms</a> and have read the <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a></span>
                 </label>
                 <p class="start-error" id="start-error" hidden role="alert"></p>
-                <button type="submit" class="btn btn-primary start-submit" id="start-submit">Start free</button>
-                <p class="start-fine">No credit card. Prefer the app first? <a href="apps.html#admin-app">Download Admin</a> · <a href="pricing.html">Free vs Paid</a></p>
+                <button type="submit" class="btn btn-primary start-submit" id="start-submit">Create free centre</button>
+                <p class="start-fine">Prefer we set it up for you? Email <a href="mailto:hello@dailydotkids.ca?subject=DailyDotKids%20onboarding%20help">hello@dailydotkids.ca</a> — any day works.</p>
             </form>
 
             <div class="start-success" id="start-success" hidden>
                 <h2>Your Free centre is ready</h2>
-                <p>Install the <strong>Admin</strong> app and log in with the email and password you just created.</p>
+                <ol class="start-next-steps">
+                    <li>Install the <strong>Admin</strong> app and log in with the email and password you just used.</li>
+                    <li>Create your first class and invite one teacher (Teacher app is separate).</li>
+                    <li>Log one meal or nap — parents see it in the Parent app.</li>
+                </ol>
                 <div class="hero-stores" aria-label="Download DailyDotKids Admin">
                     <a class="store-badge apple large" href="https://apps.apple.com/ca/app/dailydotkids-admin/id6778867318" target="_blank" rel="noopener noreferrer"><img src="badges/app-store.svg" alt="Download on the App Store" width="120" height="40"></a>
                     <a class="store-badge play large" href="https://play.google.com/store/apps/details?id=com.anthor.dailydot.admin" target="_blank" rel="noopener noreferrer"><img src="badges/google-play.png" alt="Get it on Google Play" width="132" height="40"></a>
                 </div>
-                <p class="start-fine">Need a hand? Email <a href="mailto:hello@dailydotkids.ca">hello@dailydotkids.ca</a> — Ankur helps around nap or pickup.</p>
+                <p class="start-fine">Stuck? Email <a href="mailto:hello@dailydotkids.ca">hello@dailydotkids.ca</a> — we help around nap or pickup.</p>
             </div>
         </div>
     </main>
@@ -123,7 +137,7 @@
             <span>|</span>
             <a href="apps.html">Apps</a>
             <span>|</span>
-            <a href="pricing.html">Pricing</a>
+            <a href="free.html">Free</a>
             <span>|</span>
             <a href="privacy.html">Privacy</a>
             <span>|</span>
@@ -132,6 +146,6 @@
     </footer>
 
     <script src="analytics.js?v=20261018a"></script>
-    <script src="start.js?v=20261018a"></script>
+    <script src="start.js?v=20261118d"></script>
 </body>
 </html>
