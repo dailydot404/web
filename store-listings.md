@@ -15,47 +15,43 @@ Copy-paste text for production listings. Keep in sync with [pricing.html](./pric
 
 ## What's New (next release — all 3 apps)
 
-Versions: Admin **1.0.18** · Teacher **1.0.19** · Parent **1.0.15** · Backend **1.1.4**  
-Gates: Parent family-care Maestro PASS · Admin shift Maestro PASS · Teacher family-care Maestro PASS · Admin Playwright 36 passed. Not submitted. Do not publish admin web until these store builds are out.
+Versions: Admin **1.0.19** · Teacher **1.0.20** · Parent **1.0.16** · Backend **1.1.8**  
+Deployer: new trains (prior marketing/versionCodes already on store/EAS). Admin web Free already published.
 
 **Shared (Play + App Store — all three)**
 ```
-A clearer picture of the day, for the centre and for families.
+Privacy on dailydotkids.ca, and full Free for centres on Admin.
 
-• Needs from the centre, kept separate from the daily log
-• Pickup plans families and teachers can both see
-• Choose a color theme
+• Admin Free includes unlimited kids and compliance tools
+• Privacy policy opens on dailydotkids.ca
+• Clearer Plan copy in Admin
 • Stability improvements
 ```
 
 **Admin**
 ```
-Family details on the student card, and a shift you can review.
+Full Free for your centre, plus a clearer Plan screen.
 
-• Needs from the family and the pickup list, on the student record
-• Open During this shift on a time log to see what was recorded
-• Color themes in settings
+• Unlimited kids and compliance tools on Free
+• Clearer Plan and billing copy
+• Floating tab bar polish on tools
 • Stability improvements
 ```
 
 **Teacher**
 ```
-Ask families for what the room needs, and see who is picking up.
+Privacy policy now opens on dailydotkids.ca.
 
-• Send a need from the student record
-• See who may pick up, and who must not
-• The week’s pickup plan on the same screen
-• Color themes in settings
+• Updated privacy link
+• Stability improvements
 ```
 
 **Parent**
 ```
-Know what the centre is asking for, and who picks up this week.
+Privacy policy now opens on dailydotkids.ca.
 
-• Needs from you, with unread items first
-• Mark a request read when you’ve seen it
-• Who may pick up, and who must not
-• Set who picks up each day
+• Updated privacy link
+• Stability improvements
 ```
 
 ---
